@@ -54,15 +54,31 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
+class _PostgresConnection:
+    """Compatibility adapter for the existing parameterized SQLite queries."""
+    def __init__(self, connection):
+        self.connection = connection
+
+    def execute(self, statement, params=()):
+        return self.connection.execute(statement.replace('?', '%s'), params)
+
+
 @contextmanager
 def connect():
-    c = sqlite3.connect(DB, timeout=15)
-    c.row_factory = sqlite3.Row
-    try:
-        with c:
-            yield c
-    finally:
-        c.close()
+    database_url = os.environ.get('DATABASE_URL', '').strip()
+    if database_url:
+        from psycopg import connect as postgres_connect
+        from psycopg.rows import dict_row
+        with postgres_connect(database_url, row_factory=dict_row, connect_timeout=10) as connection:
+            yield _PostgresConnection(connection)
+    else:
+        connection = sqlite3.connect(DB, timeout=15)
+        connection.row_factory = sqlite3.Row
+        try:
+            with connection:
+                yield connection
+        finally:
+            connection.close()
 
 
 with connect() as c:
@@ -203,7 +219,7 @@ def homepage():
 @app.get('/health')
 def health():
     from language_service import configuration
-    return jsonify(ok=True, application='MM_Electronics_YOLO', revision='6.1',
+    return jsonify(ok=True, database_backend='postgresql' if os.environ.get('DATABASE_URL') else 'sqlite', application='MM_Electronics_YOLO', revision='6.1',
                    model_loaded=MODEL is not None, language=configuration(), **model_info())
 
 
