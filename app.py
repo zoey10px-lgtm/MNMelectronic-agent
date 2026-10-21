@@ -275,7 +275,7 @@ def analyze():
     if product not in ('A156', 'A176', 'A276', 'A376', 'AUTO') or (not photos and len(message) < 10 and len(document_text) < 10):
         return jsonify(error='제품을 선택하고 사진 또는 10자 이상의 문의 내용을 입력해주세요.'), 400
     if not message:
-        message = '첨부 사진의 결함 의심 영역 검사를 요청합니다.'
+        message = '첨부 문서의 품질 문제 분석을 요청합니다.' if document_text else '첨부 사진의 결함 의심 영역 검사를 요청합니다.'
     try:
         images = [decode_photo(p) for p in photos]
     except ValueError as e:
