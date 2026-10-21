@@ -1,0 +1,1586 @@
+{
+  "summary": {
+    "revision": "3.0",
+    "source_images": 31,
+    "all_source_images_reviewed": true,
+    "typed_defect_images": 18,
+    "typed_defect_boxes": 20,
+    "source_rois_requiring_confirmation": 8,
+    "inspection_maps": 5,
+    "unique_train_sources": 14,
+    "unique_val_sources": 4,
+    "train_class_counts": {
+      "missing_feature": 4,
+      "fracture": 6,
+      "dent": 3,
+      "porosity": 1
+    },
+    "val_class_counts": {
+      "dent": 1,
+      "porosity": 1,
+      "missing_feature": 1,
+      "fracture": 1
+    },
+    "split_method": "one photo per defect type held out; specimen independence unknown",
+    "factory_verified": false,
+    "normal_product_images_available": 0,
+    "source_workbook_sha256": "543067d839c167672416daf543bbb0848f973d7f12d2f13da579abbe6da47068",
+    "interpretation_policy": "Describe observed/labeled appearance and review checks; no inferred factory cause, tolerance, warranty or resolution.",
+    "all_defect_types_finalized": false,
+    "defect_type_or_boundary_confirmation_pending": 8
+  },
+  "images": [
+    {
+      "image_id": "A156_reference_01",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 0,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image14.png",
+        "inspection_position": "HÌNH ẢNH"
+      },
+      "source_sha256": "a41b44319978ab2906c863ecbeac913dcc9bef0372b011e80073c0e15015b4b9",
+      "width": 456,
+      "height": 696,
+      "original_image": "originals/A156_reference_01.png",
+      "overlay_image": "overlays/A156_reference_01.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [],
+      "training_included": false,
+      "annotation_status": "inspection_location_map",
+      "predicted_or_labeled_type": null,
+      "interpretation": "제품의 검사 위치 번호를 보여주는 안내 이미지입니다. 번호 상자를 실제 결함 정답으로 사용하지 않았습니다.",
+      "evidence_level": "inspection location map"
+    },
+    {
+      "image_id": "A156_reference_02",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 0,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image15.png",
+        "inspection_position": "HÌNH ẢNH"
+      },
+      "source_sha256": "2676ffc663a5242d3bfac15732e7ccc123bcb096b2d7606d865821401061a541",
+      "width": 455,
+      "height": 735,
+      "original_image": "originals/A156_reference_02.png",
+      "overlay_image": "overlays/A156_reference_02.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [],
+      "training_included": false,
+      "annotation_status": "inspection_location_map",
+      "predicted_or_labeled_type": null,
+      "interpretation": "제품의 검사 위치 번호를 보여주는 안내 이미지입니다. 번호 상자를 실제 결함 정답으로 사용하지 않았습니다.",
+      "evidence_level": "inspection location map"
+    },
+    {
+      "image_id": "A156_reference_03",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 6,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image16.png",
+        "inspection_position": "7"
+      },
+      "source_sha256": "60bf139267b6f224216e22ebdb6806ae40b6b6191841645d384cceae9e89e2c0",
+      "width": 319,
+      "height": 395,
+      "original_image": "originals/A156_reference_03.png",
+      "overlay_image": "overlays/A156_reference_03.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [
+        [
+          100,
+          168,
+          190,
+          287
+        ]
+      ],
+      "training_included": false,
+      "annotation_status": "source_roi_requires_confirmation",
+      "predicted_or_labeled_type": null,
+      "source_indicated_type": null,
+      "source_defect_word": null,
+      "interpretation": "원본 빨간 사각형이 리브·돌출 형상을 가리킵니다. 결함의 종류와 정상 형상 대비 차이는 원본에서 확인되지 않습니다.",
+      "required_evidence": "같은 위치의 정상 형상 또는 불량 유형 설명이 필요합니다.",
+      "evidence_level": "source-indicated ROI; no confirmed defect boundary"
+    },
+    {
+      "image_id": "A156_reference_04",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 3,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image17.png",
+        "inspection_position": "4"
+      },
+      "source_sha256": "718a361e1822aa2a4b478f105b6c98f3b81cd5b672a9c64cf1f07909ed239430",
+      "width": 225,
+      "height": 245,
+      "original_image": "originals/A156_reference_04.png",
+      "overlay_image": "overlays/A156_reference_04.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [
+        [
+          67,
+          75,
+          173,
+          182
+        ]
+      ],
+      "training_included": false,
+      "annotation_status": "source_roi_requires_confirmation",
+      "predicted_or_labeled_type": null,
+      "source_indicated_type": null,
+      "source_defect_word": null,
+      "interpretation": "구멍 주변 확대 사진입니다. 구멍이 보인다는 사실만으로 직경·위치 불량을 정하지 않았습니다.",
+      "required_evidence": "기준 직경·위치·허용 공차 또는 정상 제품 대조가 필요합니다.",
+      "evidence_level": "source-indicated ROI; no confirmed defect boundary"
+    },
+    {
+      "image_id": "A156_reference_05",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 9,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image18.png",
+        "inspection_position": "10"
+      },
+      "source_sha256": "0469f99d39245f6fbd33230879d34fd920066a627efcc75a5e81a0e58b4bf074",
+      "width": 567,
+      "height": 337,
+      "original_image": "originals/A156_reference_05.png",
+      "overlay_image": "overlays/A156_reference_05.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            165,
+            140,
+            346,
+            184
+          ],
+          "observation": "상단 가장자리 중앙에 거칠고 불규칙하게 내려간 결손 형태가 보입니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          165,
+          140,
+          346,
+          184
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "missing_feature",
+      "interpretation": "상단 가장자리 중앙에 거칠고 불규칙하게 내려간 결손 형태가 보입니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        0,
+        45,
+        567,
+        215
+      ]
+    },
+    {
+      "image_id": "A156_reference_06",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 1,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image19.png",
+        "inspection_position": "1-2"
+      },
+      "source_sha256": "2e31ae5baf27b20110c24f079a7e4b530cfac4ab27e8bb9b46ff91f9e7b2eabd",
+      "width": 565,
+      "height": 349,
+      "original_image": "originals/A156_reference_06.png",
+      "overlay_image": "overlays/A156_reference_06.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            63,
+            130,
+            166,
+            164
+          ],
+          "observation": "상단 얇은 플랜지의 두 구간에 불규칙한 끊김·결손 형태가 보입니다. 하단의 검은 선은 라벨에 포함하지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            291,
+            142,
+            387,
+            174
+          ],
+          "observation": "상단 얇은 플랜지의 두 구간에 불규칙한 끊김·결손 형태가 보입니다. 하단의 검은 선은 라벨에 포함하지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          63,
+          130,
+          166,
+          164
+        ],
+        [
+          291,
+          142,
+          387,
+          174
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "missing_feature",
+      "interpretation": "상단 얇은 플랜지의 두 구간에 불규칙한 끊김·결손 형태가 보입니다. 하단의 검은 선은 라벨에 포함하지 않았습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        0,
+        65,
+        565,
+        211
+      ]
+    },
+    {
+      "image_id": "A156_reference_07",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 4,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image20.png",
+        "inspection_position": "5-6-11-12"
+      },
+      "source_sha256": "0b9fdc166be06214db2959c14ab21e779d588e25b1a8c81e821b79b40339dc35",
+      "width": 219,
+      "height": 263,
+      "original_image": "originals/A156_reference_07.png",
+      "overlay_image": "overlays/A156_reference_07.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [
+        [
+          85,
+          139,
+          135,
+          164
+        ]
+      ],
+      "training_included": false,
+      "annotation_status": "source_roi_requires_confirmation",
+      "predicted_or_labeled_type": null,
+      "source_indicated_type": null,
+      "source_defect_word": null,
+      "interpretation": "작은 국부적인 요철과 거친 표면이 보입니다. 원래 설계 형상과 결함 경계가 구분되지 않습니다.",
+      "required_evidence": "정상 형상 대조와 근접 사진 또는 원본 불량 설명이 필요합니다.",
+      "evidence_level": "source-indicated ROI; no confirmed defect boundary"
+    },
+    {
+      "image_id": "A156_reference_08",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 1,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image21.png",
+        "inspection_position": "1-2"
+      },
+      "source_sha256": "14738e745a3b8323e57f7bd097eca1a6f01b25c348a9a99d99cbefaeddf0b88b",
+      "width": 247,
+      "height": 760,
+      "original_image": "originals/A156_reference_08.png",
+      "overlay_image": "overlays/A156_reference_08.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            121,
+            12,
+            166,
+            510
+          ],
+          "observation": "세로 가장자리를 따라 벌어진 선이 스티커 위아래에 보입니다. 스티커에 가린 중간 부분은 정답 영역으로 그리지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            105,
+            641,
+            131,
+            753
+          ],
+          "observation": "세로 가장자리를 따라 벌어진 선이 스티커 위아래에 보입니다. 스티커에 가린 중간 부분은 정답 영역으로 그리지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          121,
+          12,
+          166,
+          510
+        ],
+        [
+          105,
+          641,
+          131,
+          753
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "fracture",
+      "interpretation": "세로 가장자리를 따라 벌어진 선이 스티커 위아래에 보입니다. 스티커에 가린 중간 부분은 정답 영역으로 그리지 않았습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        25,
+        0,
+        225,
+        760
+      ]
+    },
+    {
+      "image_id": "A156_reference_09",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 8,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image22.png",
+        "inspection_position": "9"
+      },
+      "source_sha256": "cd67de7c0235f5af7611e7abf87920b1b9f45bf4ef0b5c4b98f820ef3a094c77",
+      "width": 476,
+      "height": 401,
+      "original_image": "originals/A156_reference_09.png",
+      "overlay_image": "overlays/A156_reference_09.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            160,
+            158,
+            206,
+            265
+          ],
+          "observation": "리브 접합부에 열린 파단선이 보이며 원본 스티커의 Gãy 표시와 일치합니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          160,
+          158,
+          206,
+          265
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "fracture",
+      "interpretation": "리브 접합부에 열린 파단선이 보이며 원본 스티커의 Gãy 표시와 일치합니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        75,
+        80,
+        234,
+        335
+      ]
+    },
+    {
+      "image_id": "A156_reference_10",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 1,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image23.png",
+        "inspection_position": "1-2"
+      },
+      "source_sha256": "833839155733a5cf65b6c266ebc3d2b237a0decae6e4e1d05c93ef0adbb1534b",
+      "width": 441,
+      "height": 512,
+      "original_image": "originals/A156_reference_10.png",
+      "overlay_image": "overlays/A156_reference_10.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            202,
+            128,
+            279,
+            228
+          ],
+          "observation": "표면의 국부적인 눌림 자국이 보이며 스티커에 Dập이라고 적혀 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "split": "val",
+      "defect_boxes": [
+        [
+          202,
+          128,
+          279,
+          228
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "dent",
+      "interpretation": "표면의 국부적인 눌림 자국이 보이며 스티커에 Dập이라고 적혀 있습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        80,
+        60,
+        360,
+        245
+      ]
+    },
+    {
+      "image_id": "A156_reference_11",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 6,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image24.png",
+        "inspection_position": "7"
+      },
+      "source_sha256": "e9681f0877c8445ce0c664e6c154b4c7d6dd12e7dc673fd78e91d96bf4e834d0",
+      "width": 243,
+      "height": 325,
+      "original_image": "originals/A156_reference_11.png",
+      "overlay_image": "overlays/A156_reference_11.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [
+        [
+          91,
+          125,
+          190,
+          232
+        ]
+      ],
+      "training_included": false,
+      "annotation_status": "source_roi_requires_confirmation",
+      "predicted_or_labeled_type": null,
+      "source_indicated_type": null,
+      "source_defect_word": null,
+      "interpretation": "원본 사각형이 돌출부와 그 아래 리브를 가리킵니다. 아래쪽 어두운 틈이 설계 형상인지 파손인지 확정할 기준이 없습니다.",
+      "required_evidence": "정상 리브 형상 또는 동일 부위의 다른 각도 사진이 필요합니다.",
+      "evidence_level": "source-indicated ROI; no confirmed defect boundary"
+    },
+    {
+      "image_id": "A156_reference_12",
+      "product_model": "A156",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A156",
+        "anchor_column_zero_based": 7,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image25.png",
+        "inspection_position": "8"
+      },
+      "source_sha256": "ac756e19952df753b842d2bde47d5a0b4522665995b978b9a6394d8a7fd2bd60",
+      "width": 409,
+      "height": 271,
+      "original_image": "originals/A156_reference_12.png",
+      "overlay_image": "overlays/A156_reference_12.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            129,
+            164,
+            345,
+            204
+          ],
+          "observation": "하단 금속 가장자리에 불규칙한 형상이 보이며 원본에 Thiếu liệu라고 표시되어 있습니다. 스티커가 가린 부분은 직접 관찰 근거가 없습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          129,
+          164,
+          345,
+          204
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "missing_feature",
+      "interpretation": "하단 금속 가장자리에 불규칙한 형상이 보이며 원본에 Thiếu liệu라고 표시되어 있습니다. 스티커가 가린 부분은 직접 관찰 근거가 없습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        30,
+        145,
+        409,
+        245
+      ]
+    },
+    {
+      "image_id": "A176_reference_01",
+      "product_model": "A176",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A176",
+        "anchor_column_zero_based": 0,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image1.png",
+        "inspection_position": "HÌNH ẢNH"
+      },
+      "source_sha256": "1e694d253a6d8680963f9ff91a4abfffe974c2a7e5aaeaf0511ad9b540ea9193",
+      "width": 466,
+      "height": 739,
+      "original_image": "originals/A176_reference_01.png",
+      "overlay_image": "overlays/A176_reference_01.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [],
+      "training_included": false,
+      "annotation_status": "inspection_location_map",
+      "predicted_or_labeled_type": null,
+      "interpretation": "제품의 검사 위치 번호를 보여주는 안내 이미지입니다. 번호 상자를 실제 결함 정답으로 사용하지 않았습니다.",
+      "evidence_level": "inspection location map"
+    },
+    {
+      "image_id": "A176_reference_02",
+      "product_model": "A176",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A176",
+        "anchor_column_zero_based": 6,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image2.png",
+        "inspection_position": "9"
+      },
+      "source_sha256": "151d9f5e0ab9c02bc863109591ec199ad83c1308295ab63b5c23df65b0616ed0",
+      "width": 542,
+      "height": 613,
+      "original_image": "originals/A176_reference_02.png",
+      "overlay_image": "overlays/A176_reference_02.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            291,
+            128,
+            374,
+            194
+          ],
+          "observation": "상부 체결 구멍의 바깥 테두리에 국부적인 눌림·비정형 윤곽이 보이며 Dập 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          291,
+          128,
+          374,
+          194
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "dent",
+      "interpretation": "상부 체결 구멍의 바깥 테두리에 국부적인 눌림·비정형 윤곽이 보이며 Dập 표시가 있습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        215,
+        50,
+        435,
+        194
+      ]
+    },
+    {
+      "image_id": "A176_reference_03",
+      "product_model": "A176",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A176",
+        "anchor_column_zero_based": 3,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image3.png",
+        "inspection_position": "6"
+      },
+      "source_sha256": "890896a832765d974302668bdeea8803bfb080fcb25b542fc60e8f912110713e",
+      "width": 371,
+      "height": 525,
+      "original_image": "originals/A176_reference_03.png",
+      "overlay_image": "overlays/A176_reference_03.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [
+        [
+          101,
+          195,
+          213,
+          244
+        ]
+      ],
+      "training_included": false,
+      "annotation_status": "source_roi_requires_confirmation",
+      "predicted_or_labeled_type": null,
+      "source_indicated_type": "dent",
+      "source_defect_word": "Dập",
+      "interpretation": "원본은 찍힘·눌림으로 지목합니다. 해당 가장자리가 검은 펜으로 덮여 실제 눌림 경계가 가려져 있습니다.",
+      "required_evidence": "펜으로 가리지 않은 사진에서 실제 눌림 경계를 확인해야 합니다.",
+      "evidence_level": "source-indicated ROI; no confirmed defect boundary"
+    },
+    {
+      "image_id": "A176_reference_04",
+      "product_model": "A176",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A176",
+        "anchor_column_zero_based": 1,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image4.png",
+        "inspection_position": "1"
+      },
+      "source_sha256": "6fc67c046de2724043508c395475ad500ba923fba7a0abebf236349307e96485",
+      "width": 476,
+      "height": 612,
+      "original_image": "originals/A176_reference_04.png",
+      "overlay_image": "overlays/A176_reference_04.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [
+        [
+          141,
+          137,
+          251,
+          244
+        ]
+      ],
+      "training_included": false,
+      "annotation_status": "source_roi_requires_confirmation",
+      "predicted_or_labeled_type": null,
+      "source_indicated_type": "missing_feature",
+      "source_defect_word": "Thiếu",
+      "interpretation": "원본은 재료 부족으로 지목합니다. 체결부 주변 형상과 구멍이 보이며 정확한 결손 경계는 정상 형상 대조가 필요합니다.",
+      "required_evidence": "동일 체결부의 정상 형상 또는 불량 부위에 대한 구체적인 설명이 필요합니다.",
+      "evidence_level": "source-indicated ROI; no confirmed defect boundary"
+    },
+    {
+      "image_id": "A176_reference_05",
+      "product_model": "A176",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A176",
+        "anchor_column_zero_based": 1,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image5.png",
+        "inspection_position": "1"
+      },
+      "source_sha256": "da7491acddebdbd0b150fa34295f942df6a2d734c8e6da588929b3442fefc688",
+      "width": 344,
+      "height": 447,
+      "original_image": "originals/A176_reference_05.png",
+      "overlay_image": "overlays/A176_reference_05.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 2,
+          "class_name": "porosity",
+          "label_ko": "기공·표면 공동 의심",
+          "box_xyxy": [
+            103,
+            74,
+            158,
+            180
+          ],
+          "observation": "좁은 금속 가장자리에 여러 열린 공동이 보이며 Rỗ khí 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+            "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          103,
+          74,
+          158,
+          180
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "porosity",
+      "interpretation": "좁은 금속 가장자리에 여러 열린 공동이 보이며 Rỗ khí 표시가 있습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        40,
+        0,
+        245,
+        182
+      ]
+    },
+    {
+      "image_id": "A176_reference_06",
+      "product_model": "A176",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A176",
+        "anchor_column_zero_based": 6,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image6.png",
+        "inspection_position": "9"
+      },
+      "source_sha256": "e21028a276e95621ef6e9a6d109baefe285a3c113054cfbaea6aa373d5d744a0",
+      "width": 436,
+      "height": 515,
+      "original_image": "originals/A176_reference_06.png",
+      "overlay_image": "overlays/A176_reference_06.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 2,
+          "class_name": "porosity",
+          "label_ko": "기공·표면 공동 의심",
+          "box_xyxy": [
+            235,
+            287,
+            270,
+            333
+          ],
+          "observation": "금속 리브 아래쪽에 작은 공동 두 곳이 보이며 Rỗ khí 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+            "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+          ]
+        }
+      ],
+      "split": "val",
+      "defect_boxes": [
+        [
+          235,
+          287,
+          270,
+          333
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "porosity",
+      "interpretation": "금속 리브 아래쪽에 작은 공동 두 곳이 보이며 Rỗ khí 표시가 있습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        177,
+        279,
+        396,
+        449
+      ]
+    },
+    {
+      "image_id": "A176_reference_07",
+      "product_model": "A176",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A176",
+        "anchor_column_zero_based": 2,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image7.png",
+        "inspection_position": "2-3-4-5"
+      },
+      "source_sha256": "8dad5907ce3b0bd24e1ef83e42b4a5c8fd7072a8b29442672180afe9abf8d1dd",
+      "width": 340,
+      "height": 518,
+      "original_image": "originals/A176_reference_07.png",
+      "overlay_image": "overlays/A176_reference_07.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            164,
+            175,
+            192,
+            219
+          ],
+          "observation": "세로 가장자리의 일부가 끊겨 벌어진 구간이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          164,
+          175,
+          192,
+          219
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "fracture",
+      "interpretation": "세로 가장자리의 일부가 끊겨 벌어진 구간이 보이며 Gãy 표시가 있습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        65,
+        78,
+        270,
+        245
+      ]
+    },
+    {
+      "image_id": "A176_reference_08",
+      "product_model": "A176",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A176",
+        "anchor_column_zero_based": 2,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image8.png",
+        "inspection_position": "2-3-4-5"
+      },
+      "source_sha256": "fb45e887a3f88490faab6c89bcaafc27a0c8d0d64a766be3cc569c8c8c9a6172",
+      "width": 400,
+      "height": 372,
+      "original_image": "originals/A176_reference_08.png",
+      "overlay_image": "overlays/A176_reference_08.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [
+        [
+          184,
+          129,
+          224,
+          165
+        ]
+      ],
+      "training_included": false,
+      "annotation_status": "source_roi_requires_confirmation",
+      "predicted_or_labeled_type": null,
+      "source_indicated_type": null,
+      "source_defect_word": null,
+      "interpretation": "작은 돌출부 주변을 화살표가 가리킵니다. 읽을 수 있는 정보만으로 세부 결함 유형은 확정하지 않았습니다.",
+      "required_evidence": "불량 유형 원문 또는 정상 돌출부 대조가 필요합니다.",
+      "evidence_level": "source-indicated ROI; no confirmed defect boundary"
+    },
+    {
+      "image_id": "A276_reference_01",
+      "product_model": "A276",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A276",
+        "anchor_column_zero_based": 0,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image26.png",
+        "inspection_position": "HÌNH ẢNH"
+      },
+      "source_sha256": "7d7673429d884adca5a929d2c5d128fde73d841de1c5c6e8c3b1f04d0c89e583",
+      "width": 418,
+      "height": 676,
+      "original_image": "originals/A276_reference_01.png",
+      "overlay_image": "overlays/A276_reference_01.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [],
+      "training_included": false,
+      "annotation_status": "inspection_location_map",
+      "predicted_or_labeled_type": null,
+      "interpretation": "제품의 검사 위치 번호를 보여주는 안내 이미지입니다. 번호 상자를 실제 결함 정답으로 사용하지 않았습니다.",
+      "evidence_level": "inspection location map"
+    },
+    {
+      "image_id": "A276_reference_02",
+      "product_model": "A276",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A276",
+        "anchor_column_zero_based": 2,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image27.png",
+        "inspection_position": "2"
+      },
+      "source_sha256": "c5c98cb7ac0e4c2ab3c6bf7f9d3403ffbf64c74ba2633aa542dfe27c23fa1090",
+      "width": 461,
+      "height": 579,
+      "original_image": "originals/A276_reference_02.png",
+      "overlay_image": "overlays/A276_reference_02.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            189,
+            70,
+            366,
+            163
+          ],
+          "observation": "상단 가장자리 일부가 거칠고 불규칙하게 파인 형상이며 원본에 Thiếu라고 표시되어 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "val",
+      "defect_boxes": [
+        [
+          189,
+          70,
+          366,
+          163
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "missing_feature",
+      "interpretation": "상단 가장자리 일부가 거칠고 불규칙하게 파인 형상이며 원본에 Thiếu라고 표시되어 있습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        150,
+        5,
+        430,
+        171
+      ]
+    },
+    {
+      "image_id": "A276_reference_03",
+      "product_model": "A276",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A276",
+        "anchor_column_zero_based": 2,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image28.png",
+        "inspection_position": "2"
+      },
+      "source_sha256": "bc4b9a746c865a81dd647258ee790e2cd4173ef70a054e93a27efbddfb561476",
+      "width": 392,
+      "height": 464,
+      "original_image": "originals/A276_reference_03.png",
+      "overlay_image": "overlays/A276_reference_03.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [
+        [
+          217,
+          133,
+          300,
+          190
+        ]
+      ],
+      "training_included": false,
+      "annotation_status": "source_roi_requires_confirmation",
+      "predicted_or_labeled_type": null,
+      "source_indicated_type": "deformation",
+      "source_defect_word": "Cong",
+      "interpretation": "원본은 휨·변형으로 지목하며 돌출 체결부의 뿌리를 가리킵니다. 해당 부위가 펜으로 가려져 있고 한 방향 사진만 있습니다.",
+      "required_evidence": "측면 사진과 기준 평면·정상 각도 대조가 필요합니다.",
+      "evidence_level": "source-indicated ROI; no confirmed defect boundary"
+    },
+    {
+      "image_id": "A276_reference_04",
+      "product_model": "A276",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A276",
+        "anchor_column_zero_based": 8,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image29.png",
+        "inspection_position": "8"
+      },
+      "source_sha256": "9f1666b33cc0e2f1cab56d94a1b0f0198fb0bddbb5c7b87e507d96e5e6e5a66b",
+      "width": 583,
+      "height": 778,
+      "original_image": "originals/A276_reference_04.png",
+      "overlay_image": "overlays/A276_reference_04.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            63,
+            106,
+            429,
+            371
+          ],
+          "observation": "곡선 가장자리 인접 표면에 불완전하고 불규칙한 재료 형상이 보이며 Thiếu 표시가 있습니다. 정확한 결손량은 사진에서 측정하지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          63,
+          106,
+          429,
+          371
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "missing_feature",
+      "interpretation": "곡선 가장자리 인접 표면에 불완전하고 불규칙한 재료 형상이 보이며 Thiếu 표시가 있습니다. 정확한 결손량은 사진에서 측정하지 않았습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        10,
+        30,
+        560,
+        386
+      ]
+    },
+    {
+      "image_id": "A276_reference_05",
+      "product_model": "A276",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A276",
+        "anchor_column_zero_based": 5,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image30.png",
+        "inspection_position": "5"
+      },
+      "source_sha256": "fa40104fc2f458e423adbfee414b95f091f72b1ab4d70a8e54f934117003813a",
+      "width": 287,
+      "height": 323,
+      "original_image": "originals/A276_reference_05.png",
+      "overlay_image": "overlays/A276_reference_05.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            170,
+            162,
+            209,
+            202
+          ],
+          "observation": "구멍 테두리 아래 오른쪽에 국부적인 패임이 보입니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          170,
+          162,
+          209,
+          202
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "dent",
+      "interpretation": "구멍 테두리 아래 오른쪽에 국부적인 패임이 보입니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        95,
+        90,
+        270,
+        229
+      ]
+    },
+    {
+      "image_id": "A276_reference_06",
+      "product_model": "A276",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A276",
+        "anchor_column_zero_based": 3,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image31.png",
+        "inspection_position": "3"
+      },
+      "source_sha256": "7ed4b8ca6acb8c02022b38a3f6594a33d50d3681c7a1bc60737840f89fceac18",
+      "width": 388,
+      "height": 504,
+      "original_image": "originals/A276_reference_06.png",
+      "overlay_image": "overlays/A276_reference_06.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            215,
+            151,
+            251,
+            199
+          ],
+          "observation": "돌출 체결부 테두리에 국부적인 눌림·비정형 윤곽이 보이며 Dập 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          215,
+          151,
+          251,
+          199
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "dent",
+      "interpretation": "돌출 체결부 테두리에 국부적인 눌림·비정형 윤곽이 보이며 Dập 표시가 있습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        115,
+        55,
+        315,
+        245
+      ]
+    },
+    {
+      "image_id": "A376_reference_01",
+      "product_model": "A376",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A376",
+        "anchor_column_zero_based": 0,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image9.png",
+        "inspection_position": "HÌNH ẢNH"
+      },
+      "source_sha256": "e5c8452d94c0c2c12a412d252d48367f59d8f447b4d2f81d173ee7792c764c20",
+      "width": 395,
+      "height": 672,
+      "original_image": "originals/A376_reference_01.png",
+      "overlay_image": "overlays/A376_reference_01.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [],
+      "split": null,
+      "defect_boxes": [],
+      "inspection_rois": [],
+      "training_included": false,
+      "annotation_status": "inspection_location_map",
+      "predicted_or_labeled_type": null,
+      "interpretation": "제품의 검사 위치 번호를 보여주는 안내 이미지입니다. 번호 상자를 실제 결함 정답으로 사용하지 않았습니다.",
+      "evidence_level": "inspection location map"
+    },
+    {
+      "image_id": "A376_reference_02",
+      "product_model": "A376",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A376",
+        "anchor_column_zero_based": 1,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image10.png",
+        "inspection_position": "1"
+      },
+      "source_sha256": "cf3b95a89f190726a2866844c1d952adbd7b8e116c19736d2dd869db041b13c5",
+      "width": 375,
+      "height": 509,
+      "original_image": "originals/A376_reference_02.png",
+      "overlay_image": "overlays/A376_reference_02.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            193,
+            222,
+            215,
+            269
+          ],
+          "observation": "가로 지지대와 접합부 사이에 열린 파단선이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "val",
+      "defect_boxes": [
+        [
+          193,
+          222,
+          215,
+          269
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "fracture",
+      "interpretation": "가로 지지대와 접합부 사이에 열린 파단선이 보이며 Gãy 표시가 있습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        109,
+        160,
+        249,
+        312
+      ]
+    },
+    {
+      "image_id": "A376_reference_03",
+      "product_model": "A376",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A376",
+        "anchor_column_zero_based": 10,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image11.png",
+        "inspection_position": "10-11"
+      },
+      "source_sha256": "6667f16d5a3c96679f0b391189de3b89cedf36dd6ae8456747fb12be211c9895",
+      "width": 453,
+      "height": 614,
+      "original_image": "originals/A376_reference_03.png",
+      "overlay_image": "overlays/A376_reference_03.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            37,
+            179,
+            67,
+            232
+          ],
+          "observation": "왼쪽 지지대에 연결을 가로지르는 끊김이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          37,
+          179,
+          67,
+          232
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "fracture",
+      "interpretation": "왼쪽 지지대에 연결을 가로지르는 끊김이 보이며 Gãy 표시가 있습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        0,
+        110,
+        155,
+        297
+      ]
+    },
+    {
+      "image_id": "A376_reference_04",
+      "product_model": "A376",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A376",
+        "anchor_column_zero_based": 10,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image12.png",
+        "inspection_position": "10-11"
+      },
+      "source_sha256": "9f5c5ba99bff0fcd79ae08abcd74271cbff134236b66f0dbea0b6408d78dce5f",
+      "width": 459,
+      "height": 600,
+      "original_image": "originals/A376_reference_04.png",
+      "overlay_image": "overlays/A376_reference_04.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            255,
+            190,
+            283,
+            258
+          ],
+          "observation": "가로 지지대 접합부에 벌어진 균열이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          255,
+          190,
+          283,
+          258
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "fracture",
+      "interpretation": "가로 지지대 접합부에 벌어진 균열이 보이며 Gãy 표시가 있습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        156,
+        127,
+        333,
+        347
+      ]
+    },
+    {
+      "image_id": "A376_reference_05",
+      "product_model": "A376",
+      "source": {
+        "workbook": "Bracket NG các vị trí.xlsx",
+        "sheet": "A376",
+        "anchor_column_zero_based": 5,
+        "anchor_row_zero_based": 2,
+        "source_media": "xl/media/image13.png",
+        "inspection_position": "5"
+      },
+      "source_sha256": "44a646c22aee790ed8acf5333bfb68f1766fe36857a83007a3ba8b567f50ed52",
+      "width": 390,
+      "height": 502,
+      "original_image": "originals/A376_reference_05.png",
+      "overlay_image": "overlays/A376_reference_05.jpg",
+      "factory_verified": false,
+      "reviewed": true,
+      "labels": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            201,
+            191,
+            226,
+            244
+          ],
+          "observation": "지지대 접합부에 열린 균열이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "split": "train",
+      "defect_boxes": [
+        [
+          201,
+          191,
+          226,
+          244
+        ]
+      ],
+      "inspection_rois": [],
+      "training_included": true,
+      "annotation_status": "typed_visual_label",
+      "predicted_or_labeled_type": "fracture",
+      "interpretation": "지지대 접합부에 열린 균열이 보이며 Gãy 표시가 있습니다.",
+      "evidence_level": "AI visual annotation + source indication where legible",
+      "crop_xyxy": [
+        118,
+        130,
+        234,
+        296
+      ]
+    }
+  ]
+}

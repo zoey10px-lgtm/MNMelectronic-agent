@@ -1,0 +1,59 @@
+{
+  "original_photos": 31,
+  "counts": {
+    "train": {
+      "unique_photos": 14,
+      "boxes_by_class": {
+        "missing_feature": 5,
+        "fracture": 7,
+        "dent": 3,
+        "porosity": 1
+      }
+    },
+    "val": {
+      "unique_photos": 4,
+      "boxes_by_class": {
+        "dent": 1,
+        "porosity": 1,
+        "missing_feature": 1,
+        "fracture": 1
+      }
+    }
+  },
+  "product_class_counts": {
+    "A156": {
+      "missing_feature": 4,
+      "fracture": 3,
+      "dent": 1
+    },
+    "A176": {
+      "dent": 1,
+      "porosity": 2,
+      "fracture": 1
+    },
+    "A276": {
+      "missing_feature": 2,
+      "dent": 2
+    },
+    "A376": {
+      "fracture": 4
+    }
+  },
+  "errors": [],
+  "normal_part_photos": 0,
+  "unsupported_requested_types": [
+    "scratch",
+    "assembly_gap"
+  ],
+  "specimen_independence": "unknown",
+  "source_split_overlap": 0,
+  "findings": [
+    "The old 98 training images derive from only 14 unique source photos.",
+    "The old training and validation inputs are tight defect crops; the web app accepts full photos.",
+    "Only one porosity training source exists; offline brightness transforms add no new physical examples.",
+    "Historical input contained a single-class checkpoint. The current checkpoint includes weights/defect_types.pt and its hash-bound four-class MODEL_EVALUATION.json.",
+    "All labeled A376 photos show fracture; class and product appearance are confounded.",
+    "The former registered-image display prioritized stored labels, which does not measure model prediction accuracy.",
+    "No scratch or assembly-gap labels exist in the supplied data."
+  ]
+}

@@ -1,0 +1,7 @@
+train: images/train
+val: images/val
+names:
+  0: fracture
+  1: dent
+  2: porosity
+  3: missing_feature

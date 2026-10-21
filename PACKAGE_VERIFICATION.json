@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "health": {
+    "active_classes": [
+      "fracture",
+      "dent",
+      "porosity",
+      "missing_feature"
+    ],
+    "active_weights": "weights/defect_types.pt",
+    "application": "MM_Electronics_YOLO",
+    "available_weights": [
+      "weights/defect_types.pt",
+      "weights/best.pt"
+    ],
+    "evaluation": {
+      "status": "limited_photo_holdout_only",
+      "summary": {
+        "train": {
+          "fn": 1,
+          "fp": 4,
+          "images": 14,
+          "matched_images": 14,
+          "precision": 0.7894736842105263,
+          "recall": 0.9375,
+          "tp": 15
+        },
+        "val": {
+          "fn": 3,
+          "fp": 0,
+          "images": 4,
+          "matched_images": 1,
+          "precision": 1.0,
+          "recall": 0.25,
+          "tp": 1
+        },
+        "val_per_class": {
+          "dent": {
+            "gt": 1,
+            "tp": 0
+          },
+          "fracture": {
+            "gt": 1,
+            "tp": 1
+          },
+          "missing_feature": {
+            "gt": 1,
+            "tp": 0
+          },
+          "porosity": {
+            "gt": 1,
+            "tp": 0
+          }
+        }
+      },
+      "universal_generalization_verified": false,
+      "unsupported_types": [
+        "scratch",
+        "assembly_gap"
+      ]
+    },
+    "language": {
+      "configured": false,
+      "image_analysis": true,
+      "model": "gpt-5.4-mini",
+      "provider": "OpenAI",
+      "reply_generation": true
+    },
+    "model_loaded": true,
+    "ok": true,
+    "revision": "6.1",
+    "type_classifier_active": true
+  },
+  "api_cases": [
+    {
+      "name": "registered_original",
+      "returned_count": 1,
+      "types": [
+        "fracture"
+      ],
+      "inference_complete": true,
+      "media_access": true,
+      "foreign_session_denied": true,
+      "confirmation": true
+    },
+    {
+      "name": "external_housing",
+      "returned_count": 1,
+      "types": [
+        "fracture"
+      ],
+      "inference_complete": true,
+      "media_access": true,
+      "foreign_session_denied": true,
+      "confirmation": true
+    }
+  ],
+  "invalid_image_rejected": true,
+  "source_labels_not_used_as_predictions": true
+}

@@ -1,0 +1,46 @@
+{
+  "selected_model": "weights/defect_types.pt",
+  "selected_model_sha256": "5ed6f416200b5768a962363d9f834390e8fa765d71b2d73193ae1ab7d0cc4cbc",
+  "selected_experiment": "supplied_augmentation",
+  "stages": [
+    {
+      "name": "initial_full_photo",
+      "source": "weights/best.pt",
+      "epochs_completed": 51,
+      "config": "training_history/initial_full_photo/args.yaml",
+      "results": "training_history/initial_full_photo/results.csv",
+      "activation": "not_activated"
+    },
+    {
+      "name": "balanced_continuation",
+      "source": "weights/full_photo_warmstart.pt",
+      "epochs_completed": 60,
+      "config": "training_history/balanced_continuation/args.yaml",
+      "results": "training_history/balanced_continuation/results.csv",
+      "activation": "previously_selected"
+    },
+    {
+      "name": "generic_pretrained",
+      "source": "weights/pretrained_base.pt",
+      "epochs_completed": 60,
+      "config": "training_history/generic_pretrained/args.yaml",
+      "results": "training_history/generic_pretrained/results.csv",
+      "activation": "not_selected"
+    },
+    {
+      "name": "supplied_augmentation",
+      "source": "weights/previous_model.pt",
+      "source_sha256": "278746cf20cbc6fa50634aadbee8e4a4fe83fd62cb0a84354f3184b4d4af9a1e",
+      "epochs_completed": 24,
+      "training_images": 164,
+      "unique_originals": 14,
+      "boxes": 186,
+      "config": "training_history/augmented_retraining/args.yaml",
+      "results": "training_history/augmented_retraining/results.csv",
+      "activation": "selected"
+    }
+  ],
+  "note": "Training history preserves the exact paths used during each run. The supplied augmentation contains 164 training views from 14 originals; 4 unchanged heldout originals are separate. App inference uses weights/defect_types.pt, checked against MODEL_EVALUATION.json.",
+  "pretrained_base_source": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt",
+  "date": "2026-10-21"
+}

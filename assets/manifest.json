@@ -1,0 +1,2362 @@
+{
+  "archive_sha256": "07bf9ef65a3f783ccd6dc6fec04e2bd52acc02da6c3fa9cbc21e002f44080d16",
+  "parts": [
+    {
+      "name": "checkpoint-assets.000",
+      "size": 5242880,
+      "sha256": "e07d8bbc77acd74b71d446c1f73a2d8ad2472068c92664b3526636508f54a727"
+    },
+    {
+      "name": "checkpoint-assets.001",
+      "size": 5242880,
+      "sha256": "593f15fc97bf651c140defa7b77feb9099beef499ece09016d71680e3f6628eb"
+    },
+    {
+      "name": "checkpoint-assets.002",
+      "size": 5242880,
+      "sha256": "2337455546406d85674af8d9e1e09ac66b94dc52e99ea6544930054b9386420b"
+    },
+    {
+      "name": "checkpoint-assets.003",
+      "size": 5242880,
+      "sha256": "1acd2ec19a74e45151df34f27558a9bc80b12abed668a99b3e57bf92173c8924"
+    },
+    {
+      "name": "checkpoint-assets.004",
+      "size": 5242880,
+      "sha256": "2fe95ecb52c5e5a13a65932f817aea178d12ec9a75ba246ddf018f42d5223e19"
+    },
+    {
+      "name": "checkpoint-assets.005",
+      "size": 5242880,
+      "sha256": "b26fa1b9619405be29656301286d7af0f5ec855fc1b7fa1ca152365923fe8420"
+    },
+    {
+      "name": "checkpoint-assets.006",
+      "size": 5242880,
+      "sha256": "3dc4545ff4842bde8b52dec7e11af19564543b8441df58c3ce136e6061c7ed78"
+    },
+    {
+      "name": "checkpoint-assets.007",
+      "size": 5242880,
+      "sha256": "1a6763ea660c39e4ccdfba7895161bac02cd77b5a059dd7558b0f2c145a10946"
+    },
+    {
+      "name": "checkpoint-assets.008",
+      "size": 5242880,
+      "sha256": "3041c88d46cb08068df300c52577044dda9597e15b62e63c4f23ca40e807ebc1"
+    },
+    {
+      "name": "checkpoint-assets.009",
+      "size": 5242880,
+      "sha256": "618c182025ff13e76f54af8b16faf97bcfc6d929e8d35f4190699cb5570b5116"
+    },
+    {
+      "name": "checkpoint-assets.010",
+      "size": 5242880,
+      "sha256": "693a76cd003606793fa10d3fa951088d276b7f47683d528839ca681794ed83ac"
+    },
+    {
+      "name": "checkpoint-assets.011",
+      "size": 5242880,
+      "sha256": "a364c8840c20f3bd486d5473f8dba64127b915401a7442611f9728d131795355"
+    },
+    {
+      "name": "checkpoint-assets.012",
+      "size": 5242880,
+      "sha256": "af203d7c58bb6bf2659f0d92e23c574eb5ab31e518f60dbb0531d31f5d7b1bb8"
+    },
+    {
+      "name": "checkpoint-assets.013",
+      "size": 5242880,
+      "sha256": "3df4bf245ee7dc1b5d094fc0699ef2e745c81d645093d9bc759b242f060a14eb"
+    },
+    {
+      "name": "checkpoint-assets.014",
+      "size": 5242880,
+      "sha256": "182c5fa5569a0680e75dbacd6101e4ef379f4fbf1de419b3fda166d3fe32c783"
+    },
+    {
+      "name": "checkpoint-assets.015",
+      "size": 5242880,
+      "sha256": "cadf52a0e2369b8436b4ddca13f6c0f6c91ccd055c82aad52fb84eb7b0e54920"
+    },
+    {
+      "name": "checkpoint-assets.016",
+      "size": 5242880,
+      "sha256": "bb017027a63bf82fdeec317db4b61621e9ba4f08c1b7e6538a4c5ae009365c81"
+    },
+    {
+      "name": "checkpoint-assets.017",
+      "size": 5242880,
+      "sha256": "aec5c28a1f2c25ce23191a06cce8d0420c156bb6c2dbba977429ba4f4be66acb"
+    },
+    {
+      "name": "checkpoint-assets.018",
+      "size": 5242880,
+      "sha256": "cb3e2df1d170149b22c8869da23d280c3dd6dfd4dcbb66f19c59254142a8fbc1"
+    },
+    {
+      "name": "checkpoint-assets.019",
+      "size": 1021924,
+      "sha256": "b31e61e6d4872e987296b3d7ed6bad2ed9923ab4d99bdbacdbdba1a68e6ab8c5"
+    }
+  ],
+  "files": [
+    {
+      "path": "annotations/LABEL_PREVIEW.jpg",
+      "size": 134953,
+      "sha256": "8be8900faa2aa8f6ea334822b3ec9f38623fc273c6788031e8561ca310a3d184"
+    },
+    {
+      "path": "annotations/images/train/A156_reference_05.png",
+      "size": 123390,
+      "sha256": "39d283b58b1a80ad661647ccbee9ec665904498f6cf4831ec2dc244a5ec1f702"
+    },
+    {
+      "path": "annotations/images/train/A156_reference_06.png",
+      "size": 91524,
+      "sha256": "fdbfd00fb931ee1b6aaff4bd0702c8cfcf8b057d8f0377ef356c3d3e22a899d2"
+    },
+    {
+      "path": "annotations/images/train/A156_reference_08.png",
+      "size": 219575,
+      "sha256": "ad8c6dfdc89a5cadfddb08abb7d20a8b6fdeb13f5b0d67a346a7bebfcd38a4e9"
+    },
+    {
+      "path": "annotations/images/train/A156_reference_09.png",
+      "size": 69249,
+      "sha256": "017aaa6d29842d8ec99b8170de63bf89b8f13302c69e70308090ca329cf6a2ad"
+    },
+    {
+      "path": "annotations/images/train/A156_reference_12.png",
+      "size": 47664,
+      "sha256": "b7f48872491474d47cbce68f34b7194720b8348b698316a62903c5df042cefdb"
+    },
+    {
+      "path": "annotations/images/train/A176_reference_02.png",
+      "size": 32357,
+      "sha256": "97f7980c9dae183404fbabebe4420212dbea6864ead9fa54f71190d8bf956516"
+    },
+    {
+      "path": "annotations/images/train/A176_reference_05.png",
+      "size": 46319,
+      "sha256": "665c885632879e4a52d10007022a5e4e7b65d2334cb552c21439be95545b8c96"
+    },
+    {
+      "path": "annotations/images/train/A176_reference_07.png",
+      "size": 50750,
+      "sha256": "5844133202f44a5d46a9b4bed4a82bd08e2f66f9f712f3714a1de3cee7e10712"
+    },
+    {
+      "path": "annotations/images/train/A276_reference_04.png",
+      "size": 241220,
+      "sha256": "cc4f618368764b1fbf1eacc2bef76ef407ced8079598b0bac5863e5a2588f5b8"
+    },
+    {
+      "path": "annotations/images/train/A276_reference_05.png",
+      "size": 37665,
+      "sha256": "17fcfa9fcdf7e6b1e9ac711f624b1c5bf6bb9b1c3d7db7ad93ea5c95b8fe9ce0"
+    },
+    {
+      "path": "annotations/images/train/A276_reference_06.png",
+      "size": 40891,
+      "sha256": "5206ef28392db509bb2990eb1d94feccda89b1a8a2e61e6ae341883b8d1ebb33"
+    },
+    {
+      "path": "annotations/images/train/A376_reference_03.png",
+      "size": 37842,
+      "sha256": "8557429ed99577cb386fdb87b07f234c5b0fc4e3289e9026960aadf8f635b9e3"
+    },
+    {
+      "path": "annotations/images/train/A376_reference_04.png",
+      "size": 47400,
+      "sha256": "1b3aeda64757fcbf793a8dd7ce2e4cb58ec9a9fd0b8eb0abd10f8ba75ecb0598"
+    },
+    {
+      "path": "annotations/images/train/A376_reference_05.png",
+      "size": 23134,
+      "sha256": "fb50ba55fd7a5d1d5dc2af1e32f63406acc48dfd994a4d606cdfc3d9d8699bb3"
+    },
+    {
+      "path": "annotations/images/val/A156_reference_10.png",
+      "size": 100687,
+      "sha256": "af8b8871ea70c77661b5d47296b889a57fc094940de0d4f47dec5a869b39c050"
+    },
+    {
+      "path": "annotations/images/val/A176_reference_06.png",
+      "size": 39832,
+      "sha256": "4aa8ee95bbbe62745bcd871ec87005176ed1eaa644d5b67923f69be589a47b6c"
+    },
+    {
+      "path": "annotations/images/val/A276_reference_02.png",
+      "size": 47232,
+      "sha256": "ad0ca7dfec630bdda165c210eb518c23dce58c0eb6cac92700b2b9f5f08ac41c"
+    },
+    {
+      "path": "annotations/images/val/A376_reference_02.png",
+      "size": 32088,
+      "sha256": "c4db1a12de89dd49d4a38a3e5255e766e9956f247801b0fffacf1abbdc22f193"
+    },
+    {
+      "path": "annotations/originals/A156_reference_01.png",
+      "size": 501193,
+      "sha256": "a41b44319978ab2906c863ecbeac913dcc9bef0372b011e80073c0e15015b4b9"
+    },
+    {
+      "path": "annotations/originals/A156_reference_02.png",
+      "size": 554385,
+      "sha256": "2676ffc663a5242d3bfac15732e7ccc123bcb096b2d7606d865821401061a541"
+    },
+    {
+      "path": "annotations/originals/A156_reference_03.png",
+      "size": 223567,
+      "sha256": "60bf139267b6f224216e22ebdb6806ae40b6b6191841645d384cceae9e89e2c0"
+    },
+    {
+      "path": "annotations/originals/A156_reference_04.png",
+      "size": 127517,
+      "sha256": "718a361e1822aa2a4b478f105b6c98f3b81cd5b672a9c64cf1f07909ed239430"
+    },
+    {
+      "path": "annotations/originals/A156_reference_05.png",
+      "size": 363453,
+      "sha256": "0469f99d39245f6fbd33230879d34fd920066a627efcc75a5e81a0e58b4bf074"
+    },
+    {
+      "path": "annotations/originals/A156_reference_06.png",
+      "size": 360455,
+      "sha256": "2e31ae5baf27b20110c24f079a7e4b530cfac4ab27e8bb9b46ff91f9e7b2eabd"
+    },
+    {
+      "path": "annotations/originals/A156_reference_07.png",
+      "size": 104565,
+      "sha256": "0b9fdc166be06214db2959c14ab21e779d588e25b1a8c81e821b79b40339dc35"
+    },
+    {
+      "path": "annotations/originals/A156_reference_08.png",
+      "size": 378649,
+      "sha256": "14738e745a3b8323e57f7bd097eca1a6f01b25c348a9a99d99cbefaeddf0b88b"
+    },
+    {
+      "path": "annotations/originals/A156_reference_09.png",
+      "size": 423619,
+      "sha256": "cd67de7c0235f5af7611e7abf87920b1b9f45bf4ef0b5c4b98f820ef3a094c77"
+    },
+    {
+      "path": "annotations/originals/A156_reference_10.png",
+      "size": 537899,
+      "sha256": "833839155733a5cf65b6c266ebc3d2b237a0decae6e4e1d05c93ef0adbb1534b"
+    },
+    {
+      "path": "annotations/originals/A156_reference_11.png",
+      "size": 160292,
+      "sha256": "e9681f0877c8445ce0c664e6c154b4c7d6dd12e7dc673fd78e91d96bf4e834d0"
+    },
+    {
+      "path": "annotations/originals/A156_reference_12.png",
+      "size": 222843,
+      "sha256": "ac756e19952df753b842d2bde47d5a0b4522665995b978b9a6394d8a7fd2bd60"
+    },
+    {
+      "path": "annotations/originals/A176_reference_01.png",
+      "size": 775641,
+      "sha256": "1e694d253a6d8680963f9ff91a4abfffe974c2a7e5aaeaf0511ad9b540ea9193"
+    },
+    {
+      "path": "annotations/originals/A176_reference_02.png",
+      "size": 693165,
+      "sha256": "151d9f5e0ab9c02bc863109591ec199ad83c1308295ab63b5c23df65b0616ed0"
+    },
+    {
+      "path": "annotations/originals/A176_reference_03.png",
+      "size": 413313,
+      "sha256": "890896a832765d974302668bdeea8803bfb080fcb25b542fc60e8f912110713e"
+    },
+    {
+      "path": "annotations/originals/A176_reference_04.png",
+      "size": 599495,
+      "sha256": "6fc67c046de2724043508c395475ad500ba923fba7a0abebf236349307e96485"
+    },
+    {
+      "path": "annotations/originals/A176_reference_05.png",
+      "size": 340446,
+      "sha256": "da7491acddebdbd0b150fa34295f942df6a2d734c8e6da588929b3442fefc688"
+    },
+    {
+      "path": "annotations/originals/A176_reference_06.png",
+      "size": 365348,
+      "sha256": "e21028a276e95621ef6e9a6d109baefe285a3c113054cfbaea6aa373d5d744a0"
+    },
+    {
+      "path": "annotations/originals/A176_reference_07.png",
+      "size": 390045,
+      "sha256": "8dad5907ce3b0bd24e1ef83e42b4a5c8fd7072a8b29442672180afe9abf8d1dd"
+    },
+    {
+      "path": "annotations/originals/A176_reference_08.png",
+      "size": 304699,
+      "sha256": "fb45e887a3f88490faab6c89bcaafc27a0c8d0d64a766be3cc569c8c8c9a6172"
+    },
+    {
+      "path": "annotations/originals/A276_reference_01.png",
+      "size": 516830,
+      "sha256": "7d7673429d884adca5a929d2c5d128fde73d841de1c5c6e8c3b1f04d0c89e583"
+    },
+    {
+      "path": "annotations/originals/A276_reference_02.png",
+      "size": 537512,
+      "sha256": "c5c98cb7ac0e4c2ab3c6bf7f9d3403ffbf64c74ba2633aa542dfe27c23fa1090"
+    },
+    {
+      "path": "annotations/originals/A276_reference_03.png",
+      "size": 368553,
+      "sha256": "bc4b9a746c865a81dd647258ee790e2cd4173ef70a054e93a27efbddfb561476"
+    },
+    {
+      "path": "annotations/originals/A276_reference_04.png",
+      "size": 891824,
+      "sha256": "9f1666b33cc0e2f1cab56d94a1b0f0198fb0bddbb5c7b87e507d96e5e6e5a66b"
+    },
+    {
+      "path": "annotations/originals/A276_reference_05.png",
+      "size": 199325,
+      "sha256": "fa40104fc2f458e423adbfee414b95f091f72b1ab4d70a8e54f934117003813a"
+    },
+    {
+      "path": "annotations/originals/A276_reference_06.png",
+      "size": 342883,
+      "sha256": "7ed4b8ca6acb8c02022b38a3f6594a33d50d3681c7a1bc60737840f89fceac18"
+    },
+    {
+      "path": "annotations/originals/A376_reference_01.png",
+      "size": 530168,
+      "sha256": "e5c8452d94c0c2c12a412d252d48367f59d8f447b4d2f81d173ee7792c764c20"
+    },
+    {
+      "path": "annotations/originals/A376_reference_02.png",
+      "size": 418349,
+      "sha256": "cf3b95a89f190726a2866844c1d952adbd7b8e116c19736d2dd869db041b13c5"
+    },
+    {
+      "path": "annotations/originals/A376_reference_03.png",
+      "size": 523306,
+      "sha256": "6667f16d5a3c96679f0b391189de3b89cedf36dd6ae8456747fb12be211c9895"
+    },
+    {
+      "path": "annotations/originals/A376_reference_04.png",
+      "size": 454695,
+      "sha256": "9f5c5ba99bff0fcd79ae08abcd74271cbff134236b66f0dbea0b6408d78dce5f"
+    },
+    {
+      "path": "annotations/originals/A376_reference_05.png",
+      "size": 386064,
+      "sha256": "44a646c22aee790ed8acf5333bfb68f1766fe36857a83007a3ba8b567f50ed52"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_01.jpg",
+      "size": 100887,
+      "sha256": "7e050c27ecddcac83252a8501c596c3001859acc0600bbc2ce682956afa0cea1"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_02.jpg",
+      "size": 116754,
+      "sha256": "253be10b48fc6758d54e88cb08a1fa6069436e6dbc0557b90a6a72ddf8da9156"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_03.jpg",
+      "size": 36097,
+      "sha256": "cbd966b2144799d59c6a18e43898bfafd03949049e5652f44d67c8c894c25132"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_04.jpg",
+      "size": 27910,
+      "sha256": "e87856b5263f2c2f0a84a9b5064823b77ec5ca5a006cd54bc126bb6a5262110e"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_05.jpg",
+      "size": 68173,
+      "sha256": "1b9fb306bcab85cff0b511c1e064e2e0e251df18abae3fcde3f0ab949debc757"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_06.jpg",
+      "size": 68163,
+      "sha256": "0b8ef53c76492aea3d4f9eb2b15b0a1fb928980f232b8343ecbb1f055fb40614"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_07.jpg",
+      "size": 17478,
+      "sha256": "789f7b6f855126e6a3193a7b547728a37587d692190c90565a39fbbcdeaca10b"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_08.jpg",
+      "size": 67019,
+      "sha256": "79e25914e243a85860cb69f118637af20daa97e62116c40e04284d53a70e59d6"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_09.jpg",
+      "size": 73581,
+      "sha256": "dcc2d46ff7f5055d3ed46af351add3ebb086d341538b173aee2d9a081a0cb2aa"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_10.jpg",
+      "size": 104988,
+      "sha256": "c810fb7a9e906c8eb44aa86c1c3329e831aec771f523b5c2dd083260e00bf7ae"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_11.jpg",
+      "size": 23143,
+      "sha256": "7a1bce1f43da472fb7531a8b9720179383ea5b3c9a82a1ee981c7b4d70ecc215"
+    },
+    {
+      "path": "annotations/overlays/A156_reference_12.jpg",
+      "size": 34863,
+      "sha256": "1ff7b2c4e16b79f686f82f8ace9df6eeeec20cbd85c0858a55e9748f50a0f411"
+    },
+    {
+      "path": "annotations/overlays/A176_reference_01.jpg",
+      "size": 140650,
+      "sha256": "61846e63eb8de36874e736885979a390542c66717811a3fc2582ec117ab25b98"
+    },
+    {
+      "path": "annotations/overlays/A176_reference_02.jpg",
+      "size": 109228,
+      "sha256": "082fc0ba46384dd63ccba46fdaa74fffe05e996f60ab5127ce9a09ac058b73af"
+    },
+    {
+      "path": "annotations/overlays/A176_reference_03.jpg",
+      "size": 68403,
+      "sha256": "265c7b31f82702e720e2cbf7edc160331a33c9461727b029cf28c62e12d2b007"
+    },
+    {
+      "path": "annotations/overlays/A176_reference_04.jpg",
+      "size": 95739,
+      "sha256": "1d1542bf6d60b3a532a84c28eee6e523da3fe6c86b5d3490b22d5cd0668a4e3b"
+    },
+    {
+      "path": "annotations/overlays/A176_reference_05.jpg",
+      "size": 52121,
+      "sha256": "d12b79f5dcf70da6e0d4548546c0bda6f2d2095fef17dfd518b212032cb1a940"
+    },
+    {
+      "path": "annotations/overlays/A176_reference_06.jpg",
+      "size": 53620,
+      "sha256": "2ca3b53f8e9278520ec5b480a2205cb81c0f060bfc4b3252bba149004258b68d"
+    },
+    {
+      "path": "annotations/overlays/A176_reference_07.jpg",
+      "size": 65287,
+      "sha256": "e308dbfbe65402bf23f9ac77fa52875fd1c261f6162c871a6afcf918e37de04e"
+    },
+    {
+      "path": "annotations/overlays/A176_reference_08.jpg",
+      "size": 52437,
+      "sha256": "b4d36f021270b7f7ceacf8a93231c0af9f7c067d6f0e37d3be9a40e3dc08cf86"
+    },
+    {
+      "path": "annotations/overlays/A276_reference_01.jpg",
+      "size": 127823,
+      "sha256": "3584a164b93760aad6e45b3bccdd071b96c8ee874c0a0200824e331557786a06"
+    },
+    {
+      "path": "annotations/overlays/A276_reference_02.jpg",
+      "size": 84589,
+      "sha256": "8e1f56d0b509e44e985339acfbb726bffa4bc48bb7c5d95e10aa00893c2db8f5"
+    },
+    {
+      "path": "annotations/overlays/A276_reference_03.jpg",
+      "size": 58384,
+      "sha256": "d63ba4692ab2356b139d013508f4aceed4a94c50c195041779c9d1d5695cb370"
+    },
+    {
+      "path": "annotations/overlays/A276_reference_04.jpg",
+      "size": 157398,
+      "sha256": "12ab041736739e671c9d328aac844b34052dd9758f829a872186e2c4304f93a8"
+    },
+    {
+      "path": "annotations/overlays/A276_reference_05.jpg",
+      "size": 42249,
+      "sha256": "0230dbfdb57535cb0add3cf36d78e827f1d4cb8bb7e5600003591ec0c0a9af8a"
+    },
+    {
+      "path": "annotations/overlays/A276_reference_06.jpg",
+      "size": 54174,
+      "sha256": "28cbe14edd098f27c06f21a429723ade3a7dc8b818651bb8dadae3f7f4c943ea"
+    },
+    {
+      "path": "annotations/overlays/A376_reference_01.jpg",
+      "size": 120230,
+      "sha256": "62b34eb64c484ba38e801f43d7d52a98c84d391930afce1a1e94c69a29b2083e"
+    },
+    {
+      "path": "annotations/overlays/A376_reference_02.jpg",
+      "size": 68469,
+      "sha256": "3c1cd897d7e10fc5915479622169db3ea37df9c926afc6bb63af2f2eab1f8588"
+    },
+    {
+      "path": "annotations/overlays/A376_reference_03.jpg",
+      "size": 83834,
+      "sha256": "328a8d3a88cd8937017b04301e3dab2ef27b5d989ada5748d02355bc42dd892a"
+    },
+    {
+      "path": "annotations/overlays/A376_reference_04.jpg",
+      "size": 64942,
+      "sha256": "a95c8d94e1f20f8582842a6fc164402c7a87711769f9a7c822f835e3e81d64f9"
+    },
+    {
+      "path": "annotations/overlays/A376_reference_05.jpg",
+      "size": 62902,
+      "sha256": "bebfb88cd99729c2659a478df7245813e15369d4cc20c3e12abf690f4eb15081"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A156_reference_05__full.jpg",
+      "size": 47659,
+      "sha256": "2dddbcab2ba79920b1dd61825fcfc24dccac854695efc9d2d2b2d1bfbce55265"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A156_reference_06__full.jpg",
+      "size": 47997,
+      "sha256": "ae3342105a8b3e31b8a31db794391e7077149509e6465025dfb5a4606d558ac4"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A156_reference_08__full.jpg",
+      "size": 45221,
+      "sha256": "b78f6c9e7ea54821164d107553abba2c2e4864289bb7985d1e12051f738b3ace"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A156_reference_09__full.jpg",
+      "size": 52172,
+      "sha256": "92890f53e0a966234144e56afe5ac66d47de66766223c8856940b0acd5d7fd21"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A156_reference_10__brightness.jpg",
+      "size": 64314,
+      "sha256": "1a7ab40520400b3a7357c640b0d35a0ba0b01d63d8873ac1762bf3f769eb31a5"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A156_reference_10__full.jpg",
+      "size": 72636,
+      "sha256": "ab58583a59729ae98366abec742e3f1b21b53b01e092c7949d5d52677271e3fc"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A156_reference_10__jpeg85.jpg",
+      "size": 68567,
+      "sha256": "1487e7f6965267107d0abcbab2073a693e6571cd4f6031b5a0ef0e94642f1400"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A156_reference_12__full.jpg",
+      "size": 24294,
+      "sha256": "ae67fc58479092db93cd66115cf2fa7e2612a482fe18229867ee2baefa20e69e"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A176_reference_02__full.jpg",
+      "size": 74530,
+      "sha256": "285e3fe402f244bb1448d888732793b4caafe940e728966969622e661c5c6535"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A176_reference_05__full.jpg",
+      "size": 36754,
+      "sha256": "a93bb0eb30e462061bc267ef3c3bc57355c3124fb8897a3475c7870bbeb7c7fc"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A176_reference_06__brightness.jpg",
+      "size": 32039,
+      "sha256": "82d0665d675a545155265c9c73178eebb67da3177b05ce5f4d79f7d6d90d3480"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A176_reference_06__full.jpg",
+      "size": 35608,
+      "sha256": "0858e5f381c2eb043c2814de60ca10a24980faf6ac5f63b6b17f1668ff308c22"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A176_reference_06__jpeg85.jpg",
+      "size": 32916,
+      "sha256": "d864594fdbb0bf8643c6b1a88aa1ae06f4193e4f8935229a442b88f8df2a83ab"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A176_reference_07__full.jpg",
+      "size": 45753,
+      "sha256": "0ddc71aa13d5d1641e6b651f1dfa6e2fb6263e644727d8c4137cc96852c45103"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A276_reference_02__brightness.jpg",
+      "size": 49832,
+      "sha256": "1ed06834f8c2a184436293021b982a259e0af7abf3b5c2e513592e4b502eb862"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A276_reference_02__full.jpg",
+      "size": 55945,
+      "sha256": "84ad42673602f45ad35bdc57a0d4e37f1b694822f6da3968d3f4ef9e9c59306c"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A276_reference_02__jpeg85.jpg",
+      "size": 52069,
+      "sha256": "7cc0240cc02a8078e6de78932d859f85a81fe41e141b4f909538deb3d243aec4"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A276_reference_04__full.jpg",
+      "size": 107632,
+      "sha256": "a813f1699fd04ba8a19534201921c75982a536dca741f31cde65e050389e10e0"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A276_reference_05__full.jpg",
+      "size": 29615,
+      "sha256": "55b69cdf857ae26e2b2b2f4668c1d72e9d1fc4b725a088e21d5827ae1169ff2f"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A276_reference_06__full.jpg",
+      "size": 37111,
+      "sha256": "5b10326250aabbcd5a013ae392351832e561f78455180b563f39304da93a97de"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A376_reference_02__brightness.jpg",
+      "size": 42182,
+      "sha256": "24a014713f8e4a2f8cde62f26ea2a9eb5e792ee84bd309e5a095f569935c46dd"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A376_reference_02__full.jpg",
+      "size": 47206,
+      "sha256": "c22be475125aed99b048848e985453dbdbdeb02b52ddb2c2c73c2fb738123da4"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A376_reference_02__jpeg85.jpg",
+      "size": 44316,
+      "sha256": "29dc77f3e7c85b0e1486e72eff58b9cb2576d5e23aeb8cfb805fda421be3c56a"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A376_reference_03__full.jpg",
+      "size": 58075,
+      "sha256": "f0de03a83121af10304220949f6c75c5cbd542219f4d126bc67a6462e5e3a9e2"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A376_reference_04__full.jpg",
+      "size": 42949,
+      "sha256": "0928505a29c4054129dfdd45d74e9d865db0d6583e160d7e018402766a90ec6f"
+    },
+    {
+      "path": "evaluation/augmented_retraining/A376_reference_05__full.jpg",
+      "size": 42921,
+      "sha256": "a236a190485709f526f463c9368c0190f2ee5a5b781db94055e657b51acdb9d4"
+    },
+    {
+      "path": "evaluation/augmented_retraining/external_housing.jpg",
+      "size": 33876,
+      "sha256": "6cae8eb659dfb0660e78ab09f0d5dbaa782a624ccd60518b5cd201e982987da8"
+    },
+    {
+      "path": "evaluation/baseline/A156_reference_05__full.jpg",
+      "size": 47562,
+      "sha256": "32a9f419310d783fa101b85859277a21d0ed87b3122bdadbc432aead3b15ed7a"
+    },
+    {
+      "path": "evaluation/baseline/A156_reference_06__full.jpg",
+      "size": 49003,
+      "sha256": "0e18a5bab257fe0aab7236b352dd655750e06ab779ce4d90f12139fdbd6c6cf2"
+    },
+    {
+      "path": "evaluation/baseline/A156_reference_08__full.jpg",
+      "size": 46645,
+      "sha256": "fa88c6d0b8491f3506df0a962ad4e85134e0c7ccc4352a2f2000a897f02ed423"
+    },
+    {
+      "path": "evaluation/baseline/A156_reference_09__full.jpg",
+      "size": 53077,
+      "sha256": "9b305a956569c7c9d71ecff37474cb4bb81dea125b9022b49c8eedde419f1e30"
+    },
+    {
+      "path": "evaluation/baseline/A156_reference_10__brightness.jpg",
+      "size": 66861,
+      "sha256": "86af8bb1e3bfb50402e636bdc79054a6d16df6407b36331bcfe62cda3bb9c794"
+    },
+    {
+      "path": "evaluation/baseline/A156_reference_10__full.jpg",
+      "size": 74779,
+      "sha256": "f81b787b1aecb0f0f86686ad661e4ffd1877cfd2974c6dbbec2ed22a66c86060"
+    },
+    {
+      "path": "evaluation/baseline/A156_reference_10__jpeg85.jpg",
+      "size": 72715,
+      "sha256": "9b25837f1ab568a070dc4d22592be8bf8a01be09bd29dd715a5102c205f77837"
+    },
+    {
+      "path": "evaluation/baseline/A156_reference_12__full.jpg",
+      "size": 23651,
+      "sha256": "13b36755e58b65e8efcccf18c4baefea26cf35ccbfe621b9c37689a806ec56f4"
+    },
+    {
+      "path": "evaluation/baseline/A176_reference_02__full.jpg",
+      "size": 74450,
+      "sha256": "25a9d731f09c5763be661bd2a496380f346d016fc3c6f4e15c993fbe67a2e06a"
+    },
+    {
+      "path": "evaluation/baseline/A176_reference_05__full.jpg",
+      "size": 39509,
+      "sha256": "053178ba7c72f11713cc83ebeed35637b1e6aea314887bd5fb77996a8f5ea3f6"
+    },
+    {
+      "path": "evaluation/baseline/A176_reference_06__brightness.jpg",
+      "size": 36135,
+      "sha256": "0c26e820bbe3e0cbbd4f13c5434d7e40f21dc4264794abe59ad5948f3eccf54e"
+    },
+    {
+      "path": "evaluation/baseline/A176_reference_06__full.jpg",
+      "size": 36938,
+      "sha256": "dc28ce690c266ab8301459751d4a5d3e368c463850cd0dfbe4b4a472a20a19f9"
+    },
+    {
+      "path": "evaluation/baseline/A176_reference_06__jpeg85.jpg",
+      "size": 32916,
+      "sha256": "d864594fdbb0bf8643c6b1a88aa1ae06f4193e4f8935229a442b88f8df2a83ab"
+    },
+    {
+      "path": "evaluation/baseline/A176_reference_07__full.jpg",
+      "size": 48961,
+      "sha256": "3bc2e0104af662350116a641dfc676f99fd417c1c75b12fc7b284ae4e78e458c"
+    },
+    {
+      "path": "evaluation/baseline/A276_reference_02__brightness.jpg",
+      "size": 49832,
+      "sha256": "1ed06834f8c2a184436293021b982a259e0af7abf3b5c2e513592e4b502eb862"
+    },
+    {
+      "path": "evaluation/baseline/A276_reference_02__full.jpg",
+      "size": 58252,
+      "sha256": "31e6a3bbf970c4185af535ac2a4497e4be751d15513bff86660614a990e20726"
+    },
+    {
+      "path": "evaluation/baseline/A276_reference_02__jpeg85.jpg",
+      "size": 54476,
+      "sha256": "2f70b1cb1f6e7e55e93d50ae825ded3ade09c53ba57eaa4199bcc7b6e0df9075"
+    },
+    {
+      "path": "evaluation/baseline/A276_reference_04__full.jpg",
+      "size": 104399,
+      "sha256": "81e232d50111e22fd43633b97a5086aac61542914142e497e053174fd888e7ce"
+    },
+    {
+      "path": "evaluation/baseline/A276_reference_05__full.jpg",
+      "size": 30067,
+      "sha256": "6c2e1c431b699bd815b3e0100105085834e1ce155a19774598cd174a16e32ea5"
+    },
+    {
+      "path": "evaluation/baseline/A276_reference_06__full.jpg",
+      "size": 37540,
+      "sha256": "29a223d8b6e9f9f3da6bbab252715bd437210c9aac135483efaf9702c474b0f6"
+    },
+    {
+      "path": "evaluation/baseline/A376_reference_02__brightness.jpg",
+      "size": 45083,
+      "sha256": "1791944a23b76f1964133a39e2ae6c62215ae26b1e9ea1dc396977da70736735"
+    },
+    {
+      "path": "evaluation/baseline/A376_reference_02__full.jpg",
+      "size": 46750,
+      "sha256": "c41b8426e80164e02c42345c9232df0d33555add925cd8fd31f1ba9086cbbc4b"
+    },
+    {
+      "path": "evaluation/baseline/A376_reference_02__jpeg85.jpg",
+      "size": 44808,
+      "sha256": "dc506feebf3751eeb3a6e3e3ce57c1211d1bdc26c37d998e95e8cf3450a63c4d"
+    },
+    {
+      "path": "evaluation/baseline/A376_reference_03__full.jpg",
+      "size": 55928,
+      "sha256": "9f96236bfe3d0956287c3bff7da4875534c46321b0f126aa0d1469433ffa13d9"
+    },
+    {
+      "path": "evaluation/baseline/A376_reference_04__full.jpg",
+      "size": 43962,
+      "sha256": "a6aac9c8ea524b23bd42a0d60e104dcaffb5b0148c0ca127767859d6e32869a1"
+    },
+    {
+      "path": "evaluation/baseline/A376_reference_05__full.jpg",
+      "size": 47058,
+      "sha256": "ca1e2c970f7d71d638dba2ac799cfded538154287638978a1b145d36dffc1996"
+    },
+    {
+      "path": "evaluation/baseline/external_housing.jpg",
+      "size": 33012,
+      "sha256": "f76c1c1d8c7ccd18ce2dd5db043f98596d6b1839e731838178933d946219d232"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A156_reference_05__full.jpg",
+      "size": 47926,
+      "sha256": "cd4855dd7f67f4412a982b77ac8996adefd8ea13a3b7500aaa78db0303f270e5"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A156_reference_06__full.jpg",
+      "size": 48165,
+      "sha256": "8d6c1e408670126b463466b4c7d0baf5e387ad027d0cc872a5c29f3ea067d133"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A156_reference_08__full.jpg",
+      "size": 44955,
+      "sha256": "7205b1680350cdd3f33e4414aaac161dec90954fe676eba9145805c6b139b3ac"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A156_reference_09__full.jpg",
+      "size": 51130,
+      "sha256": "51a1f452edfade3f1e135e0b0619d308d215229ced105bc8746bfc61e77609be"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A156_reference_10__brightness.jpg",
+      "size": 64314,
+      "sha256": "1a7ab40520400b3a7357c640b0d35a0ba0b01d63d8873ac1762bf3f769eb31a5"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A156_reference_10__full.jpg",
+      "size": 72636,
+      "sha256": "ab58583a59729ae98366abec742e3f1b21b53b01e092c7949d5d52677271e3fc"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A156_reference_10__jpeg85.jpg",
+      "size": 68567,
+      "sha256": "1487e7f6965267107d0abcbab2073a693e6571cd4f6031b5a0ef0e94642f1400"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A156_reference_12__full.jpg",
+      "size": 24129,
+      "sha256": "86d87f47bbc2df674bf04457c30408297e0fb938afff8382dfd23cb47072fb75"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A176_reference_02__full.jpg",
+      "size": 74871,
+      "sha256": "2cbc74e2e68d73c8f57d717e00c6869e5319ac26bff83f61915fc88b41c1eacc"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A176_reference_05__full.jpg",
+      "size": 36701,
+      "sha256": "c9dc1341a48bcbaaa5f076398796c905e06f4edf0a249bf0f9d6d327a0c60323"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A176_reference_06__brightness.jpg",
+      "size": 32039,
+      "sha256": "82d0665d675a545155265c9c73178eebb67da3177b05ce5f4d79f7d6d90d3480"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A176_reference_06__full.jpg",
+      "size": 36787,
+      "sha256": "aed42bf0f6846e7dce22714f76b40465fd7453392b3973f01bb5c9f68b2768c8"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A176_reference_06__jpeg85.jpg",
+      "size": 34594,
+      "sha256": "1bf054ace72a3969f767ecd666665cd8d552854cbd310ce5e777010b68c5821d"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A176_reference_07__full.jpg",
+      "size": 45928,
+      "sha256": "6a93b27fa4a4c5bad4f954d73120fa8fc9e361b29fb9db4d26f5853411473ab5"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A276_reference_02__brightness.jpg",
+      "size": 49832,
+      "sha256": "1ed06834f8c2a184436293021b982a259e0af7abf3b5c2e513592e4b502eb862"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A276_reference_02__full.jpg",
+      "size": 55945,
+      "sha256": "84ad42673602f45ad35bdc57a0d4e37f1b694822f6da3968d3f4ef9e9c59306c"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A276_reference_02__jpeg85.jpg",
+      "size": 52069,
+      "sha256": "7cc0240cc02a8078e6de78932d859f85a81fe41e141b4f909538deb3d243aec4"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A276_reference_04__full.jpg",
+      "size": 107555,
+      "sha256": "e6b14a85df7ff9889b45929cbb439048bf2789a408fc9854d33b4404092a0fed"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A276_reference_05__full.jpg",
+      "size": 29662,
+      "sha256": "220e029c1df2f7f5e454a0558eef3bae73cbb199e651c28d73d9d26460ea8f60"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A276_reference_06__full.jpg",
+      "size": 37640,
+      "sha256": "4d39111bd38e12f90ef6cdd23f2b14952f84dd2373dd4728f0b9406b6f679e25"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A376_reference_02__brightness.jpg",
+      "size": 44698,
+      "sha256": "fec8a055280ab28ac073332945e720682b6967244e6f7845f450cdcb72be328b"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A376_reference_02__full.jpg",
+      "size": 49636,
+      "sha256": "8582ced466678229d7e263a8f87660dc5623f1b837f497dc2082d0a3f26382ed"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A376_reference_02__jpeg85.jpg",
+      "size": 46716,
+      "sha256": "d93ad586b0b660e13228cdc63f968810f5e0b612dc6026d8b0255061a6e1255c"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A376_reference_03__full.jpg",
+      "size": 57031,
+      "sha256": "c3d694499e69cd2aaa913e707e6fc2485cc76b546f0efe9bf5b6f1c4be38e138"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A376_reference_04__full.jpg",
+      "size": 43093,
+      "sha256": "2f5067f253ff2c0176c62c4eb4f7423b711cf53b6fb0fa8178a47e675f1658d8"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/A376_reference_05__full.jpg",
+      "size": 42529,
+      "sha256": "6d05893780437a1d188fc4cc692b46a54863dd6013f69e47a47950f324c9f38a"
+    },
+    {
+      "path": "evaluation/candidates/generic_pretrained/external_housing.jpg",
+      "size": 36264,
+      "sha256": "8975593e2d5cfd29b8ad33137bc0d41f19e5e8d4f4b71b66d250f76ea6768b5b"
+    },
+    {
+      "path": "evaluation/external_housing.png",
+      "size": 372058,
+      "sha256": "e430ba15d3fa7a16c8967dd7fa906c75dc37d1d35c78b9465f3519a1426cc429"
+    },
+    {
+      "path": "evaluation/pre_retraining/A156_reference_05__full.jpg",
+      "size": 47394,
+      "sha256": "f8c493a461d708ef5684bdf95c2774114aa7bea16ad2151f76741909fb191d2c"
+    },
+    {
+      "path": "evaluation/pre_retraining/A156_reference_06__full.jpg",
+      "size": 48672,
+      "sha256": "dd7987ad3b6eb2614355ece2cfcd41e5deafac3505e995dd4e233a17f786d22d"
+    },
+    {
+      "path": "evaluation/pre_retraining/A156_reference_08__full.jpg",
+      "size": 47669,
+      "sha256": "435a75e7b6e5e40f9d031022d466e823673890e7d72a510b125de045fabae4ab"
+    },
+    {
+      "path": "evaluation/pre_retraining/A156_reference_09__full.jpg",
+      "size": 50775,
+      "sha256": "8e9c3a2639f52b3f302c4616ad43f3a93bb1ae4b2a0f898d60bdda5d2dcb33e2"
+    },
+    {
+      "path": "evaluation/pre_retraining/A156_reference_10__brightness.jpg",
+      "size": 64314,
+      "sha256": "1a7ab40520400b3a7357c640b0d35a0ba0b01d63d8873ac1762bf3f769eb31a5"
+    },
+    {
+      "path": "evaluation/pre_retraining/A156_reference_10__full.jpg",
+      "size": 72636,
+      "sha256": "ab58583a59729ae98366abec742e3f1b21b53b01e092c7949d5d52677271e3fc"
+    },
+    {
+      "path": "evaluation/pre_retraining/A156_reference_10__jpeg85.jpg",
+      "size": 68567,
+      "sha256": "1487e7f6965267107d0abcbab2073a693e6571cd4f6031b5a0ef0e94642f1400"
+    },
+    {
+      "path": "evaluation/pre_retraining/A156_reference_12__full.jpg",
+      "size": 24162,
+      "sha256": "2f8149912c218c0063674cad5b8b7e3a9b0af4d97068d6bee30d23298c65690f"
+    },
+    {
+      "path": "evaluation/pre_retraining/A176_reference_02__full.jpg",
+      "size": 74887,
+      "sha256": "ec5c439f1b3c96431da48f5a1df71394eaba2e6e2c960d1695b63364dc8b0a64"
+    },
+    {
+      "path": "evaluation/pre_retraining/A176_reference_05__full.jpg",
+      "size": 36442,
+      "sha256": "11dfa4893bd359a5ae8e40f489bb1354641a128939b503753a40b9d3fe7743e8"
+    },
+    {
+      "path": "evaluation/pre_retraining/A176_reference_06__brightness.jpg",
+      "size": 32039,
+      "sha256": "82d0665d675a545155265c9c73178eebb67da3177b05ce5f4d79f7d6d90d3480"
+    },
+    {
+      "path": "evaluation/pre_retraining/A176_reference_06__full.jpg",
+      "size": 35608,
+      "sha256": "0858e5f381c2eb043c2814de60ca10a24980faf6ac5f63b6b17f1668ff308c22"
+    },
+    {
+      "path": "evaluation/pre_retraining/A176_reference_06__jpeg85.jpg",
+      "size": 32916,
+      "sha256": "d864594fdbb0bf8643c6b1a88aa1ae06f4193e4f8935229a442b88f8df2a83ab"
+    },
+    {
+      "path": "evaluation/pre_retraining/A176_reference_07__full.jpg",
+      "size": 46065,
+      "sha256": "70acf8a57061e0dd899a44108b4cf3753126e404a8cc9dc260f34a522f7dda3c"
+    },
+    {
+      "path": "evaluation/pre_retraining/A276_reference_02__brightness.jpg",
+      "size": 49832,
+      "sha256": "1ed06834f8c2a184436293021b982a259e0af7abf3b5c2e513592e4b502eb862"
+    },
+    {
+      "path": "evaluation/pre_retraining/A276_reference_02__full.jpg",
+      "size": 55945,
+      "sha256": "84ad42673602f45ad35bdc57a0d4e37f1b694822f6da3968d3f4ef9e9c59306c"
+    },
+    {
+      "path": "evaluation/pre_retraining/A276_reference_02__jpeg85.jpg",
+      "size": 52069,
+      "sha256": "7cc0240cc02a8078e6de78932d859f85a81fe41e141b4f909538deb3d243aec4"
+    },
+    {
+      "path": "evaluation/pre_retraining/A276_reference_04__full.jpg",
+      "size": 109170,
+      "sha256": "72a055c1247d38e5194084133d6c2bdde4caf3ec2be791b1d649e7524a9872df"
+    },
+    {
+      "path": "evaluation/pre_retraining/A276_reference_05__full.jpg",
+      "size": 29268,
+      "sha256": "eb638981a9ca02778c5e2825a15bf974c91b7c4a7c910cc86a63f68baca2fce3"
+    },
+    {
+      "path": "evaluation/pre_retraining/A276_reference_06__full.jpg",
+      "size": 37100,
+      "sha256": "b2b5eba0a83eac020f705380c251ad6ccc93dc84ac3d0150a564f45f197ead4f"
+    },
+    {
+      "path": "evaluation/pre_retraining/A376_reference_02__brightness.jpg",
+      "size": 43105,
+      "sha256": "06e2a84ee35b6aea3b56d8e5f629046279630722850fe0f97c1d8032eb850147"
+    },
+    {
+      "path": "evaluation/pre_retraining/A376_reference_02__full.jpg",
+      "size": 48567,
+      "sha256": "cb494d89ee1a48ed6812177c1ec749df29651d3bab57111712a17840981c3ec4"
+    },
+    {
+      "path": "evaluation/pre_retraining/A376_reference_02__jpeg85.jpg",
+      "size": 45612,
+      "sha256": "f2f23ab5c259808bc3fe1526a3d8734fef5a4dee698045616d2126e38ff319f9"
+    },
+    {
+      "path": "evaluation/pre_retraining/A376_reference_03__full.jpg",
+      "size": 56993,
+      "sha256": "6403e9c5939ac2f12d4959c727a1e5d9659521fc93a3fa6009a32bba2a342bfa"
+    },
+    {
+      "path": "evaluation/pre_retraining/A376_reference_04__full.jpg",
+      "size": 43014,
+      "sha256": "6072e4cfe0772073d77312abe4a469475aac679fc4d629ad3e5452d9e08fd50e"
+    },
+    {
+      "path": "evaluation/pre_retraining/A376_reference_05__full.jpg",
+      "size": 42512,
+      "sha256": "06977fab7b2150beaf5d9361a4e9a109c93ac012ce4784568defda98ec15462e"
+    },
+    {
+      "path": "evaluation/pre_retraining/external_housing.jpg",
+      "size": 33840,
+      "sha256": "9d0c521abd377952e769e3be7d5c4237a9f1b02697bcb76b55ab9aa9914ef8bd"
+    },
+    {
+      "path": "evaluation/repaired/A156_reference_05__full.jpg",
+      "size": 47659,
+      "sha256": "2dddbcab2ba79920b1dd61825fcfc24dccac854695efc9d2d2b2d1bfbce55265"
+    },
+    {
+      "path": "evaluation/repaired/A156_reference_06__full.jpg",
+      "size": 47997,
+      "sha256": "ae3342105a8b3e31b8a31db794391e7077149509e6465025dfb5a4606d558ac4"
+    },
+    {
+      "path": "evaluation/repaired/A156_reference_08__full.jpg",
+      "size": 45221,
+      "sha256": "b78f6c9e7ea54821164d107553abba2c2e4864289bb7985d1e12051f738b3ace"
+    },
+    {
+      "path": "evaluation/repaired/A156_reference_09__full.jpg",
+      "size": 52172,
+      "sha256": "92890f53e0a966234144e56afe5ac66d47de66766223c8856940b0acd5d7fd21"
+    },
+    {
+      "path": "evaluation/repaired/A156_reference_10__brightness.jpg",
+      "size": 64314,
+      "sha256": "1a7ab40520400b3a7357c640b0d35a0ba0b01d63d8873ac1762bf3f769eb31a5"
+    },
+    {
+      "path": "evaluation/repaired/A156_reference_10__full.jpg",
+      "size": 72636,
+      "sha256": "ab58583a59729ae98366abec742e3f1b21b53b01e092c7949d5d52677271e3fc"
+    },
+    {
+      "path": "evaluation/repaired/A156_reference_10__jpeg85.jpg",
+      "size": 68567,
+      "sha256": "1487e7f6965267107d0abcbab2073a693e6571cd4f6031b5a0ef0e94642f1400"
+    },
+    {
+      "path": "evaluation/repaired/A156_reference_12__full.jpg",
+      "size": 24294,
+      "sha256": "ae67fc58479092db93cd66115cf2fa7e2612a482fe18229867ee2baefa20e69e"
+    },
+    {
+      "path": "evaluation/repaired/A176_reference_02__full.jpg",
+      "size": 74530,
+      "sha256": "285e3fe402f244bb1448d888732793b4caafe940e728966969622e661c5c6535"
+    },
+    {
+      "path": "evaluation/repaired/A176_reference_05__full.jpg",
+      "size": 36754,
+      "sha256": "a93bb0eb30e462061bc267ef3c3bc57355c3124fb8897a3475c7870bbeb7c7fc"
+    },
+    {
+      "path": "evaluation/repaired/A176_reference_06__brightness.jpg",
+      "size": 32039,
+      "sha256": "82d0665d675a545155265c9c73178eebb67da3177b05ce5f4d79f7d6d90d3480"
+    },
+    {
+      "path": "evaluation/repaired/A176_reference_06__full.jpg",
+      "size": 35608,
+      "sha256": "0858e5f381c2eb043c2814de60ca10a24980faf6ac5f63b6b17f1668ff308c22"
+    },
+    {
+      "path": "evaluation/repaired/A176_reference_06__jpeg85.jpg",
+      "size": 32916,
+      "sha256": "d864594fdbb0bf8643c6b1a88aa1ae06f4193e4f8935229a442b88f8df2a83ab"
+    },
+    {
+      "path": "evaluation/repaired/A176_reference_07__full.jpg",
+      "size": 45753,
+      "sha256": "0ddc71aa13d5d1641e6b651f1dfa6e2fb6263e644727d8c4137cc96852c45103"
+    },
+    {
+      "path": "evaluation/repaired/A276_reference_02__brightness.jpg",
+      "size": 49832,
+      "sha256": "1ed06834f8c2a184436293021b982a259e0af7abf3b5c2e513592e4b502eb862"
+    },
+    {
+      "path": "evaluation/repaired/A276_reference_02__full.jpg",
+      "size": 55945,
+      "sha256": "84ad42673602f45ad35bdc57a0d4e37f1b694822f6da3968d3f4ef9e9c59306c"
+    },
+    {
+      "path": "evaluation/repaired/A276_reference_02__jpeg85.jpg",
+      "size": 52069,
+      "sha256": "7cc0240cc02a8078e6de78932d859f85a81fe41e141b4f909538deb3d243aec4"
+    },
+    {
+      "path": "evaluation/repaired/A276_reference_04__full.jpg",
+      "size": 107632,
+      "sha256": "a813f1699fd04ba8a19534201921c75982a536dca741f31cde65e050389e10e0"
+    },
+    {
+      "path": "evaluation/repaired/A276_reference_05__full.jpg",
+      "size": 29615,
+      "sha256": "55b69cdf857ae26e2b2b2f4668c1d72e9d1fc4b725a088e21d5827ae1169ff2f"
+    },
+    {
+      "path": "evaluation/repaired/A276_reference_06__full.jpg",
+      "size": 37111,
+      "sha256": "5b10326250aabbcd5a013ae392351832e561f78455180b563f39304da93a97de"
+    },
+    {
+      "path": "evaluation/repaired/A376_reference_02__brightness.jpg",
+      "size": 42182,
+      "sha256": "24a014713f8e4a2f8cde62f26ea2a9eb5e792ee84bd309e5a095f569935c46dd"
+    },
+    {
+      "path": "evaluation/repaired/A376_reference_02__full.jpg",
+      "size": 47206,
+      "sha256": "c22be475125aed99b048848e985453dbdbdeb02b52ddb2c2c73c2fb738123da4"
+    },
+    {
+      "path": "evaluation/repaired/A376_reference_02__jpeg85.jpg",
+      "size": 44316,
+      "sha256": "29dc77f3e7c85b0e1486e72eff58b9cb2576d5e23aeb8cfb805fda421be3c56a"
+    },
+    {
+      "path": "evaluation/repaired/A376_reference_03__full.jpg",
+      "size": 58075,
+      "sha256": "f0de03a83121af10304220949f6c75c5cbd542219f4d126bc67a6462e5e3a9e2"
+    },
+    {
+      "path": "evaluation/repaired/A376_reference_04__full.jpg",
+      "size": 42949,
+      "sha256": "0928505a29c4054129dfdd45d74e9d865db0d6583e160d7e018402766a90ec6f"
+    },
+    {
+      "path": "evaluation/repaired/A376_reference_05__full.jpg",
+      "size": 42921,
+      "sha256": "a236a190485709f526f463c9368c0190f2ee5a5b781db94055e657b51acdb9d4"
+    },
+    {
+      "path": "evaluation/repaired/external_housing.jpg",
+      "size": 33876,
+      "sha256": "6cae8eb659dfb0660e78ab09f0d5dbaa782a624ccd60518b5cd201e982987da8"
+    },
+    {
+      "path": "sample_photos/A376_closeup.jpg",
+      "size": 11863,
+      "sha256": "b676c59cdf996da567901d138ce545c2372b9c64c63b0d15ae305ceb2318e9ea"
+    },
+    {
+      "path": "sample_photos/dent.jpg",
+      "size": 36979,
+      "sha256": "4140ab19cc252ab81bcf4d30c4952203c030db3c15e6de80f9121c8a0b1fb149"
+    },
+    {
+      "path": "sample_photos/fracture.jpg",
+      "size": 11863,
+      "sha256": "b676c59cdf996da567901d138ce545c2372b9c64c63b0d15ae305ceb2318e9ea"
+    },
+    {
+      "path": "sample_photos/missing_feature.jpg",
+      "size": 15942,
+      "sha256": "7978695815cab5e385b0930937305ed0f6cdb57ca0e5529a9aeb1a2c32d02735"
+    },
+    {
+      "path": "sample_photos/porosity.jpg",
+      "size": 14787,
+      "sha256": "becea74d7621058d9159f5951e15632fabe66f612f58e4b7699e29e90557c822"
+    },
+    {
+      "path": "training_dataset/MM_Augmentation_Training_Data.json",
+      "size": 7987109,
+      "sha256": "33def041b9713aa31ed425ea8f071278e0bd4bbdce3c6ced5e2f5cc805452836"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_05.png",
+      "size": 363453,
+      "sha256": "0469f99d39245f6fbd33230879d34fd920066a627efcc75a5e81a0e58b4bf074"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_05__aug01.jpg",
+      "size": 23388,
+      "sha256": "cd00c9db30f2b2a1414db0cd72f91dbcbfb3d9d010726d633669540ff3000206"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_05__aug02.jpg",
+      "size": 28090,
+      "sha256": "9ec5fca17bbbba39a86f23090860219949f0b062598b51ed1d1b16c105d91a54"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_05__aug03.jpg",
+      "size": 39939,
+      "sha256": "075c818af5b5f0fc2b9f3a83884d719307d6cec4d7988829d79a6ed0e5da39be"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_05__aug04.png",
+      "size": 383454,
+      "sha256": "e79bcaf196b64a3ea0e5a306e434e0239d702a43514a2fe3d09f761cf9290957"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_05__aug05.png",
+      "size": 398217,
+      "sha256": "3486de41b0551b64f77121eb89c812a6fee4ded013349ac6e20a245e1b585071"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_05__aug06.png",
+      "size": 321916,
+      "sha256": "7a56acf6e436e383ca1c525ea1a91e2fa257f9ed6a0dd38f41cfa8cc3bd00931"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_05__aug07.jpg",
+      "size": 51884,
+      "sha256": "60d373196afac8026acc65a5879370ed88e9fb3dea04da90139d5f7c1f88daf5"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_05__aug08.jpg",
+      "size": 23737,
+      "sha256": "8088d77cfc2e57352bf118468968ef6dd0d85572a795940f11155d828f6c48d4"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_05__aug09.png",
+      "size": 310870,
+      "sha256": "9b994413631571995d7e314c8e842ea9af12940442ecfc01bb4c3c51ceae691c"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_05__aug10.png",
+      "size": 204060,
+      "sha256": "dede982091daae7e8b3993fc4ed7766e62358a1991148c9ecdd3aa7722c11aff"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_06.png",
+      "size": 360455,
+      "sha256": "2e31ae5baf27b20110c24f079a7e4b530cfac4ab27e8bb9b46ff91f9e7b2eabd"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_06__aug01.jpg",
+      "size": 20738,
+      "sha256": "1aaf3beb07efb318835d2aa2aaafc0f247b60caae21a1b9a77d8dde5d4b73e76"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_06__aug02.jpg",
+      "size": 15511,
+      "sha256": "01c9ea6bcd26d382f5ce9716c1999279eff390fdc3754eb044f296d38cf22cbc"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_06__aug03.png",
+      "size": 312867,
+      "sha256": "0f81ed1900e02c26823108e13f547cd660f33708098df62273e2e2518ef970ce"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_06__aug04.png",
+      "size": 327417,
+      "sha256": "60407ed1559c875f8b05ba7e89593c436d3109ad529ff8165873a1ed7991a604"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_06__aug05.jpg",
+      "size": 25892,
+      "sha256": "e5527ff875f83825c2fcdf54c3a3fcb03fdc1501dc05e8acac4be5320c9f0759"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_06__aug06.png",
+      "size": 398207,
+      "sha256": "0072f6a75816a303fca8ac24724a5aad25c6840f3b9d811b2e2a0d1495e239cd"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_06__aug07.jpg",
+      "size": 14148,
+      "sha256": "89a591704a202195e16baa8457f6ce031c2021075b666b0073af4a8139214d28"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_06__aug08.png",
+      "size": 320347,
+      "sha256": "b92a7e29844bae8d3c3184a48f6392ad3c2a629881ab4ffcfbe0b77a2f868ec3"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_06__aug09.png",
+      "size": 277261,
+      "sha256": "2f49fc7b2fa27136e48caf1473e4acdaad86764a3ebb6b45117c9e1002273eb8"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_06__aug10.jpg",
+      "size": 17848,
+      "sha256": "24b96767cb3c7201243f5ef59d998124b44b79a6654c0d4207af1ad817b4de30"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_08.png",
+      "size": 378649,
+      "sha256": "14738e745a3b8323e57f7bd097eca1a6f01b25c348a9a99d99cbefaeddf0b88b"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_08__aug01.png",
+      "size": 362374,
+      "sha256": "8598bf60172ab10b9ac7b44b3cb3be0107a5bd6a14c9d52d2428afce856335b6"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_08__aug02.png",
+      "size": 344626,
+      "sha256": "a003486e1316cddd5a2f2b380c5db18e23d9baccbf698bf034bf5d2119da611d"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_08__aug03.jpg",
+      "size": 19957,
+      "sha256": "52b248ba475fe4cf8db5d0b85b1481f071b221b302ff9022fd2a463425e7d555"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_08__aug04.jpg",
+      "size": 37161,
+      "sha256": "9814ce3f8f9bd1cf386bcd95fd468e651694bcd84e9e0bef3b307e12e57f3b3e"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_08__aug05.jpg",
+      "size": 18143,
+      "sha256": "a865cefe1a65afdfac958a6175ad209f95350c4e7da802e72d37f9ee8f47b3cc"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_08__aug06.jpg",
+      "size": 21047,
+      "sha256": "9c9208b60a87de2e97acd398f1cc05e9e0df2557bb7edf3917dab4c29d9af564"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_08__aug07.png",
+      "size": 369922,
+      "sha256": "9f8064ea01c61813ffcca1313551a3cab1cd204f6086176c1ad0e8f8f5d24a6b"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_08__aug08.jpg",
+      "size": 25455,
+      "sha256": "c386d38bc941cccc03edb9bc1be7e29e737a95291cf12cf66ff963fde57faa8c"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_08__aug09.png",
+      "size": 372635,
+      "sha256": "4fa33ab02e38cfffb95de552e4d4cec51d4ff6bbcc8b9f276093cec71aa58c3f"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_08__aug10.jpg",
+      "size": 13824,
+      "sha256": "0d8b8d00ef96e674e05ecd410a35172d590b0da47132a93561939dfbc62009b1"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_09.png",
+      "size": 423619,
+      "sha256": "cd67de7c0235f5af7611e7abf87920b1b9f45bf4ef0b5c4b98f820ef3a094c77"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_09__aug01.png",
+      "size": 281668,
+      "sha256": "afa18cb73a13fcdbf8ce87e2dc7368972171e120bf3e4ae35d1674ca0c6b9478"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_09__aug02.png",
+      "size": 332744,
+      "sha256": "66be294d710a423bd4eea3b4df57751673421d7bb72bed5066f7c9761beabf99"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_09__aug03.jpg",
+      "size": 18277,
+      "sha256": "1b344cf0f7210de1ec91046348a6ca054c6ef6e658228c6b79571717813ddde8"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_09__aug04.png",
+      "size": 363182,
+      "sha256": "ad291192d52e9e51c6ab45c4a3e5ac0b868f41c632ecf52b14771c0128531407"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_09__aug05.jpg",
+      "size": 53771,
+      "sha256": "66d4b99f4a9cee4b63ba2f22fda00b9472a2a8082e2e2658690cd9c608a6327a"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_09__aug06.jpg",
+      "size": 26878,
+      "sha256": "a59ffa083217dd0ec8cd773d95c9c13c3604cc8eb7944162b91b5d962266ebcf"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_09__aug07.jpg",
+      "size": 41977,
+      "sha256": "4fdfc887f5510f739ebce493298d58e939c1f61ccbfdd575a14cf4c13d342203"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_09__aug08.png",
+      "size": 341524,
+      "sha256": "3e48fa2ec952d842558b4878fd11faa73c1afa2e744b76aed2718ab8c8bc381c"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_09__aug09.jpg",
+      "size": 21048,
+      "sha256": "f2d315b49ce608c1f747ff02d15ce2b8b9a141df6ff5f5dca24b0146fbcaca20"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_09__aug10.jpg",
+      "size": 14721,
+      "sha256": "c5a44ebe7cfa51c1182139ffebefc71d69fb45df7bf94dc50903b040a1a234d0"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_12.png",
+      "size": 222843,
+      "sha256": "ac756e19952df753b842d2bde47d5a0b4522665995b978b9a6394d8a7fd2bd60"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_12__aug01.png",
+      "size": 143186,
+      "sha256": "8338699eb6eaacbde4125fe26ee796c8471a1ccc138c7b1dd2a63245fa31a202"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_12__aug02.png",
+      "size": 227555,
+      "sha256": "d3c0ee0f8988bc394eb3813b9e09abe4d7720b7ac5769c4c95c9ef31bdf54845"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_12__aug03.png",
+      "size": 193590,
+      "sha256": "497c61cf3c14c3b0f22fe200f4a073257ecc798d9856c9ea04f6813af57c3c65"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_12__aug04.png",
+      "size": 221263,
+      "sha256": "c4840c00dcda6cf0477f9da1375e7afdb6d80bab8c26f0853d41db5c72202229"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_12__aug05.jpg",
+      "size": 16025,
+      "sha256": "dc439f3c3cf775048c01db8d3e9e95ae34a08fb1c2f00c956ba98060b763028a"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_12__aug06.png",
+      "size": 151500,
+      "sha256": "93bd8e893f7cf14ab1ab39c777b7d61f6e4ecbfef6d094e30559feee6e62b427"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_12__aug07.jpg",
+      "size": 11574,
+      "sha256": "e1d033aee2a768d2f7a9f0036916a8ac2c36eb457e4b20efe136c206feffe06c"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_12__aug08.png",
+      "size": 209319,
+      "sha256": "a3cb2b8c03b00f656b09d946f5203f66b78affc825ea772aca6c75f1d5350b8f"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_12__aug09.jpg",
+      "size": 16102,
+      "sha256": "b6f0d2f8cb476b744bb33ead4861bf0ad27caac379f241118fc7147470ff060d"
+    },
+    {
+      "path": "training_dataset/images/train/A156_reference_12__aug10.jpg",
+      "size": 11088,
+      "sha256": "cc203460776009b6309b2bf8867426109004019073c8860590e795ada88d4934"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_02.png",
+      "size": 693165,
+      "sha256": "151d9f5e0ab9c02bc863109591ec199ad83c1308295ab63b5c23df65b0616ed0"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_02__aug01.png",
+      "size": 494923,
+      "sha256": "21df8ff28747257f3288ab94164057822c7ef1bfc3f6716549d2b2ffd0584ec9"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_02__aug02.jpg",
+      "size": 28828,
+      "sha256": "d239b345107509400fc8b3069ad481713fd9ff3a049ef39da1aab0558d005a00"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_02__aug03.jpg",
+      "size": 31789,
+      "sha256": "add6dceaf37624bf5b631fc6507016573a00fe982d2a3368f883c1d8c9a9fa06"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_02__aug04.jpg",
+      "size": 35790,
+      "sha256": "b355044be5cc6a71387dd747f1be5486a38a2397f1f469ec2354906c98a65286"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_02__aug05.jpg",
+      "size": 69375,
+      "sha256": "618c5f1c123fdebe5c1a167a677f62fc4cd99b30b0bbabbde624717f099b4594"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_02__aug06.jpg",
+      "size": 30487,
+      "sha256": "a127924ccaca24b5b47875fb32c25f4f33421fbc8e2bb3995054b5dd66c768a6"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_02__aug07.jpg",
+      "size": 27871,
+      "sha256": "a4b91b4b35a152e87a6011d144eb7f5f396e8e12577a83f3d656078a8cb9e302"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_02__aug08.jpg",
+      "size": 50917,
+      "sha256": "66864b1126d40438122856f0ebc0a583ec757ec066c6fc615b4f7d9f3dd59451"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_02__aug09.jpg",
+      "size": 25455,
+      "sha256": "14cb01eee5befae0c5f089d1e53aca05e2e0df44f68d298a6cb59f8eb7d2f0ec"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_02__aug10.jpg",
+      "size": 47865,
+      "sha256": "6dc63f64c26b3284db578518be32092d01b359bed979c9b6ff7539ecf5a72d99"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05.png",
+      "size": 340446,
+      "sha256": "da7491acddebdbd0b150fa34295f942df6a2d734c8e6da588929b3442fefc688"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug01.jpg",
+      "size": 16361,
+      "sha256": "e5fd54e0e57803c162984dc898885e8fa6cf5eb9e3ed07d2665b2068732a46a3"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug02.png",
+      "size": 219285,
+      "sha256": "10f06e339ca38d24bd2d32482aeb956c2d60cd0ddaeff97350f313fe9fb40ad3"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug03.jpg",
+      "size": 15446,
+      "sha256": "c7350e877ffec8fd1e4796374b4831fc8bd0b65050519d0bb213d2a79042e2d2"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug04.jpg",
+      "size": 17830,
+      "sha256": "f5c71ba021866d3bbfbc2947d6f134295afc750cf430bf0b6f8026c9bafb5ced"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug05.jpg",
+      "size": 19515,
+      "sha256": "a2740a3a6013b42c55777ff77e4a0f3bd7405790520374c037c2d330b2f8d5fb"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug06.jpg",
+      "size": 14771,
+      "sha256": "1cec95f16b453b416d2165f8c7fbcaffe8909105c476999f18efdf3a2eda7088"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug07.jpg",
+      "size": 14535,
+      "sha256": "1e246714f65cbcad06ab0a9e94e9085b03899dda44b988d73c9f0d80b9b2e7a5"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug08.png",
+      "size": 285781,
+      "sha256": "26d817680f4467cff7e2628afb6326683a522c9e36a2e2d38c2decf4df360a94"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug09.jpg",
+      "size": 14678,
+      "sha256": "12b45129e3726e65335550f6be6bd312a8ede689fc38d3b36dc28b231aaa497a"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug10.jpg",
+      "size": 19182,
+      "sha256": "f950e7fb24dc2cc1703075676f1f35c40db8b5cf998fbeb771768e1840ed2ee2"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug11.png",
+      "size": 246043,
+      "sha256": "401eb9898e1ac08d3fcbb43f74e1cf452688e0384e5a7a2ea58f4271f1dd7fe1"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug12.png",
+      "size": 324803,
+      "sha256": "72e22093be4dc8c54be041a27cea5c1f06ab31d7c20766bcdc1e513deef3c8b5"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug13.jpg",
+      "size": 18980,
+      "sha256": "6d58f249605463238aa7c8089621d0ae287251f93c9771a39cc6433022c9d988"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug14.jpg",
+      "size": 16121,
+      "sha256": "2a839a5332e507f943f98b11ad2cba15aa1ba8b33642eae3ac461f4ed4d97a67"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug15.png",
+      "size": 247591,
+      "sha256": "b5acc84edf79cbf144dedcb1a5601c08c26783b2f817b7f1613f6e859548eb04"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug16.jpg",
+      "size": 18616,
+      "sha256": "8cefc1e970deabc063727119effe8d85d469aca6141645b0dce67d20de0779a5"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug17.png",
+      "size": 307600,
+      "sha256": "0f323bc884a33dbdc29dfa4ceffefdc5c1d84a2f53fc7b6777b23c0a15ace422"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug18.png",
+      "size": 213936,
+      "sha256": "62396b801c694405d95736cc772f40ee7102fa6588c1a058317f0138c34fc630"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug19.jpg",
+      "size": 12401,
+      "sha256": "6255a07b3b6e18a94c4a3ce95a45810ba6a473025741337f98bbea93281b6c0c"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_05__aug20.png",
+      "size": 275554,
+      "sha256": "baf5ca776bb893dbbcab6f8173fe21befe550d4804f3a70db67f6cfb29e90ba7"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_07.png",
+      "size": 390045,
+      "sha256": "8dad5907ce3b0bd24e1ef83e42b4a5c8fd7072a8b29442672180afe9abf8d1dd"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_07__aug01.jpg",
+      "size": 16636,
+      "sha256": "60f408e6215920e31061340821aca1c0887d33172d9c73c5ec0493326e6f1f1a"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_07__aug02.png",
+      "size": 315569,
+      "sha256": "e1e229115b776dadeff48c7c5e865e1923d563dc4e6824b48ab6ff973b423247"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_07__aug03.jpg",
+      "size": 29726,
+      "sha256": "6ebf221e5e64b52fa2fcef71207931d31a25d0644bff75e3f8d656ff75f85c6e"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_07__aug04.png",
+      "size": 372903,
+      "sha256": "b6eec169f981ae6c72064fa8c90a7ca3ce96c432e59a34fb203c68f73dd88aa9"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_07__aug05.jpg",
+      "size": 23445,
+      "sha256": "be73b5477c7a78f53f3878ee6f0959d9941f332fd0fbdee8cd9bb703ff00823a"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_07__aug06.jpg",
+      "size": 23947,
+      "sha256": "0d7d03cb4a0cd2c16fd80687ba87bfbac24cececdf8a0b9a4e58802080c10061"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_07__aug07.jpg",
+      "size": 24049,
+      "sha256": "57165edbf0c8c1c8591746da5d8f8cc99cc32c7a71c7d1b2d0e7a083447d48a3"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_07__aug08.jpg",
+      "size": 24949,
+      "sha256": "3e8fea13853f11b22cc7ffa48751aec4c35ce64152cfcaeb1c21a0d28775cb58"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_07__aug09.jpg",
+      "size": 35915,
+      "sha256": "cc6e29a7e7cec8449c5100213905fe4a723fbe115215b8b7399acf7ddb013fad"
+    },
+    {
+      "path": "training_dataset/images/train/A176_reference_07__aug10.jpg",
+      "size": 21321,
+      "sha256": "e94666c1e6e0570dfff15f1cb65b36c013d0a9918a4bcd01da6737eb71269131"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_04.png",
+      "size": 891824,
+      "sha256": "9f1666b33cc0e2f1cab56d94a1b0f0198fb0bddbb5c7b87e507d96e5e6e5a66b"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_04__aug01.png",
+      "size": 712826,
+      "sha256": "874a2753d9e5ca2ab631fff0568f3ba1c0d2e6e679b00554ae163f8a05dc77f0"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_04__aug02.jpg",
+      "size": 69574,
+      "sha256": "0271a379b9814be53e6aeff8b8fd78358e3831e3cd35b9fa400ff7491e3cf01c"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_04__aug03.jpg",
+      "size": 44102,
+      "sha256": "d4b7d6bfea6fcf14df6a81bac42bb9aa903f7e1da5f7fd04403f4bceaea2eec2"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_04__aug04.png",
+      "size": 898095,
+      "sha256": "45d694f95f20888361f616d4d7c11959cd0d51b5bd99c0fe4246b7e20501f85e"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_04__aug05.jpg",
+      "size": 70700,
+      "sha256": "d408f336102ae1c0eabccb3f76fc86b85a5debceb8e3f7c8a5dad7b64a6bf1ef"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_04__aug06.jpg",
+      "size": 45002,
+      "sha256": "27ef9de905a9be8f354b165c882a0b426927eec6e8ee6955e311ae6d03d54a56"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_04__aug07.jpg",
+      "size": 68665,
+      "sha256": "c711e9a4fce7c1718741017a1cead8d314e393328109eed7348fe91fc9ffc228"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_04__aug08.jpg",
+      "size": 60611,
+      "sha256": "212cade8debcc935b850892a9c28603c1d9871154070a3dae11fac507c4d3398"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_04__aug09.png",
+      "size": 822123,
+      "sha256": "e35c4c547ff39b69ef4916589cb573220652933dc515563d770fe1e2d9aceef1"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_04__aug10.png",
+      "size": 771026,
+      "sha256": "48d85733a642cb4f7a83ff7e715a199a4e7a2369dcf85b4a909b931d817efe24"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_05.png",
+      "size": 199325,
+      "sha256": "fa40104fc2f458e423adbfee414b95f091f72b1ab4d70a8e54f934117003813a"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_05__aug01.jpg",
+      "size": 12439,
+      "sha256": "3d2a72a6dc1c579e2c712af5a757e31567b8f71f82e7eee79b5bbea874ac02af"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_05__aug02.jpg",
+      "size": 11299,
+      "sha256": "7146585767745288fe9f0128eef28940b7b1ce277147a5b8e88da33256746154"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_05__aug03.png",
+      "size": 156967,
+      "sha256": "a5b19daac5eb7feccf743c4d20d0a719efa1c008d288d75d6da832a85bcf572b"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_05__aug04.png",
+      "size": 189244,
+      "sha256": "ca43ea950ed42f5a1ff95eb5a59cf15aa491126b2decefb8ca6fcdc9b30a7f92"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_05__aug05.png",
+      "size": 182305,
+      "sha256": "ba57a1e6b88c83c92de7f7cfe851ab4487edbf236e2144d4d7d26b7813d3b3eb"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_05__aug06.jpg",
+      "size": 15600,
+      "sha256": "4708ecfdf18de633aa0c73757bd389f425aa6dee41bbc0ae761fa5d7b4ec0074"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_05__aug07.png",
+      "size": 186218,
+      "sha256": "a7139485b75054e13daf7487a44af9746dda24aa389ec7857323a258d0e67e10"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_05__aug08.png",
+      "size": 112610,
+      "sha256": "aa0ee8ddbc01498f4fb1fa2f903a8eb20c0c7acccf26f7d31c3f68f09128ff8a"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_05__aug09.png",
+      "size": 187540,
+      "sha256": "37ab119677e6e489bbcb72f4d0c0213f9d5646d9da415030a500e33db27a8f5e"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_05__aug10.png",
+      "size": 185625,
+      "sha256": "41238992f16c7d34e25b10ca3cc2d61c5b85141b52cda8e4fa5d995a09ee839a"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_06.png",
+      "size": 342883,
+      "sha256": "7ed4b8ca6acb8c02022b38a3f6594a33d50d3681c7a1bc60737840f89fceac18"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_06__aug01.png",
+      "size": 342835,
+      "sha256": "905c6090a7d9baa7bf22adf4aa34e32e06b54f180169e8f4787db772d2f3dd98"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_06__aug02.png",
+      "size": 373298,
+      "sha256": "0c7380e3f05522490d822111871631838523f3a4f767f6f7c3020ac085c938d9"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_06__aug03.png",
+      "size": 208375,
+      "sha256": "b71bb65657eed51b2d7b3471ba2b388047e0225cedf5ed1a7c832775b0864226"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_06__aug04.png",
+      "size": 182093,
+      "sha256": "6922c1f952f84ceb970fb0c0ef7cda1d91e855c07379887ced484616c7d8e041"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_06__aug05.png",
+      "size": 287586,
+      "sha256": "760a4ae65a7f8ca5d24b7042bc3456286d2688d90f98bda5d96046acde6dfd17"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_06__aug06.jpg",
+      "size": 21726,
+      "sha256": "4f36f614f0e2a72068e27046ddc5a3ab2e8ecd97be836bc49bd3137555be7802"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_06__aug07.jpg",
+      "size": 31782,
+      "sha256": "8ead4556d0d5d624abacb9853873ab6ce9ebaec9aed2336fd4b50743597610b8"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_06__aug08.png",
+      "size": 400257,
+      "sha256": "f46efefb28fa039304ec0f9a150898e25225b41d5c1c59af95acc5f96b4ea25e"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_06__aug09.png",
+      "size": 234956,
+      "sha256": "ec42a1dcce4294d16b1c0b2f2212cc7e84e10c3e74d20eb4e9c91a9529c8cfd7"
+    },
+    {
+      "path": "training_dataset/images/train/A276_reference_06__aug10.jpg",
+      "size": 17848,
+      "sha256": "d1f8625d8e3d4cc6f5a4ac30ff0e82d9c2c3180c3b6c01ceb9c83bdd7a1e2ce0"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_03.png",
+      "size": 523306,
+      "sha256": "6667f16d5a3c96679f0b391189de3b89cedf36dd6ae8456747fb12be211c9895"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_03__aug01.jpg",
+      "size": 29312,
+      "sha256": "65100c6207b39116907a29e717dc7b92de818145d7ba72e70b9ce9c609f328e9"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_03__aug02.jpg",
+      "size": 62761,
+      "sha256": "d95f51bad55bde54cd4b4341730185af941d6395ff900df1a3593d9f04ef5ffa"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_03__aug03.png",
+      "size": 269868,
+      "sha256": "bd7d9f0bb9adf6bad03b8bfa3b21b3a4b6c259d21f1d0e344f6bfaa9952ab192"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_03__aug04.png",
+      "size": 463379,
+      "sha256": "10a3374c0efa38c78da46693b57a921eddecd7f28bec6e7bf2577424c44a9035"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_03__aug05.png",
+      "size": 570448,
+      "sha256": "c382f023a3bf9f4a6ee4faccd5776ce7a093db5bb0eeebf9b1eafb6c86356bf7"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_03__aug06.jpg",
+      "size": 21923,
+      "sha256": "fd00daf2fc827af668ccd28c736055ee4fac5234614848b1ce58e8662f1e42ec"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_03__aug07.png",
+      "size": 522407,
+      "sha256": "a9fc4a5168a8ec8cf05a79f1cbe2ef237466edcbc155035fff48a9d27b8f66b4"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_03__aug08.jpg",
+      "size": 25031,
+      "sha256": "f98ffb39eaf81546b1176f8587932aac74dd9354743ab43444697f9fa670c084"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_03__aug09.png",
+      "size": 531443,
+      "sha256": "9ed2d10a5c4b20d9239763cb1618b79db5984bc30e5199890902adaf475720c9"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_03__aug10.jpg",
+      "size": 27942,
+      "sha256": "32b09cfecaa9cafd61984e33d05881b9eaf19f5981c633ca2b6cd14e666691cb"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_04.png",
+      "size": 454695,
+      "sha256": "9f5c5ba99bff0fcd79ae08abcd74271cbff134236b66f0dbea0b6408d78dce5f"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_04__aug01.png",
+      "size": 553402,
+      "sha256": "1fcc106e081dcd74d2803a2c1bf68e6a69c36160ccfd77ba837a039a842ec6db"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_04__aug02.png",
+      "size": 412291,
+      "sha256": "3fe7d9d484272340a7224a9582b6b549c44a8b4594c7f11c1064de81e1a2d3d5"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_04__aug03.png",
+      "size": 459637,
+      "sha256": "b42424d085d9b16b8cd070bf5ca9a3eb356437070e1b0738e66ea60f0afc1ce6"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_04__aug04.jpg",
+      "size": 19566,
+      "sha256": "b5d3ba10b4b952d1f37d84780c55dfe4d81c177550219d3ea3abe9441e2b2cd7"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_04__aug05.jpg",
+      "size": 20440,
+      "sha256": "8c285d51129436e35c76eae1bef366cc86c1e3586d8ca73bb4f8cc029d5a6a76"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_04__aug06.png",
+      "size": 378576,
+      "sha256": "1299d43af187574f30194dfe26f3dfbde1bae118e74a3da9be4806e5c9787f8a"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_04__aug07.png",
+      "size": 386711,
+      "sha256": "47b68e5ecffa145ac20d81986dbbad86061992f01e9f5af689956d9a9838f8ed"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_04__aug08.jpg",
+      "size": 19241,
+      "sha256": "7e6250b8d8eec8e129940fae8f09e78bca0f5eb70772b6423a079b991a7e912c"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_04__aug09.jpg",
+      "size": 19030,
+      "sha256": "9b00a7a77fc3fb3be72bb0fe5c377bf02d4588971bcc4f47e1db829a8e8d8acb"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_04__aug10.png",
+      "size": 526550,
+      "sha256": "f3fddac19c79bc169588e25b7594da3a102fb66396af716279a00ac0547f926c"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_05.png",
+      "size": 386064,
+      "sha256": "44a646c22aee790ed8acf5333bfb68f1766fe36857a83007a3ba8b567f50ed52"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_05__aug01.jpg",
+      "size": 17622,
+      "sha256": "d09c5542a2b7701c70528221b248303ad438f0519f1f7bb204039e707002fade"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_05__aug02.jpg",
+      "size": 19837,
+      "sha256": "36d3e84f0d9794f5a69567146dabd70b2ffd250b8de546956790fa1ae4921aa0"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_05__aug03.jpg",
+      "size": 15088,
+      "sha256": "c8efb49da14e796c24d0025767f037110e77a3220a4d730da99a53d3f47e9971"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_05__aug04.png",
+      "size": 240156,
+      "sha256": "ed7b9b097ef1a636a811a50c08e7e46d025dbada9080e562d931c0b5c78b0ab3"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_05__aug05.jpg",
+      "size": 31486,
+      "sha256": "2aca75b5e40997e3b6f9860b2631c6b423580d1b63c7525f3f06a9f28fa5a4b9"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_05__aug06.png",
+      "size": 242675,
+      "sha256": "15149a1cf54dab651a5de4279b29c58727f27b8c9e9b8d1c84ae3a9d1f15ef66"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_05__aug07.png",
+      "size": 380151,
+      "sha256": "a2656e44096e9430f55d446ded98bd18c72a351de266e7b306dbfb649b2fb1a4"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_05__aug08.jpg",
+      "size": 17042,
+      "sha256": "87151f30a390a29e9fa39a26a481b0411ca665b0067e933a0e4668cb8f88cc01"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_05__aug09.png",
+      "size": 282202,
+      "sha256": "11f0faaf23a33298af2dd10a6b9b90e9a50fa6d527db00821885ce59452cec0a"
+    },
+    {
+      "path": "training_dataset/images/train/A376_reference_05__aug10.png",
+      "size": 340126,
+      "sha256": "5a87d2fcfa6aff5c8b91066bc64b8787f8beba9b115fafd93f1f55a8ff5b44dd"
+    },
+    {
+      "path": "training_dataset/images/val/A156_reference_10.png",
+      "size": 537899,
+      "sha256": "833839155733a5cf65b6c266ebc3d2b237a0decae6e4e1d05c93ef0adbb1534b"
+    },
+    {
+      "path": "training_dataset/images/val/A176_reference_06.png",
+      "size": 365348,
+      "sha256": "e21028a276e95621ef6e9a6d109baefe285a3c113054cfbaea6aa373d5d744a0"
+    },
+    {
+      "path": "training_dataset/images/val/A276_reference_02.png",
+      "size": 537512,
+      "sha256": "c5c98cb7ac0e4c2ab3c6bf7f9d3403ffbf64c74ba2633aa542dfe27c23fa1090"
+    },
+    {
+      "path": "training_dataset/images/val/A376_reference_02.png",
+      "size": 418349,
+      "sha256": "cf3b95a89f190726a2866844c1d952adbd7b8e116c19736d2dd869db041b13c5"
+    },
+    {
+      "path": "training_dataset/overlays/overlay_sheet_1.jpg",
+      "size": 396914,
+      "sha256": "2fbb4041336ab9ec251c744502638f708051c3f676bfda6f0ec2199ebac8088e"
+    },
+    {
+      "path": "training_dataset/overlays/overlay_sheet_2.jpg",
+      "size": 441176,
+      "sha256": "aed9fcd8c89c8bfa68dfe76403b1458e4faf8e5d1da54627e6346b562f346ff6"
+    },
+    {
+      "path": "training_dataset/overlays/overlay_sheet_3.jpg",
+      "size": 459370,
+      "sha256": "51fbbbf2bce5217d3d7f74232349ceeda0c01c293c4dce36b5ce85baee068d25"
+    },
+    {
+      "path": "training_dataset/overlays/overlay_sheet_4.jpg",
+      "size": 201482,
+      "sha256": "a39d459b947d863fc867bfd023f28a795b73e5df834384c2426b5e72509476d0"
+    },
+    {
+      "path": "training_history/augmented_retraining/BoxF1_curve.png",
+      "size": 115356,
+      "sha256": "932e3a26622af3459ea0e47857ee0bea2d14faaf950dcb076cd2c895206971f6"
+    },
+    {
+      "path": "training_history/augmented_retraining/BoxPR_curve.png",
+      "size": 96438,
+      "sha256": "739c811b93ee4d086efd1e241485c1b6240df776462e3507756ff15b84bbf0a4"
+    },
+    {
+      "path": "training_history/augmented_retraining/BoxP_curve.png",
+      "size": 128468,
+      "sha256": "0f034ab1b8dac8eaf96b3656dbae7477f5061e991256a16440ed6e717528f7e6"
+    },
+    {
+      "path": "training_history/augmented_retraining/BoxR_curve.png",
+      "size": 91352,
+      "sha256": "33260f609f0cf1568896ba6d5e9a4946c3b278b1f14d61b45e589418043cf199"
+    },
+    {
+      "path": "training_history/augmented_retraining/confusion_matrix.png",
+      "size": 127933,
+      "sha256": "c5f75d7732def5d1475d8176c7b63daf16b9b80999a6659ca0f5cf3c644f13cc"
+    },
+    {
+      "path": "training_history/augmented_retraining/confusion_matrix_normalized.png",
+      "size": 140725,
+      "sha256": "91fe30a889a060a399b2e0e191cf6484f101e8a64d10d017763d5af4bffcdd30"
+    },
+    {
+      "path": "training_history/augmented_retraining/labels.jpg",
+      "size": 139365,
+      "sha256": "d77d57fd1cc61c423c42a82547a5742dd33def43ce2d663b69c06d58050a3fa5"
+    },
+    {
+      "path": "training_history/augmented_retraining/results.png",
+      "size": 275898,
+      "sha256": "76348eb8e946d7e873b590886920e7a05d688de788625d511bf8c0976cabe61d"
+    },
+    {
+      "path": "training_history/augmented_retraining/train_batch0.jpg",
+      "size": 294724,
+      "sha256": "c06d8e91b7eb442a5e5a1e69ac0ffbc4124d9c88ddfeeab4bcc657a209cc9953"
+    },
+    {
+      "path": "training_history/augmented_retraining/train_batch1.jpg",
+      "size": 282925,
+      "sha256": "d55c76540275c0f2faacc36b4e7d3e4914e3a4b52d84f4ee879670fbafb73b25"
+    },
+    {
+      "path": "training_history/augmented_retraining/train_batch2.jpg",
+      "size": 283733,
+      "sha256": "ce2cc810c6e93856073da99cdc07e5ef00903f7de577e26c49537b420e095cca"
+    },
+    {
+      "path": "training_history/augmented_retraining/val_batch0_labels.jpg",
+      "size": 175226,
+      "sha256": "df9cff59a373155fc4e003caee4b318ba22a347848dde4de1eb846e1ffcf3bbe"
+    },
+    {
+      "path": "training_history/augmented_retraining/val_batch0_pred.jpg",
+      "size": 173159,
+      "sha256": "986baabb856b7cc5f5f245ad98fab229a9aafb0c01cebc17a9882e9adf20d9e3"
+    },
+    {
+      "path": "training_history/balanced_continuation/BoxF1_curve.png",
+      "size": 123734,
+      "sha256": "1cfa173955261902c0d0cb63e9151eeec90913937ac026bd44dddf382661c450"
+    },
+    {
+      "path": "training_history/balanced_continuation/BoxPR_curve.png",
+      "size": 96569,
+      "sha256": "9e53b6f651a8f062daecb541109f0afd4042d8d0b9ff02c8e9087ae3e922ab44"
+    },
+    {
+      "path": "training_history/balanced_continuation/BoxP_curve.png",
+      "size": 133386,
+      "sha256": "286825143b7fb881e2e3c9a0ba78941b37d3055c3384be301c0c3b140d25c038"
+    },
+    {
+      "path": "training_history/balanced_continuation/BoxR_curve.png",
+      "size": 96530,
+      "sha256": "83aa5c50aed51f7dac16e802180322dde930afed0a955ec0356b15f15d694c62"
+    },
+    {
+      "path": "training_history/balanced_continuation/confusion_matrix.png",
+      "size": 126941,
+      "sha256": "195f75cfd044a3f7cfbd4e2f552cf377bba8a626fbd641598e8a03677330bbf0"
+    },
+    {
+      "path": "training_history/balanced_continuation/confusion_matrix_normalized.png",
+      "size": 143650,
+      "sha256": "1fae8d353fa03f2babe8d79f06ca01f3e3c6e85ce738ace43264e48136ef6ef6"
+    },
+    {
+      "path": "training_history/balanced_continuation/labels.jpg",
+      "size": 100574,
+      "sha256": "0967b266a6943ddd077d900728b78eb4079080814d7566210fbe1323d682e6ce"
+    },
+    {
+      "path": "training_history/balanced_continuation/results.png",
+      "size": 331034,
+      "sha256": "0b218e748262f51d6fe53751095cd4c6a00a11b7a3ce4f2b637202abc4a3caa8"
+    },
+    {
+      "path": "training_history/balanced_continuation/train_batch0.jpg",
+      "size": 131351,
+      "sha256": "70091e365ca511515ea96f33447e8bbe2f0786d9670ffaaf99a35071a8afedb4"
+    },
+    {
+      "path": "training_history/balanced_continuation/train_batch1.jpg",
+      "size": 128650,
+      "sha256": "598de873efd0a96a3d49868eb9eab9ecce09ce9a2e340f688a3aa06ad3fc3e4f"
+    },
+    {
+      "path": "training_history/balanced_continuation/train_batch2.jpg",
+      "size": 127986,
+      "sha256": "f362e756348ad300eb1fc8e246ee367f926a47a5572325e27202d88de89707a4"
+    },
+    {
+      "path": "training_history/balanced_continuation/train_batch450.jpg",
+      "size": 121989,
+      "sha256": "f833fd5bd5f28d876168e6129015a316ad60ea6b1c4b60f8704ee17238fa4bfa"
+    },
+    {
+      "path": "training_history/balanced_continuation/train_batch451.jpg",
+      "size": 130495,
+      "sha256": "8e0dd0ae215d0594c23fa6a0599d51bf71018e12aedaa1ec4e977cb598f17adb"
+    },
+    {
+      "path": "training_history/balanced_continuation/train_batch452.jpg",
+      "size": 151186,
+      "sha256": "c6cfac57cd4ead480856118b82b265e367f6a184289d0322bae2d3b564d67139"
+    },
+    {
+      "path": "training_history/balanced_continuation/val_batch0_labels.jpg",
+      "size": 176212,
+      "sha256": "f394db93a729cfe8eeb34fb19cb0f6d46f0934cccf35364d9da6f9268550ce51"
+    },
+    {
+      "path": "training_history/balanced_continuation/val_batch0_pred.jpg",
+      "size": 174368,
+      "sha256": "38f970c2e22df3a9ed0f69261a9e27b27a0d2459ff1343d3923a50c14fe1e61d"
+    },
+    {
+      "path": "training_history/generic_pretrained/BoxF1_curve.png",
+      "size": 118440,
+      "sha256": "af028bf701d5bdeafbc99ebab6692050d49ff06dfb0c72de67408a9dd9fb4f2a"
+    },
+    {
+      "path": "training_history/generic_pretrained/BoxPR_curve.png",
+      "size": 95842,
+      "sha256": "a6a16c1a79836f057d7347ab8019d7787d65a9655b2e299899b68418a105c415"
+    },
+    {
+      "path": "training_history/generic_pretrained/BoxP_curve.png",
+      "size": 132926,
+      "sha256": "9ccc89aa681fa8e45100daaca67c1f55bf85512ab507e0228e56df029558f8a6"
+    },
+    {
+      "path": "training_history/generic_pretrained/BoxR_curve.png",
+      "size": 104503,
+      "sha256": "67da1f2f32ed6863a7526a7d0b50a074ff929893e161e12ca2e0662bcd11abc5"
+    },
+    {
+      "path": "training_history/generic_pretrained/confusion_matrix.png",
+      "size": 132387,
+      "sha256": "d0fc84285f2190a68c5c99e7ccd6d0561f98e0d24d117230f93e016955b7cde9"
+    },
+    {
+      "path": "training_history/generic_pretrained/confusion_matrix_normalized.png",
+      "size": 144169,
+      "sha256": "ec9078acff32885ebc9249bce65785b9b7d07a35908dd08b49b9ca799251ddc1"
+    },
+    {
+      "path": "training_history/generic_pretrained/labels.jpg",
+      "size": 100574,
+      "sha256": "0967b266a6943ddd077d900728b78eb4079080814d7566210fbe1323d682e6ce"
+    },
+    {
+      "path": "training_history/generic_pretrained/results.png",
+      "size": 345989,
+      "sha256": "832c57088d010d6b93cb2dfd0d556f99f4cbcf7bd36fa72ad1baab23c1804efc"
+    },
+    {
+      "path": "training_history/generic_pretrained/train_batch0.jpg",
+      "size": 131351,
+      "sha256": "70091e365ca511515ea96f33447e8bbe2f0786d9670ffaaf99a35071a8afedb4"
+    },
+    {
+      "path": "training_history/generic_pretrained/train_batch1.jpg",
+      "size": 128650,
+      "sha256": "598de873efd0a96a3d49868eb9eab9ecce09ce9a2e340f688a3aa06ad3fc3e4f"
+    },
+    {
+      "path": "training_history/generic_pretrained/train_batch2.jpg",
+      "size": 127986,
+      "sha256": "f362e756348ad300eb1fc8e246ee367f926a47a5572325e27202d88de89707a4"
+    },
+    {
+      "path": "training_history/generic_pretrained/train_batch450.jpg",
+      "size": 121989,
+      "sha256": "f833fd5bd5f28d876168e6129015a316ad60ea6b1c4b60f8704ee17238fa4bfa"
+    },
+    {
+      "path": "training_history/generic_pretrained/train_batch451.jpg",
+      "size": 130495,
+      "sha256": "8e0dd0ae215d0594c23fa6a0599d51bf71018e12aedaa1ec4e977cb598f17adb"
+    },
+    {
+      "path": "training_history/generic_pretrained/train_batch452.jpg",
+      "size": 151186,
+      "sha256": "c6cfac57cd4ead480856118b82b265e367f6a184289d0322bae2d3b564d67139"
+    },
+    {
+      "path": "training_history/generic_pretrained/val_batch0_labels.jpg",
+      "size": 176212,
+      "sha256": "f394db93a729cfe8eeb34fb19cb0f6d46f0934cccf35364d9da6f9268550ce51"
+    },
+    {
+      "path": "training_history/generic_pretrained/val_batch0_pred.jpg",
+      "size": 175906,
+      "sha256": "211c9702562056bee0aacbfc50c48ed24dc6f52dba20b3526b6687cd6e4cedb3"
+    },
+    {
+      "path": "training_history/initial_full_photo/labels.jpg",
+      "size": 100574,
+      "sha256": "0967b266a6943ddd077d900728b78eb4079080814d7566210fbe1323d682e6ce"
+    },
+    {
+      "path": "training_history/initial_full_photo/results.png",
+      "size": 319741,
+      "sha256": "48826fbc749e4f0c85bd4545c4ef0357da9dc03e5701d8d65ba90d38c3d138ee"
+    },
+    {
+      "path": "training_history/initial_full_photo/train_batch0.jpg",
+      "size": 131351,
+      "sha256": "70091e365ca511515ea96f33447e8bbe2f0786d9670ffaaf99a35071a8afedb4"
+    },
+    {
+      "path": "training_history/initial_full_photo/train_batch1.jpg",
+      "size": 128650,
+      "sha256": "598de873efd0a96a3d49868eb9eab9ecce09ce9a2e340f688a3aa06ad3fc3e4f"
+    },
+    {
+      "path": "training_history/initial_full_photo/train_batch2.jpg",
+      "size": 127986,
+      "sha256": "f362e756348ad300eb1fc8e246ee367f926a47a5572325e27202d88de89707a4"
+    },
+    {
+      "path": "weights/augmented_candidate.pt",
+      "size": 5451648,
+      "sha256": "5ed6f416200b5768a962363d9f834390e8fa765d71b2d73193ae1ab7d0cc4cbc"
+    },
+    {
+      "path": "weights/best.pt",
+      "size": 5469381,
+      "sha256": "da3a2e370d6b8a948943353a3f771e06f264719dad44f9e96e8f08c7d8d21705"
+    },
+    {
+      "path": "weights/defect_types.pt",
+      "size": 5451648,
+      "sha256": "5ed6f416200b5768a962363d9f834390e8fa765d71b2d73193ae1ab7d0cc4cbc"
+    },
+    {
+      "path": "weights/full_photo_warmstart.pt",
+      "size": 5491493,
+      "sha256": "c77c9c045f92d2a7f00beb41fecf3cac515e57eabf58554cb0c04d9de93d2bfb"
+    },
+    {
+      "path": "weights/pretrained_base.pt",
+      "size": 5544453,
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "path": "weights/previous_model.pt",
+      "size": 5456320,
+      "sha256": "278746cf20cbc6fa50634aadbee8e4a4fe83fd62cb0a84354f3184b4d4af9a1e"
+    }
+  ]
+}

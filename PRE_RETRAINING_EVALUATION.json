@@ -1,0 +1,3256 @@
+{
+  "model_sha256": "278746cf20cbc6fa50634aadbee8e4a4fe83fd62cb0a84354f3184b4d4af9a1e",
+  "class_names": [
+    "fracture",
+    "dent",
+    "porosity",
+    "missing_feature"
+  ],
+  "confidence_threshold": 0.25,
+  "iou_match_threshold": 0.5,
+  "summary": {
+    "train": {
+      "tp": 16,
+      "fp": 3,
+      "fn": 0,
+      "images": 14,
+      "matched_images": 14,
+      "precision": 0.8421052631578947,
+      "recall": 1.0
+    },
+    "val": {
+      "tp": 1,
+      "fp": 3,
+      "fn": 3,
+      "images": 4,
+      "matched_images": 1,
+      "precision": 0.25,
+      "recall": 0.25
+    },
+    "val_per_class": {
+      "fracture": {
+        "gt": 1,
+        "tp": 1
+      },
+      "dent": {
+        "gt": 1,
+        "tp": 0
+      },
+      "porosity": {
+        "gt": 1,
+        "tp": 0
+      },
+      "missing_feature": {
+        "gt": 1,
+        "tp": 0
+      }
+    }
+  },
+  "cases": [
+    {
+      "source_id": "A156_reference_05",
+      "source_sha256": "0469f99d39245f6fbd33230879d34fd920066a627efcc75a5e81a0e58b4bf074",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            165,
+            140,
+            346,
+            184
+          ],
+          "observation": "상단 가장자리 중앙에 거칠고 불규칙하게 내려간 결손 형태가 보입니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "missing_feature",
+          "confidence": 0.688391923904419,
+          "box_xyxy": [
+            198.0,
+            140.46772384643555,
+            345.88372802734375,
+            190.28109741210938
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.3492063492063492,
+            0.41681817165114404,
+            0.6100242116884369,
+            0.5646323365344492
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 가운데 중앙에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "missing_feature",
+          "confidence": 0.11059454828500748,
+          "box_xyxy": [
+            68.42019653320312,
+            92.19148254394531,
+            368.1143341064453,
+            197.61436462402344
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.1206705406229332,
+            0.2735652301007279,
+            0.6492316298173638,
+            0.5863927733650547
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 가운데 중앙에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A156_reference_06",
+      "source_sha256": "2e31ae5baf27b20110c24f079a7e4b530cfac4ab27e8bb9b46ff91f9e7b2eabd",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            63,
+            130,
+            166,
+            164
+          ],
+          "observation": "상단 얇은 플랜지의 두 구간에 불규칙한 끊김·결손 형태가 보입니다. 하단의 검은 선은 라벨에 포함하지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            291,
+            142,
+            387,
+            174
+          ],
+          "observation": "상단 얇은 플랜지의 두 구간에 불규칙한 끊김·결손 형태가 보입니다. 하단의 검은 선은 라벨에 포함하지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "missing_feature",
+          "confidence": 0.8592446446418762,
+          "box_xyxy": [
+            286.1365966796875,
+            139.79966735839844,
+            388.364013671875,
+            179.5760955810547
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5064364543003319,
+            0.4005721127747806,
+            0.6873699357024337,
+            0.5145446864786667
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 가운데 중앙에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.8563649654388428,
+          "box_xyxy": [
+            57.89027786254883,
+            127.94776916503906,
+            164.62158203125,
+            166.9300079345703
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.10246066878327226,
+            0.3666125190975331,
+            0.29136563191371684,
+            0.47830947832255105
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 왼쪽 중앙에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.27609944343566895,
+          "box_xyxy": [
+            11.819660186767578,
+            127.76841735839844,
+            392.9194030761719,
+            198.81015014648438
+          ],
+          "search_mode": "rotation_270",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.020919752542951465,
+            0.3660986170727749,
+            0.6954325718162334,
+            0.5696565906776057
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.1381361186504364,
+          "box_xyxy": [
+            282.81134033203125,
+            125.80828857421875,
+            551.0850343704224,
+            212.42984008789062
+          ],
+          "search_mode": "rotation_90",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.5005510448354535,
+            0.36048220221839183,
+            0.9753717422485352,
+            0.6086814902231823
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.05707576125860214,
+          "box_xyxy": [
+            61.57924270629883,
+            127.60231018066406,
+            89.12548065185547,
+            159.48141479492188
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.10898981009964394,
+            0.3656226652741091,
+            0.15774421354310703,
+            0.45696680456997674
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 왼쪽 중앙에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.056568462401628494,
+          "box_xyxy": [
+            292.3508605957031,
+            140.93191528320312,
+            317.0642395019531,
+            174.52391052246094
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5174351514968197,
+            0.40381637616963645,
+            0.5611756451362002,
+            0.500068511525676
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 가운데 중앙에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A156_reference_08",
+      "source_sha256": "14738e745a3b8323e57f7bd097eca1a6f01b25c348a9a99d99cbefaeddf0b88b",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            121,
+            12,
+            166,
+            510
+          ],
+          "observation": "세로 가장자리를 따라 벌어진 선이 스티커 위아래에 보입니다. 스티커에 가린 중간 부분은 정답 영역으로 그리지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            105,
+            641,
+            131,
+            753
+          ],
+          "observation": "세로 가장자리를 따라 벌어진 선이 스티커 위아래에 보입니다. 스티커에 가린 중간 부분은 정답 영역으로 그리지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "fracture",
+          "confidence": 0.7913618087768555,
+          "box_xyxy": [
+            119.21217346191406,
+            17.303659439086914,
+            170.0430145263672,
+            555.9972534179688
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.482640378388316,
+            0.022767972946166993,
+            0.68843325719177,
+            0.7315753334446957
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.6307826638221741,
+          "box_xyxy": [
+            92.20344543457031,
+            637.4638061523438,
+            135.19668579101562,
+            760
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.3732933013545357,
+            0.838768165989926,
+            0.5473550032024924,
+            1.0
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 아래쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.30447590351104736,
+          "box_xyxy": [
+            149.00399017333984,
+            126.34478759765625,
+            218.0436611175537,
+            537.3934478759766
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6032550209446957,
+            0.16624314157586348,
+            0.8827678587755211,
+            0.7070966419420744
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.13081437349319458,
+          "box_xyxy": [
+            133.71043395996094,
+            670.7523193359375,
+            159.486083984375,
+            751.0206298828125
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.5413377893115827,
+            0.8825688412314967,
+            0.6456926477100202,
+            0.9881850393194901
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 아래쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.07229936867952347,
+          "box_xyxy": [
+            68.28788757324219,
+            80.5511474609375,
+            165.10105895996094,
+            732.3346710205078
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.2764691804584704,
+            0.10598835192228619,
+            0.6684253399188702,
+            0.9635982513427734
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.0529952198266983,
+          "box_xyxy": [
+            156.80128479003906,
+            672.5462646484375,
+            186.7949676513672,
+            752.8862915039062
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 오른쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.6348230153442878,
+            0.8849292955900493,
+            0.7562549297626202,
+            0.9906398572419819
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 아래쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A156_reference_09",
+      "source_sha256": "cd67de7c0235f5af7611e7abf87920b1b9f45bf4ef0b5c4b98f820ef3a094c77",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            160,
+            158,
+            206,
+            265
+          ],
+          "observation": "리브 접합부에 열린 파단선이 보이며 원본 스티커의 Gãy 표시와 일치합니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "fracture",
+          "confidence": 0.8724818229675293,
+          "box_xyxy": [
+            151.75538635253906,
+            152.91651916503906,
+            212.3546905517578,
+            270.22540283203125
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.3188138368750821,
+            0.3813379530300226,
+            0.4461232994784828,
+            0.6738788100549408
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.21736526489257812,
+          "box_xyxy": [
+            72.10226440429688,
+            94.62136840820312,
+            97.13247680664062,
+            130.0238037109375
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 왼쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.1514753453871783,
+            0.23596351223990805,
+            0.20405982522403493,
+            0.3242488870596945
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 왼쪽 위쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.12178073823451996,
+          "box_xyxy": [
+            161.386962890625,
+            157.08905029296875,
+            249.1735076904297,
+            210.87039184570312
+          ],
+          "search_mode": "rotation_90",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.33904824136685924,
+            0.3917432675635131,
+            0.5234737556521633,
+            0.5258613262985116
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A156_reference_10",
+      "source_sha256": "833839155733a5cf65b6c266ebc3d2b237a0decae6e4e1d05c93ef0adbb1534b",
+      "split": "val",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            202,
+            128,
+            279,
+            228
+          ],
+          "observation": "표면의 국부적인 눌림 자국이 보이며 스티커에 Dập이라고 적혀 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A156_reference_10",
+      "source_sha256": "833839155733a5cf65b6c266ebc3d2b237a0decae6e4e1d05c93ef0adbb1534b",
+      "split": "val",
+      "variant": "jpeg85",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            202,
+            128,
+            279,
+            228
+          ],
+          "observation": "표면의 국부적인 눌림 자국이 보이며 스티커에 Dập이라고 적혀 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A156_reference_10",
+      "source_sha256": "833839155733a5cf65b6c266ebc3d2b237a0decae6e4e1d05c93ef0adbb1534b",
+      "split": "val",
+      "variant": "brightness",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            202,
+            128,
+            279,
+            228
+          ],
+          "observation": "표면의 국부적인 눌림 자국이 보이며 스티커에 Dập이라고 적혀 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A156_reference_12",
+      "source_sha256": "ac756e19952df753b842d2bde47d5a0b4522665995b978b9a6394d8a7fd2bd60",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            129,
+            164,
+            345,
+            204
+          ],
+          "observation": "하단 금속 가장자리에 불규칙한 형상이 보이며 원본에 Thiếu liệu라고 표시되어 있습니다. 스티커가 가린 부분은 직접 관찰 근거가 없습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "missing_feature",
+          "confidence": 0.6222795844078064,
+          "box_xyxy": [
+            136.91961669921875,
+            157.01516723632812,
+            353.2640075683594,
+            204.27769470214844
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.3347667889956449,
+            0.579391761019661,
+            0.8637261798737393,
+            0.7537922313732415
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 가운데 중앙에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "missing_feature",
+          "confidence": 0.24346621334552765,
+          "box_xyxy": [
+            0,
+            212.1566390991211,
+            87.20941162109375,
+            247.66827392578125
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.0,
+            0.7828658269340262,
+            0.2132259452838478,
+            0.9139050698368312
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.14500395953655243,
+          "box_xyxy": [
+            170.28077697753906,
+            164.35680389404297,
+            265.23004150390625,
+            195.7820281982422
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4163344180379928,
+            0.6064826711957305,
+            0.6484842090560055,
+            0.7224429084805984
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 가운데 중앙에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A176_reference_02",
+      "source_sha256": "151d9f5e0ab9c02bc863109591ec199ad83c1308295ab63b5c23df65b0616ed0",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            291,
+            128,
+            374,
+            194
+          ],
+          "observation": "상부 체결 구멍의 바깥 테두리에 국부적인 눌림·비정형 윤곽이 보이며 Dập 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "dent",
+          "confidence": 0.8718710541725159,
+          "box_xyxy": [
+            288.7196044921875,
+            124.28710174560547,
+            376.21197509765625,
+            198.8615264892578
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.5326929972180581,
+            0.20275220513149342,
+            0.6941180352355282,
+            0.3244070578943847
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "찍힘·눌림 의심",
+          "label_en": "Suspected dent / impression",
+          "label_vi": "Nghi móp / dập",
+          "explanation": "사진 기준 가운데 위쪽에서 찍힘·눌림 의심 영역을 검출했습니다. 표면이나 가장자리의 국부적인 눌림·패임에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.08946256339550018,
+          "box_xyxy": [
+            236.49404907226562,
+            207.16461181640625,
+            322.6484069824219,
+            330.47442626953125
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.43633588389716904,
+            0.3379520584280689,
+            0.5952922638052064,
+            0.5391099939144066
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "dent",
+          "confidence": 0.07692456990480423,
+          "box_xyxy": [
+            57.222076416015625,
+            302.7507629394531,
+            132.18386840820312,
+            374.9601745605469
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.10557578674541629,
+            0.4938837894607718,
+            0.24388167602989508,
+            0.6116805457757698
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "찍힘·눌림 의심",
+          "label_en": "Suspected dent / impression",
+          "label_vi": "Nghi móp / dập",
+          "explanation": "사진 기준 왼쪽 중앙에서 찍힘·눌림 의심 영역을 검출했습니다. 표면이나 가장자리의 국부적인 눌림·패임에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A176_reference_05",
+      "source_sha256": "da7491acddebdbd0b150fa34295f942df6a2d734c8e6da588929b3442fefc688",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "porosity",
+          "label_ko": "기공·표면 공동 의심",
+          "box_xyxy": [
+            103,
+            74,
+            158,
+            180
+          ],
+          "observation": "좁은 금속 가장자리에 여러 열린 공동이 보이며 Rỗ khí 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+            "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "porosity",
+          "confidence": 0.9623832702636719,
+          "box_xyxy": [
+            96.91985321044922,
+            72.21507263183594,
+            159.1782684326172,
+            179.59970092773438
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.28174375933270124,
+            0.16155497233072916,
+            0.4627275245134221,
+            0.4017890401067883
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "기공·표면 공동 의심",
+          "label_en": "Suspected porosity / cavity",
+          "label_vi": "Nghi rỗ khí / lỗ rỗ",
+          "explanation": "사진 기준 가운데 위쪽에서 기공·표면 공동 의심 영역을 검출했습니다. 금속 표면에 열린 작은 구멍·공동이 보이는 유형입니다.",
+          "recommended_checks": [
+            "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+            "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+          ]
+        }
+      ],
+      "candidates": [],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A176_reference_06",
+      "source_sha256": "e21028a276e95621ef6e9a6d109baefe285a3c113054cfbaea6aa373d5d744a0",
+      "split": "val",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "porosity",
+          "label_ko": "기공·표면 공동 의심",
+          "box_xyxy": [
+            235,
+            287,
+            270,
+            333
+          ],
+          "observation": "금속 리브 아래쪽에 작은 공동 두 곳이 보이며 Rỗ khí 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+            "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.09937649965286255,
+          "box_xyxy": [
+            216.36058044433594,
+            276.97357177734375,
+            283.0,
+            397.228515625
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4962398634044402,
+            0.5378127607327063,
+            0.6490825688073395,
+            0.7713175060679611
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A176_reference_06",
+      "source_sha256": "e21028a276e95621ef6e9a6d109baefe285a3c113054cfbaea6aa373d5d744a0",
+      "split": "val",
+      "variant": "jpeg85",
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "porosity",
+          "label_ko": "기공·표면 공동 의심",
+          "box_xyxy": [
+            235,
+            287,
+            270,
+            333
+          ],
+          "observation": "금속 리브 아래쪽에 작은 공동 두 곳이 보이며 Rỗ khí 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+            "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.22720950841903687,
+          "box_xyxy": [
+            216.67909240722656,
+            278.2654266357422,
+            283.0,
+            396.0411071777344
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.49697039542941873,
+            0.5403212167684315,
+            0.6490825688073395,
+            0.7690118585975425
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A176_reference_06",
+      "source_sha256": "e21028a276e95621ef6e9a6d109baefe285a3c113054cfbaea6aa373d5d744a0",
+      "split": "val",
+      "variant": "brightness",
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "porosity",
+          "label_ko": "기공·표면 공동 의심",
+          "box_xyxy": [
+            235,
+            287,
+            270,
+            333
+          ],
+          "observation": "금속 리브 아래쪽에 작은 공동 두 곳이 보이며 Rỗ khí 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+            "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.15704530477523804,
+          "box_xyxy": [
+            216.69090270996094,
+            277.7034606933594,
+            283.0,
+            395.60174560546875
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4969974832797269,
+            0.5392300207638047,
+            0.6490825688073395,
+            0.7681587293310073
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.05053521692752838,
+          "box_xyxy": [
+            0,
+            253.5342025756836,
+            154.3605499267578,
+            303.03820037841797
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.0,
+            0.49229942247705555,
+            0.35403795854760967,
+            0.5884236900551805
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 왼쪽 중앙에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A176_reference_07",
+      "source_sha256": "8dad5907ce3b0bd24e1ef83e42b4a5c8fd7072a8b29442672180afe9abf8d1dd",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            164,
+            175,
+            192,
+            219
+          ],
+          "observation": "세로 가장자리의 일부가 끊겨 벌어진 구간이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "fracture",
+          "confidence": 0.9254816174507141,
+          "box_xyxy": [
+            160.39495849609375,
+            173.3479461669922,
+            194.38954162597656,
+            222.05812072753906
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4717498779296875,
+            0.33464854472392314,
+            0.5717339459587546,
+            0.4286836307481449
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A276_reference_02",
+      "source_sha256": "c5c98cb7ac0e4c2ab3c6bf7f9d3403ffbf64c74ba2633aa542dfe27c23fa1090",
+      "split": "val",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            189,
+            70,
+            366,
+            163
+          ],
+          "observation": "상단 가장자리 일부가 거칠고 불규칙하게 파인 형상이며 원본에 Thiếu라고 표시되어 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.15114852786064148,
+          "box_xyxy": [
+            307.8037109375,
+            271.1499328613281,
+            361.7186508178711,
+            300.23089599609375
+          ],
+          "search_mode": "rotation_90",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6676870085412148,
+            0.46830731064132664,
+            0.784639155787139,
+            0.5185334991296956
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.1442129909992218,
+          "box_xyxy": [
+            0,
+            324.5026092529297,
+            98.22406005859375,
+            542.4971733093262
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.0,
+            0.5604535565680996,
+            0.21306737539825107,
+            0.9369553943166256
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.09911276400089264,
+          "box_xyxy": [
+            318.8226623535156,
+            347.3837585449219,
+            383.6263656616211,
+            380.113525390625
+          ],
+          "search_mode": "rotation_90",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.691589289270099,
+            0.5999719491276716,
+            0.8321613137996119,
+            0.6565000438525475
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.09305776655673981,
+          "box_xyxy": [
+            3.54888916015625,
+            50.888427734375,
+            209.90109252929688,
+            127.6337890625
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 왼쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.007698241128321583,
+            0.08789020334088947,
+            0.4553169035342665,
+            0.22043832307858377
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 왼쪽 위쪽에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.09023549407720566,
+          "box_xyxy": [
+            267.95052337646484,
+            132.0945587158203,
+            369.08872985839844,
+            161.339599609375
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.5812375778231341,
+            0.22814258845564822,
+            0.8006263120572634,
+            0.27865215821999134
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 오른쪽 위쪽에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A276_reference_02",
+      "source_sha256": "c5c98cb7ac0e4c2ab3c6bf7f9d3403ffbf64c74ba2633aa542dfe27c23fa1090",
+      "split": "val",
+      "variant": "jpeg85",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            189,
+            70,
+            366,
+            163
+          ],
+          "observation": "상단 가장자리 일부가 거칠고 불규칙하게 파인 형상이며 원본에 Thiếu라고 표시되어 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.16014118492603302,
+          "box_xyxy": [
+            0,
+            325.5776672363281,
+            95.76068115234375,
+            540.5541496276855
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.0,
+            0.5623103061076479,
+            0.20772382028707972,
+            0.9335995675780406
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.12648425996303558,
+          "box_xyxy": [
+            307.288818359375,
+            271.2039489746094,
+            361.5196990966797,
+            300.127685546875
+          ],
+          "search_mode": "rotation_90",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6665701049010304,
+            0.4684006027195326,
+            0.7842075902314093,
+            0.5183552427407168
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.10082729160785675,
+          "box_xyxy": [
+            0,
+            57.9417724609375,
+            208.5200958251953,
+            124.81488037109375
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 왼쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.0,
+            0.1000721458738126,
+            0.4523212490785148,
+            0.21556974157356434
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 왼쪽 위쪽에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.06413362920284271,
+          "box_xyxy": [
+            318.2525634765625,
+            345.9810485839844,
+            387.0871276855469,
+            382.02984619140625
+          ],
+          "search_mode": "rotation_90",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6903526322702006,
+            0.5975493067080905,
+            0.8396683897734205,
+            0.6598097516259175
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "dent",
+          "confidence": 0.0600498728454113,
+          "box_xyxy": [
+            308.28094482421875,
+            181.99644470214844,
+            346.8002471923828,
+            218.02793884277344
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6687222230460277,
+            0.3143289200382529,
+            0.7522781934758846,
+            0.3765594798666208
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "찍힘·눌림 의심",
+          "label_en": "Suspected dent / impression",
+          "label_vi": "Nghi móp / dập",
+          "explanation": "사진 기준 오른쪽 중앙에서 찍힘·눌림 의심 영역을 검출했습니다. 표면이나 가장자리의 국부적인 눌림·패임에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A276_reference_02",
+      "source_sha256": "c5c98cb7ac0e4c2ab3c6bf7f9d3403ffbf64c74ba2633aa542dfe27c23fa1090",
+      "split": "val",
+      "variant": "brightness",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            189,
+            70,
+            366,
+            163
+          ],
+          "observation": "상단 가장자리 일부가 거칠고 불규칙하게 파인 형상이며 원본에 Thiếu라고 표시되어 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.14883366227149963,
+          "box_xyxy": [
+            308.2348327636719,
+            270.9828796386719,
+            361.41966247558594,
+            299.5601806640625
+          ],
+          "search_mode": "rotation_90",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6686221968843208,
+            0.46801879039494276,
+            0.7839905910533318,
+            0.5173750961382773
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.13366052508354187,
+          "box_xyxy": [
+            1.37603759765625,
+            56.52789306640625,
+            207.9907989501953,
+            122.60885620117188
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 왼쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.0029848971749593277,
+            0.09763021254992443,
+            0.45117309967504404,
+            0.21175968255815522
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 왼쪽 위쪽에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.12240447849035263,
+          "box_xyxy": [
+            0,
+            323.5351104736328,
+            99.01187133789062,
+            542.9149017333984
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.0,
+            0.5587825742204366,
+            0.21477629357460004,
+            0.9376768596431752
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.08612532913684845,
+          "box_xyxy": [
+            320.5460205078125,
+            349.819580078125,
+            381.45104217529297,
+            377.8103942871094
+          ],
+          "search_mode": "rotation_90",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6953275932924349,
+            0.6041788947808722,
+            0.8274426077555161,
+            0.6525222699259229
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.06553612649440765,
+          "box_xyxy": [
+            231.0614471435547,
+            125.9251708984375,
+            363.0695037841797,
+            165.91616821289062
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.5012178896823312,
+            0.21748734179350174,
+            0.7875694225253356,
+            0.28655642178392166
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 가운데 위쪽에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A276_reference_04",
+      "source_sha256": "9f1666b33cc0e2f1cab56d94a1b0f0198fb0bddbb5c7b87e507d96e5e6e5a66b",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            63,
+            106,
+            429,
+            371
+          ],
+          "observation": "곡선 가장자리 인접 표면에 불완전하고 불규칙한 재료 형상이 보이며 Thiếu 표시가 있습니다. 정확한 결손량은 사진에서 측정하지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "missing_feature",
+          "confidence": 0.9344170093536377,
+          "box_xyxy": [
+            53.111778259277344,
+            95.0689468383789,
+            435.0282897949219,
+            369.3050842285156
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.09110082034181363,
+            0.12219658976655387,
+            0.7461891763206208,
+            0.4746851982371666
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 가운데 위쪽에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.43352848291397095,
+          "box_xyxy": [
+            211.43530368804932,
+            272.0,
+            463.966552734375,
+            392.79943084716797
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.36266775932770035,
+            0.3496143958868895,
+            0.7958259909680532,
+            0.5048835872071568
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 가운데 중앙에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [],
+      "localization": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A276_reference_05",
+      "source_sha256": "fa40104fc2f458e423adbfee414b95f091f72b1ab4d70a8e54f934117003813a",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            170,
+            162,
+            209,
+            202
+          ],
+          "observation": "구멍 테두리 아래 오른쪽에 국부적인 패임이 보입니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "dent",
+          "confidence": 0.9158725738525391,
+          "box_xyxy": [
+            166.74929809570312,
+            160.4742431640625,
+            210.7290802001953,
+            203.0421600341797
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5810080073021014,
+            0.49682428224167957,
+            0.7342476662027712,
+            0.6286134985578319
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "찍힘·눌림 의심",
+          "label_en": "Suspected dent / impression",
+          "label_vi": "Nghi móp / dập",
+          "explanation": "사진 기준 가운데 중앙에서 찍힘·눌림 의심 영역을 검출했습니다. 표면이나 가장자리의 국부적인 눌림·패임에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "missing_feature",
+          "confidence": 0.12001796811819077,
+          "box_xyxy": [
+            13.456878662109375,
+            17.57077407836914,
+            174.61011505126953,
+            229.10214233398438
+          ],
+          "search_mode": "rotation_90",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.04688807896205357,
+            0.054398681357180005,
+            0.6083976134190576,
+            0.7092945583095491
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 왼쪽 중앙에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "dent",
+          "confidence": 0.07335041463375092,
+          "box_xyxy": [
+            169.06857299804688,
+            170.83823776245117,
+            187.0,
+            197.91864776611328
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5890891045228114,
+            0.5289109528249263,
+            0.6515679442508711,
+            0.6127512314740349
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "찍힘·눌림 의심",
+          "label_en": "Suspected dent / impression",
+          "label_vi": "Nghi móp / dập",
+          "explanation": "사진 기준 가운데 중앙에서 찍힘·눌림 의심 영역을 검출했습니다. 표면이나 가장자리의 국부적인 눌림·패임에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A276_reference_06",
+      "source_sha256": "7ed4b8ca6acb8c02022b38a3f6594a33d50d3681c7a1bc60737840f89fceac18",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            215,
+            151,
+            251,
+            199
+          ],
+          "observation": "돌출 체결부 테두리에 국부적인 눌림·비정형 윤곽이 보이며 Dập 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "dent",
+          "confidence": 0.9583009481430054,
+          "box_xyxy": [
+            213.62108612060547,
+            149.415771484375,
+            254.52020263671875,
+            198.23548889160156
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5505698095891893,
+            0.2964598640562996,
+            0.6559799037028834,
+            0.39332438272143166
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "찍힘·눌림 의심",
+          "label_en": "Suspected dent / impression",
+          "label_vi": "Nghi móp / dập",
+          "explanation": "사진 기준 가운데 중앙에서 찍힘·눌림 의심 영역을 검출했습니다. 표면이나 가장자리의 국부적인 눌림·패임에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A376_reference_02",
+      "source_sha256": "cf3b95a89f190726a2866844c1d952adbd7b8e116c19736d2dd869db041b13c5",
+      "split": "val",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            193,
+            222,
+            215,
+            269
+          ],
+          "observation": "가로 지지대와 접합부 사이에 열린 파단선이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "fracture",
+          "confidence": 0.8505820631980896,
+          "box_xyxy": [
+            194.2299690246582,
+            223.12022399902344,
+            215.0503158569336,
+            266.44281005859375
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5179465840657552,
+            0.43835014538118555,
+            0.573467508951823,
+            0.523463281058141
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.46463626623153687,
+          "box_xyxy": [
+            228.8493194580078,
+            177.74696350097656,
+            282.1711883544922,
+            276.2799377441406
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6102648518880208,
+            0.3492081797661622,
+            0.7524565022786458,
+            0.5427896615798441
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.42307087779045105,
+          "box_xyxy": [
+            235.34242248535156,
+            257.45169830322266,
+            278.21595764160156,
+            343.4217224121094
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6275797932942708,
+            0.5057990143481781,
+            0.7419092203776042,
+            0.6746988652497238
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.3927293121814728,
+          "box_xyxy": [
+            239.18783569335938,
+            325.4125518798828,
+            303.68052673339844,
+            413.66062927246094
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.637834228515625,
+            0.6393173907266853,
+            0.8098147379557291,
+            0.8126927883545402
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 아래쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [],
+      "localization": {
+        "tp": 1,
+        "fp": 3,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A376_reference_02",
+      "source_sha256": "cf3b95a89f190726a2866844c1d952adbd7b8e116c19736d2dd869db041b13c5",
+      "split": "val",
+      "variant": "jpeg85",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            193,
+            222,
+            215,
+            269
+          ],
+          "observation": "가로 지지대와 접합부 사이에 열린 파단선이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "fracture",
+          "confidence": 0.8444313406944275,
+          "box_xyxy": [
+            193.74030303955078,
+            222.46417236328125,
+            215.21666717529297,
+            266.94183349609375
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5166408081054688,
+            0.43706124236401034,
+            0.573911112467448,
+            0.5244436807388875
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.6465896964073181,
+          "box_xyxy": [
+            234.81192016601562,
+            257.62293243408203,
+            277.83912658691406,
+            343.47015380859375
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6261651204427083,
+            0.5061354271789431,
+            0.7409043375651042,
+            0.6747940153410487
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.6058109402656555,
+          "box_xyxy": [
+            239.71417999267578,
+            325.9151611328125,
+            303.05433654785156,
+            413.8414611816406
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.639237813313802,
+            0.6403048352314588,
+            0.8081448974609375,
+            0.8130480573313176
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 아래쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.23251532018184662,
+          "box_xyxy": [
+            228.17896270751953,
+            176.69061279296875,
+            283.0999450683594,
+            277.8641357421875
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6084772338867187,
+            0.3471328345637893,
+            0.7549331868489584,
+            0.5459020348569499
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A376_reference_02",
+      "source_sha256": "cf3b95a89f190726a2866844c1d952adbd7b8e116c19736d2dd869db041b13c5",
+      "split": "val",
+      "variant": "brightness",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            193,
+            222,
+            215,
+            269
+          ],
+          "observation": "가로 지지대와 접합부 사이에 열린 파단선이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "fracture",
+          "confidence": 0.827703595161438,
+          "box_xyxy": [
+            194.02305603027344,
+            223.1842041015625,
+            215.11676788330078,
+            266.4197692871094
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5173948160807291,
+            0.43847584302861004,
+            0.5736447143554687,
+            0.5234180143165214
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.4176555275917053,
+          "box_xyxy": [
+            229.21737670898438,
+            177.75233459472656,
+            281.4189910888672,
+            275.6571350097656
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.611246337890625,
+            0.34921873201321524,
+            0.7504506429036458,
+            0.5415660805692841
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.4089794158935547,
+          "box_xyxy": [
+            234.99908447265625,
+            257.7198715209961,
+            276.4446563720703,
+            343.85064697265625
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6266642252604167,
+            0.5063258772514658,
+            0.7371857503255208,
+            0.6755415461152382
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.11794843524694443,
+          "box_xyxy": [
+            240.30714416503906,
+            328.066650390625,
+            300.7552185058594,
+            409.2227478027344
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 오른쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.6408190511067708,
+            0.6445317296475933,
+            0.802013916015625,
+            0.803973964248987
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 아래쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.11387796700000763,
+          "box_xyxy": [
+            101.77240753173828,
+            367.8788299560547,
+            191.07508850097656,
+            422.54762268066406
+          ],
+          "search_mode": "rotation_270",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.2713930867513021,
+            0.7227481924480446,
+            0.5095335693359375,
+            0.8301525003549393
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 아래쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A376_reference_03",
+      "source_sha256": "6667f16d5a3c96679f0b391189de3b89cedf36dd6ae8456747fb12be211c9895",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            37,
+            179,
+            67,
+            232
+          ],
+          "observation": "왼쪽 지지대에 연결을 가로지르는 끊김이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "fracture",
+          "confidence": 0.8665530681610107,
+          "box_xyxy": [
+            37.474552154541016,
+            179.96795654296875,
+            69.14253997802734,
+            234.23268127441406
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.08272528069435103,
+            0.2931074210797537,
+            0.15263253858284181,
+            0.38148645158699357
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 왼쪽 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.21498450636863708,
+          "box_xyxy": [
+            86.06372833251953,
+            541.8928833007812,
+            124.39749908447266,
+            614
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.18998615525942503,
+            0.8825616991869402,
+            0.2746081657493878,
+            1.0
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.1586042195558548,
+          "box_xyxy": [
+            186.46067810058594,
+            301.50157165527344,
+            210.41720581054688,
+            335.5868682861328
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4116129759394833,
+            0.4910449049760154,
+            0.4644971430696399,
+            0.5465584174041251
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "fracture",
+          "confidence": 0.061504583805799484,
+          "box_xyxy": [
+            408.49147033691406,
+            104.37113952636719,
+            426.49139404296875,
+            131.1514434814453
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.9017471751366757,
+            0.16998556926118435,
+            0.9414821060551186,
+            0.2136016994811813
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 오른쪽 위쪽에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "label": "missing_feature",
+          "confidence": 0.05216003954410553,
+          "box_xyxy": [
+            19.931976318359375,
+            465.99908447265625,
+            213.54290771484375,
+            557.8582458496094
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.04399994772264763,
+            0.758956163636248,
+            0.4713971472733858,
+            0.9085639183218394
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A376_reference_04",
+      "source_sha256": "9f5c5ba99bff0fcd79ae08abcd74271cbff134236b66f0dbea0b6408d78dce5f",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            255,
+            190,
+            283,
+            258
+          ],
+          "observation": "가로 지지대 접합부에 벌어진 균열이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "fracture",
+          "confidence": 0.8953713774681091,
+          "box_xyxy": [
+            251.68511962890625,
+            189.62828063964844,
+            287.8916015625,
+            261.173828125
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5483335939627587,
+            0.31604713439941406,
+            0.6272148182189542,
+            0.4352897135416667
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "fracture",
+          "confidence": 0.14024682343006134,
+          "box_xyxy": [
+            228.03787231445312,
+            239.85760498046875,
+            292.2271728515625,
+            350.2410125732422
+          ],
+          "search_mode": "rotation_180",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.49681453663279546,
+            0.39976267496744794,
+            0.6366605073018791,
+            0.5837350209554036
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "source_id": "A376_reference_05",
+      "source_sha256": "44a646c22aee790ed8acf5333bfb68f1766fe36857a83007a3ba8b567f50ed52",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            201,
+            191,
+            226,
+            244
+          ],
+          "observation": "지지대 접합부에 열린 균열이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "fracture",
+          "confidence": 0.9010648131370544,
+          "box_xyxy": [
+            198.71841430664062,
+            191.2600860595703,
+            226.83346557617188,
+            245.11163330078125
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5095343956580529,
+            0.38099618736966195,
+            0.581624270708133,
+            0.48827018585813
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  ],
+  "challenges": [
+    {
+      "name": "external_housing_screenshot_crop",
+      "training_used": false,
+      "annotation": "manual_visual_evaluation_only",
+      "ground_truth": [
+        {
+          "class_name": "fracture",
+          "box_xyxy": [
+            300,
+            195,
+            365,
+            230
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "fracture",
+          "confidence": 0.3552281856536865,
+          "box_xyxy": [
+            296.3760986328125,
+            197.139892578125,
+            363.18603515625,
+            235.32777404785156
+          ],
+          "search_mode": "rotation_270",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5245594666067478,
+            0.46495257683520047,
+            0.6428071418694691,
+            0.5550183350185178
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "균열·파손 의심",
+          "label_en": "Suspected crack / fracture",
+          "label_vi": "Nghi nứt / gãy",
+          "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "missing_feature",
+          "confidence": 0.09868976473808289,
+          "box_xyxy": [
+            133.95001220703125,
+            73.59798431396484,
+            297.46258544921875,
+            157.26443481445312
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.23707966762306415,
+            0.17358015168387936,
+            0.5264824521225111,
+            0.3709066858831442
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "predicted",
+          "label_ko": "재료·형상 결손 의심",
+          "label_en": "Suspected missing material / feature",
+          "label_vi": "Nghi thiếu liệu / thiếu hình dạng",
+          "explanation": "사진 기준 가운데 위쪽에서 재료·형상 결손 의심 영역을 검출했습니다. 가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "name": "blank_white",
+      "training_used": false,
+      "predictions": [],
+      "expected_count": 0
+    },
+    {
+      "name": "blank_black",
+      "training_used": false,
+      "predictions": [],
+      "expected_count": 0
+    },
+    {
+      "name": "blank_(30, 110, 75)",
+      "training_used": false,
+      "predictions": [],
+      "expected_count": 0
+    }
+  ],
+  "assessment": "limited_photo_holdout_only",
+  "specimen_independence": "unknown",
+  "normal_part_images": 0,
+  "unsupported_types": [
+    "scratch",
+    "assembly_gap"
+  ],
+  "universal_generalization_verified": false
+}

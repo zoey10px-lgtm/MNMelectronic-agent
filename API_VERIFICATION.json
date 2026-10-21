@@ -1,0 +1,8 @@
+{
+  "api_integration_tests": 5,
+  "api_integration_status": "passed",
+  "live_openai_call_performed": false,
+  "api_key_entered_by_user": true,
+  "yolo_http_verification": "passed",
+  "default_model": "gpt-5.4-mini"
+}

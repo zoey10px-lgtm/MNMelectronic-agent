@@ -1,0 +1,42 @@
+{
+  "training_images": 164,
+  "unique_train_originals": 14,
+  "training_boxes": 186,
+  "validation": [
+    {
+      "source_id": "A156_reference_10",
+      "sha256": "833839155733a5cf65b6c266ebc3d2b237a0decae6e4e1d05c93ef0adbb1534b",
+      "boxes": 1
+    },
+    {
+      "source_id": "A176_reference_06",
+      "sha256": "e21028a276e95621ef6e9a6d109baefe285a3c113054cfbaea6aa373d5d744a0",
+      "boxes": 1
+    },
+    {
+      "source_id": "A276_reference_02",
+      "sha256": "c5c98cb7ac0e4c2ab3c6bf7f9d3403ffbf64c74ba2633aa542dfe27c23fa1090",
+      "boxes": 1
+    },
+    {
+      "source_id": "A376_reference_02",
+      "sha256": "cf3b95a89f190726a2866844c1d952adbd7b8e116c19736d2dd869db041b13c5",
+      "boxes": 1
+    }
+  ],
+  "source_archive": "MM_augmented_dataset.zip",
+  "source_archive_sha256": "2394950bc773267e6ff68312cf0ef37a70bd364ca1ac98d1151dc566b0874c8b",
+  "source_model_sha256": "278746cf20cbc6fa50634aadbee8e4a4fe83fd62cb0a84354f3184b4d4af9a1e",
+  "inference_confidence": 0.25,
+  "training_config": {
+    "epochs": 40,
+    "patience": 12,
+    "imgsz": 640,
+    "batch": 8,
+    "lr0": 0.0001,
+    "optimizer": "AdamW",
+    "cls_pw": 0.5,
+    "online_geometric_augmentation": false,
+    "online_color_augmentation": false
+  }
+}

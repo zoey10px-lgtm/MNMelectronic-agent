@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "original_photos": 31,
+  "train_images": 164,
+  "unique_train_sources": 14,
+  "train_boxes": 186,
+  "unchanged_validation_originals": 4,
+  "model_sha256": "5ed6f416200b5768a962363d9f834390e8fa765d71b2d73193ae1ab7d0cc4cbc",
+  "model_evaluation_hash_matches": true,
+  "stored_validation": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 3,
+    "images": 4,
+    "matched_images": 1,
+    "precision": 1.0,
+    "recall": 0.25
+  },
+  "checked_at": "2026-10-21T03:08:57.790778+00:00",
+  "api_verification": "passed",
+  "http_verification": "passed",
+  "admin_verification": "passed",
+  "python": "3.12.14",
+  "dependencies": {
+    "ultralytics": "8.4.183",
+    "torch": "2.14.1",
+    "torchvision": "0.29.1",
+    "Flask": "3.1.3",
+    "waitress": "3.0.2",
+    "opencv-python": "5.0.0.93"
+  },
+  "retraining_performed": false
+}

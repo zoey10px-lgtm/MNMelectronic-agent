@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "server": "Waitress",
+  "entrypoint": "python serve.py",
+  "bind_host": "0.0.0.0",
+  "port_environment_respected": true,
+  "http_status": 201,
+  "product_mode": "AUTO",
+  "image_encoding": "JPEG85",
+  "detections": [
+    {
+      "box_xyxy": [
+        298.06512451171875,
+        199.12176513671875,
+        363.9162902832031,
+        233.48037719726562
+      ],
+      "box_xyxy_normalized": [
+        0.5275488929410951,
+        0.4696268045677329,
+        0.6440996288198285,
+        0.5506612669746831
+      ],
+      "cause": null,
+      "confidence": 0.842761754989624,
+      "explanation": "사진 기준 가운데 중앙에서 균열·파손 의심 영역을 검출했습니다. 금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+      "interpretation_source": "class_catalog_and_box_coordinates",
+      "label": "fracture",
+      "label_en": "Suspected crack / fracture",
+      "label_ko": "균열·파손 의심",
+      "label_vi": "Nghi nứt / gãy",
+      "location_ko": "사진 기준 가운데 중앙",
+      "recommended_checks": [
+        "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+        "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+      ],
+      "search_mode": "rotation_270",
+      "type_status": "predicted"
+    }
+  ],
+  "registered_label_used": false,
+  "media_owner_access": true,
+  "foreign_session_denied": true,
+  "complaint_confirmation": true
+}

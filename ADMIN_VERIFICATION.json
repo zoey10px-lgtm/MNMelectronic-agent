@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "login_logout": true,
+  "confirmed_complaints_list": true,
+  "status_priority_update": true,
+  "customer_status_lookup": true
+}

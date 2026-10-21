@@ -1,0 +1,56 @@
+{
+  "classes": [
+    {
+      "id": 0,
+      "name": "fracture",
+      "ko": "균열·파손 의심",
+      "en": "Suspected crack / fracture",
+      "vi": "Nghi nứt / gãy",
+      "color": "#d33157",
+      "appearance": "금속의 연결부가 갈라지거나 끊긴 형태에 해당하는 유형입니다.",
+      "checks": [
+        "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+        "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+      ]
+    },
+    {
+      "id": 1,
+      "name": "dent",
+      "ko": "찍힘·눌림 의심",
+      "en": "Suspected dent / impression",
+      "vi": "Nghi móp / dập",
+      "color": "#a16207",
+      "appearance": "표면이나 가장자리의 국부적인 눌림·패임에 해당하는 유형입니다.",
+      "checks": [
+        "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+        "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "porosity",
+      "ko": "기공·표면 공동 의심",
+      "en": "Suspected porosity / cavity",
+      "vi": "Nghi rỗ khí / lỗ rỗ",
+      "color": "#6b4ec4",
+      "appearance": "금속 표면에 열린 작은 구멍·공동이 보이는 유형입니다.",
+      "checks": [
+        "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+        "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "missing_feature",
+      "ko": "재료·형상 결손 의심",
+      "en": "Suspected missing material / feature",
+      "vi": "Nghi thiếu liệu / thiếu hình dạng",
+      "color": "#147c84",
+      "appearance": "가장자리나 형상의 일부가 빠지거나 불완전하게 형성된 것으로 보이는 유형입니다.",
+      "checks": [
+        "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+        "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+      ]
+    }
+  ]
+}

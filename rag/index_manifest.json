@@ -1,0 +1,37 @@
+{
+  "document_count": 140,
+  "kind_counts": {
+    "product": 4,
+    "review_guide": 22,
+    "synthetic_case": 88,
+    "visual_reference": 26
+  },
+  "default_corpus": "knowledge_only",
+  "default_excluded_kinds": [
+    "synthetic_case"
+  ],
+  "metadata_filters": [
+    "product_model",
+    "category",
+    "kind",
+    "authority"
+  ],
+  "source_precedence": [
+    "source_observation",
+    "ai_visual_annotation",
+    "demo_guidance",
+    "source_indication_only",
+    "synthetic_example"
+  ],
+  "synthetic_examples_are_policy": false,
+  "embeddings_included": false,
+  "retrieval_script": "scripts/retrieve.py",
+  "annotation_revision": "3.0",
+  "visual_reference_policy": "18 typed visual annotations; 8 explicitly unconfirmed source ROIs; no unconfirmed ROI is a finalized defect boundary",
+  "default_retrieval_documents": 44,
+  "excluded_unconfirmed_visual_references": 8,
+  "excluded_synthetic_examples": 88,
+  "default_excluded_annotation_statuses": [
+    "source_roi_requires_confirmation"
+  ]
+}

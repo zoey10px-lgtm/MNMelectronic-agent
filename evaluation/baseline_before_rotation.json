@@ -1,0 +1,4278 @@
+{
+  "model_sha256": "da3a2e370d6b8a948943353a3f771e06f264719dad44f9e96e8f08c7d8d21705",
+  "class_names": [
+    "visible_defect"
+  ],
+  "confidence_threshold": 0.25,
+  "iou_match_threshold": 0.5,
+  "summary": {
+    "train": {
+      "tp": 7,
+      "fp": 10,
+      "fn": 9,
+      "images": 14,
+      "matched_images": 6,
+      "precision": 0.4117647058823529,
+      "recall": 0.4375
+    },
+    "val": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 4,
+      "images": 4,
+      "matched_images": 0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "val_per_class": {
+      "fracture": {
+        "gt": 1,
+        "tp": 0
+      },
+      "dent": {
+        "gt": 1,
+        "tp": 0
+      },
+      "porosity": {
+        "gt": 1,
+        "tp": 0
+      },
+      "missing_feature": {
+        "gt": 1,
+        "tp": 0
+      }
+    }
+  },
+  "cases": [
+    {
+      "source_id": "A156_reference_05",
+      "source_sha256": "0469f99d39245f6fbd33230879d34fd920066a627efcc75a5e81a0e58b4bf074",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            165,
+            140,
+            346,
+            184
+          ],
+          "observation": "상단 가장자리 중앙에 거칠고 불규칙하게 내려간 결손 형태가 보입니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.7555294036865234,
+          "box_xyxy": [
+            167.38919067382812,
+            139.8265380859375,
+            346.0993957519531,
+            185.51638793945312
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.2952190311707727,
+            0.41491554328171365,
+            0.6104045780457727,
+            0.5504937327580212
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.06269898265600204,
+          "box_xyxy": [
+            171.78187561035156,
+            241.62794494628906,
+            233.95822143554688,
+            337
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.3029662709177276,
+            0.7169968692768222,
+            0.412624729163222,
+            1.0
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.052767831832170486,
+          "box_xyxy": [
+            74.50008392333984,
+            139.2655029296875,
+            155.21636962890625,
+            165.79861450195312
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.1313934460729098,
+            0.4132507505331973,
+            0.27375021098572533,
+            0.49198401929362945
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.050266169011592865,
+          "box_xyxy": [
+            393.0764617919922,
+            118.0,
+            548.82373046875,
+            132.76536750793457
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6932565463703566,
+            0.35014836795252224,
+            0.9679430872464727,
+            0.39396251486033995
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A156_reference_06",
+      "source_sha256": "2e31ae5baf27b20110c24f079a7e4b530cfac4ab27e8bb9b46ff91f9e7b2eabd",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            63,
+            130,
+            166,
+            164
+          ],
+          "observation": "상단 얇은 플랜지의 두 구간에 불규칙한 끊김·결손 형태가 보입니다. 하단의 검은 선은 라벨에 포함하지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        },
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            291,
+            142,
+            387,
+            174
+          ],
+          "observation": "상단 얇은 플랜지의 두 구간에 불규칙한 끊김·결손 형태가 보입니다. 하단의 검은 선은 라벨에 포함하지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.7928047180175781,
+          "box_xyxy": [
+            59.64100646972656,
+            129.24847412109375,
+            165.70127868652344,
+            163.62457275390625
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.1055593034862417,
+            0.3703394673956841,
+            0.2932765994451742,
+            0.4688383173464363
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.689835786819458,
+          "box_xyxy": [
+            290.9153747558594,
+            141.9886016845703,
+            381.7366638183594,
+            175.73410034179688
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5148944685944413,
+            0.4068441309013476,
+            0.6756401129528484,
+            0.5035361041312232
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.19975337386131287,
+          "box_xyxy": [
+            343.02137756347656,
+            213.54444122314453,
+            511.9954528808594,
+            346.0387420654297
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.6071174824132328,
+            0.6118751897511304,
+            0.9061866422670077,
+            0.9915150202447842
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.09082242846488953,
+          "box_xyxy": [
+            61.22861862182617,
+            145.8610382080078,
+            299.9455261230469,
+            206.53836059570312
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.10836923649880738,
+            0.41793993755876163,
+            0.5308770373859236,
+            0.5918004601596079
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 2
+      }
+    },
+    {
+      "source_id": "A156_reference_08",
+      "source_sha256": "14738e745a3b8323e57f7bd097eca1a6f01b25c348a9a99d99cbefaeddf0b88b",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            121,
+            12,
+            166,
+            510
+          ],
+          "observation": "세로 가장자리를 따라 벌어진 선이 스티커 위아래에 보입니다. 스티커에 가린 중간 부분은 정답 영역으로 그리지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        },
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            105,
+            641,
+            131,
+            753
+          ],
+          "observation": "세로 가장자리를 따라 벌어진 선이 스티커 위아래에 보입니다. 스티커에 가린 중간 부분은 정답 영역으로 그리지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.7508037090301514,
+          "box_xyxy": [
+            99.36270904541016,
+            0,
+            150.46142578125,
+            504.0538024902344
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.4022781742729156,
+            0.0,
+            0.6091555699645749,
+            0.6632286874871505
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.1677277386188507,
+          "box_xyxy": [
+            101.25604248046875,
+            648.6359252929688,
+            129.87408447265625,
+            758.6004028320312
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.4099434918237601,
+            0.8534683227539063,
+            0.525806010010754,
+            0.9981584247789885
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.10455888509750366,
+          "box_xyxy": [
+            144.75823974609375,
+            0,
+            201.632080078125,
+            506.5272521972656
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 오른쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.5860657479598937,
+            0.0,
+            0.8163242108426113,
+            0.6664832265753495
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 2
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 2
+      }
+    },
+    {
+      "source_id": "A156_reference_09",
+      "source_sha256": "cd67de7c0235f5af7611e7abf87920b1b9f45bf4ef0b5c4b98f820ef3a094c77",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            160,
+            158,
+            206,
+            265
+          ],
+          "observation": "리브 접합부에 열린 파단선이 보이며 원본 스티커의 Gãy 표시와 일치합니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.7709814310073853,
+          "box_xyxy": [
+            159.34034729003906,
+            154.41038513183594,
+            214.27818298339844,
+            261.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.33474862876058625,
+            0.3850633045681694,
+            0.4501642499651228,
+            0.6508728179551122
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.2632669508457184,
+          "box_xyxy": [
+            0,
+            96.33238983154297,
+            201.05848693847656,
+            247.62066650390625
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.0,
+            0.24023039858240142,
+            0.4223917792825138,
+            0.6175078965184695
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.1745264232158661,
+          "box_xyxy": [
+            232.46273803710938,
+            77.08724212646484,
+            309.0,
+            258.2882385253906
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4883670967166163,
+            0.1922375115373188,
+            0.6491596638655462,
+            0.6441103205121961
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.12967462837696075,
+          "box_xyxy": [
+            335.82916259765625,
+            232.08657836914062,
+            399.74192810058594,
+            316.6663360595703
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.7055234508354122,
+            0.5787695221175577,
+            0.8397939665978696,
+            0.789691611121123
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.09405506402254105,
+          "box_xyxy": [
+            57.682952880859375,
+            91.22430419921875,
+            102.23848724365234,
+            168.08604431152344
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.12118267411945247,
+            0.2274920304219919,
+            0.21478673790683264,
+            0.4191671927968166
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.08911841362714767,
+          "box_xyxy": [
+            141.57431030273438,
+            215.78353118896484,
+            183.26571655273438,
+            395.8146057128906
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.29742502164439993,
+            0.5381135441121317,
+            0.385012009564568,
+            0.9870688421767846
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.08566872775554657,
+          "box_xyxy": [
+            142.28350830078125,
+            163.9291534423828,
+            307.1383361816406,
+            387.7265930175781
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.29891493340500264,
+            0.4088008814024509,
+            0.6452486054236147,
+            0.9668992344578008
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A156_reference_10",
+      "source_sha256": "833839155733a5cf65b6c266ebc3d2b237a0decae6e4e1d05c93ef0adbb1534b",
+      "split": "val",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            202,
+            128,
+            279,
+            228
+          ],
+          "observation": "표면의 국부적인 눌림 자국이 보이며 스티커에 Dập이라고 적혀 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.120466448366642,
+          "box_xyxy": [
+            199.3894920349121,
+            269.2793502807617,
+            257.85071563720703,
+            371.6230163574219
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4521303674261046,
+            0.5259362310171127,
+            0.584695500311127,
+            0.7258262038230896
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.11089543253183365,
+          "box_xyxy": [
+            188.1938362121582,
+            242.71768188476562,
+            340.27073669433594,
+            333.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4267433927713338,
+            0.47405797243118286,
+            0.7715889720959999,
+            0.650390625
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.10161188244819641,
+          "box_xyxy": [
+            203.0760955810547,
+            127.83528900146484,
+            283.19757080078125,
+            233.06973266601562
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4604900126554528,
+            0.24967829883098602,
+            0.6421713623600482,
+            0.45521432161331177
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.07167167961597443,
+          "box_xyxy": [
+            89.74241638183594,
+            332.9219207763672,
+            132.90457153320312,
+            511.2088928222656
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.2034975428159545,
+            0.6502381265163422,
+            0.3013709105061295,
+            0.9984548687934875
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A156_reference_10",
+      "source_sha256": "833839155733a5cf65b6c266ebc3d2b237a0decae6e4e1d05c93ef0adbb1534b",
+      "split": "val",
+      "variant": "jpeg85",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            202,
+            128,
+            279,
+            228
+          ],
+          "observation": "표면의 국부적인 눌림 자국이 보이며 스티커에 Dập이라고 적혀 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.07880305498838425,
+          "box_xyxy": [
+            90.54207611083984,
+            335.0864715576172,
+            135.62109375,
+            510.8551025390625
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.2053108301833103,
+            0.6544657647609711,
+            0.307530824829932,
+            0.9977638721466064
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.07860718667507172,
+          "box_xyxy": [
+            196.22959518432617,
+            242.8674774169922,
+            342.7328643798828,
+            333.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4449650684451841,
+            0.47435054183006287,
+            0.7771720280722966,
+            0.650390625
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.06684796512126923,
+          "box_xyxy": [
+            198.9531593322754,
+            268.37451171875,
+            247.53952026367188,
+            371.04905700683594
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.45114095086683764,
+            0.5241689682006836,
+            0.5613141049062854,
+            0.7247051894664764
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A156_reference_10",
+      "source_sha256": "833839155733a5cf65b6c266ebc3d2b237a0decae6e4e1d05c93ef0adbb1534b",
+      "split": "val",
+      "variant": "brightness",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            202,
+            128,
+            279,
+            228
+          ],
+          "observation": "표면의 국부적인 눌림 자국이 보이며 스티커에 Dập이라고 적혀 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.20889239013195038,
+          "box_xyxy": [
+            187.50768661499023,
+            242.33038330078125,
+            345.19715881347656,
+            332.9862060546875
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4251874979931751,
+            0.4733015298843384,
+            0.7827599973094707,
+            0.6503636837005615
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.08867485821247101,
+          "box_xyxy": [
+            199.3340606689453,
+            269.04788970947266,
+            251.11505126953125,
+            370.67909240722656
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4520046727186969,
+            0.5254841595888138,
+            0.5694218849649235,
+            0.7239826023578644
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.057834550738334656,
+          "box_xyxy": [
+            90.34186553955078,
+            333.6358642578125,
+            131.54769897460938,
+            510.9231872558594
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.20485683795816503,
+            0.65163254737854,
+            0.2982941019832412,
+            0.9978968501091003
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A156_reference_12",
+      "source_sha256": "ac756e19952df753b842d2bde47d5a0b4522665995b978b9a6394d8a7fd2bd60",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            129,
+            164,
+            345,
+            204
+          ],
+          "observation": "하단 금속 가장자리에 불규칙한 형상이 보이며 원본에 Thiếu liệu라고 표시되어 있습니다. 스티커가 가린 부분은 직접 관찰 근거가 없습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.2795715928077698,
+          "box_xyxy": [
+            91.48734283447266,
+            77.63786315917969,
+            142.78648376464844,
+            171.84323120117188
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.22368543480311162,
+            0.2864865799231723,
+            0.3491112072485292,
+            0.6341078642109663
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.10864298045635223,
+          "box_xyxy": [
+            225.0431900024414,
+            67.76449584960938,
+            302.5195617675781,
+            173.79444885253906
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5502278484167271,
+            0.2500534902199608,
+            0.7396566302385773,
+            0.6413079293451626
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.06376756727695465,
+          "box_xyxy": [
+            113.62932586669922,
+            76.8917007446289,
+            355.98980712890625,
+            190.0752716064453
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.27782231263251644,
+            0.2837332130798115,
+            0.8703907264765434,
+            0.701384766075444
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A176_reference_02",
+      "source_sha256": "151d9f5e0ab9c02bc863109591ec199ad83c1308295ab63b5c23df65b0616ed0",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            291,
+            128,
+            374,
+            194
+          ],
+          "observation": "상부 체결 구멍의 바깥 테두리에 국부적인 눌림·비정형 윤곽이 보이며 Dập 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.5432303547859192,
+          "box_xyxy": [
+            219.31309509277344,
+            402.719970703125,
+            276.9946594238281,
+            502.9879150390625
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.4046367068132351,
+            0.6569656944586052,
+            0.5110602572395353,
+            0.8205349348108687
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.174671471118927,
+          "box_xyxy": [
+            28.996238708496094,
+            204.8406219482422,
+            271.79931640625,
+            393.41265869140625
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.053498595403129325,
+            0.3341608840917491,
+            0.5014747535170664,
+            0.641782477473746
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.056148264557123184,
+          "box_xyxy": [
+            248.1722869873047,
+            213.85633850097656,
+            320.045654296875,
+            320.3291320800781
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4578824483160603,
+            0.3488684151728818,
+            0.5904901370791051,
+            0.5225597586950703
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A176_reference_05",
+      "source_sha256": "da7491acddebdbd0b150fa34295f942df6a2d734c8e6da588929b3442fefc688",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "porosity",
+          "label_ko": "기공·표면 공동 의심",
+          "box_xyxy": [
+            103,
+            74,
+            158,
+            180
+          ],
+          "observation": "좁은 금속 가장자리에 여러 열린 공동이 보이며 Rỗ khí 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+            "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.3592374324798584,
+          "box_xyxy": [
+            101.1932373046875,
+            70.97682189941406,
+            170.639404296875,
+            184.2178497314453
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.29416638751362645,
+            0.15878483646401356,
+            0.4960447799327762,
+            0.4121204691978642
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.26891928911209106,
+          "box_xyxy": [
+            165.7800750732422,
+            222.57913970947266,
+            222.752197265625,
+            320.6168670654297
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.48191882288733195,
+            0.4979399098645921,
+            0.6475354571675145,
+            0.7172636847101336
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.22442805767059326,
+          "box_xyxy": [
+            215.588134765625,
+            335.6521911621094,
+            259.4644012451172,
+            420.2178649902344
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.6267096940861192,
+            0.750899756514786,
+            0.7542569803637128,
+            0.9400847091504124
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.09911730140447617,
+          "box_xyxy": [
+            59.7878303527832,
+            228.27183532714844,
+            117.28923797607422,
+            291.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.1738018324208814,
+            0.5106752468168869,
+            0.34095708713975065,
+            0.6510067114093959
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.07441432774066925,
+          "box_xyxy": [
+            115.53244018554688,
+            226.2968292236328,
+            162.03085327148438,
+            314.14649963378906
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.33585011681845023,
+            0.5062568886434738,
+            0.4710199223008267,
+            0.702788589784763
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.06951510906219482,
+          "box_xyxy": [
+            209.82949829101562,
+            230.39132690429688,
+            250.82012939453125,
+            291.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6099694717762082,
+            0.5154168387120736,
+            0.7291282831236373,
+            0.6510067114093959
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.06239321455359459,
+          "box_xyxy": [
+            32.88978958129883,
+            150.8589324951172,
+            183.75022888183594,
+            290.0930480957031
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.09560985343400823,
+            0.3374920190047364,
+            0.5341576420983603,
+            0.6489777362319981
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A176_reference_06",
+      "source_sha256": "e21028a276e95621ef6e9a6d109baefe285a3c113054cfbaea6aa373d5d744a0",
+      "split": "val",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "porosity",
+          "label_ko": "기공·표면 공동 의심",
+          "box_xyxy": [
+            235,
+            287,
+            270,
+            333
+          ],
+          "observation": "금속 리브 아래쪽에 작은 공동 두 곳이 보이며 Rỗ khí 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+            "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.38831377029418945,
+          "box_xyxy": [
+            195.0944709777832,
+            253.5287322998047,
+            271.7239456176758,
+            335.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.447464382976567,
+            0.492288800582145,
+            0.6232200587561371,
+            0.6504854368932039
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.0836600810289383,
+          "box_xyxy": [
+            75.1272201538086,
+            180.0,
+            121.62922668457031,
+            237.7619514465332
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.1723101379674509,
+            0.34951456310679613,
+            0.27896611624901446,
+            0.4616736921291907
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.07989060133695602,
+          "box_xyxy": [
+            94.61604309082031,
+            28.90561294555664,
+            163.2241973876953,
+            133.6977996826172
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.21700927314408328,
+            0.05612740377777988,
+            0.37436742520113603,
+            0.2596073780244994
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.0680077001452446,
+          "box_xyxy": [
+            182.863525390625,
+            237.47764587402344,
+            298.1377258300781,
+            418.92230224609375
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.41941175548308485,
+            0.4611216424738319,
+            0.6838021234634819,
+            0.813441363584648
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.057615406811237335,
+          "box_xyxy": [
+            0,
+            180.0,
+            36.64106369018555,
+            261.9206085205078
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.0,
+            0.34951456310679613,
+            0.08403913690409529,
+            0.5085837058650637
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A176_reference_06",
+      "source_sha256": "e21028a276e95621ef6e9a6d109baefe285a3c113054cfbaea6aa373d5d744a0",
+      "split": "val",
+      "variant": "jpeg85",
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "porosity",
+          "label_ko": "기공·표면 공동 의심",
+          "box_xyxy": [
+            235,
+            287,
+            270,
+            333
+          ],
+          "observation": "금속 리브 아래쪽에 작은 공동 두 곳이 보이며 Rỗ khí 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+            "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.1936236470937729,
+          "box_xyxy": [
+            194.00580978393555,
+            254.49740600585938,
+            266.64158630371094,
+            335.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4449674536328797,
+            0.49416972039972695,
+            0.6115632713387865,
+            0.6504854368932039
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.17725825309753418,
+          "box_xyxy": [
+            44.12547302246094,
+            172.99693298339844,
+            97.18708038330078,
+            251.354736328125
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.1012052133542682,
+            0.3359163747250455,
+            0.22290614766812106,
+            0.48806744918082523
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.12201980501413345,
+          "box_xyxy": [
+            75.0777816772461,
+            180.0,
+            122.00303649902344,
+            238.89502334594727
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.17219674696616077,
+            0.34951456310679613,
+            0.27982347820876935,
+            0.4638738317397034
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.06250396370887756,
+          "box_xyxy": [
+            183.01882934570312,
+            252.37158203125,
+            298.7755432128906,
+            418.9141845703125
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.41976795721491544,
+            0.4900419068567961,
+            0.6852650073690152,
+            0.8134256011074029
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.05404246971011162,
+          "box_xyxy": [
+            0,
+            170.7568817138672,
+            37.28415298461914,
+            260.4462585449219
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.0,
+            0.33156676060945084,
+            0.0855141123500439,
+            0.5057208903784891
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A176_reference_06",
+      "source_sha256": "e21028a276e95621ef6e9a6d109baefe285a3c113054cfbaea6aa373d5d744a0",
+      "split": "val",
+      "variant": "brightness",
+      "ground_truth": [
+        {
+          "class_id": 2,
+          "class_name": "porosity",
+          "label_ko": "기공·표면 공동 의심",
+          "box_xyxy": [
+            235,
+            287,
+            270,
+            333
+          ],
+          "observation": "금속 리브 아래쪽에 작은 공동 두 곳이 보이며 Rỗ khí 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "확대 사진으로 구멍이 표면의 실제 공동인지 확인하세요.",
+            "깊이·내부 분포는 추가 검사로 확인하고 제품별 허용 기준과 대조하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.25124967098236084,
+          "box_xyxy": [
+            194.4474983215332,
+            252.60467529296875,
+            266.32818603515625,
+            335.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4459805007374615,
+            0.49049451513197817,
+            0.6108444633833859,
+            0.6504854368932039
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.14894187450408936,
+          "box_xyxy": [
+            74.90775299072266,
+            180.0,
+            121.60682678222656,
+            238.6021499633789
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.1718067729145015,
+            0.34951456310679613,
+            0.2789147403262077,
+            0.46330514555995905
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.07173050194978714,
+          "box_xyxy": [
+            153.0,
+            65.61906433105469,
+            175.41772651672363,
+            195.25051879882812
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.35091743119266056,
+            0.12741565889525183,
+            0.4023342351301001,
+            0.3791272209685983
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A176_reference_07",
+      "source_sha256": "8dad5907ce3b0bd24e1ef83e42b4a5c8fd7072a8b29442672180afe9abf8d1dd",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            164,
+            175,
+            192,
+            219
+          ],
+          "observation": "세로 가장자리의 일부가 끊겨 벌어진 구간이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.6463845372200012,
+          "box_xyxy": [
+            160.98959350585938,
+            172.87701416015625,
+            194.76937866210938,
+            222.2830352783203
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.47349880442899817,
+            0.33373940957559123,
+            0.5728511137120864,
+            0.4291178287226261
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.384464293718338,
+          "box_xyxy": [
+            121.5042495727539,
+            4.0816144943237305,
+            151.31764221191406,
+            247.84242248535156
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.3573654399198644,
+            0.007879564660856623,
+            0.4450518888585708,
+            0.47846027506824623
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.29568368196487427,
+          "box_xyxy": [
+            69.40266418457031,
+            0.29610559344291687,
+            119.19376373291016,
+            265.42156982421875
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 왼쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.20412548289579505,
+            0.0005716324197739708,
+            0.3505698933320887,
+            0.5123968529425073
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.1637095957994461,
+          "box_xyxy": [
+            78.42528533935547,
+            241.66770935058594,
+            219.4792022705078,
+            336.32281494140625
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.23066260393928079,
+            0.4665399794412856,
+            0.6455270655014935,
+            0.6492718435162282
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.10323917865753174,
+          "box_xyxy": [
+            146.79380798339844,
+            3.3248398303985596,
+            203.2237548828125,
+            244.81968688964844
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.43174649406881893,
+            0.00641860971119413,
+            0.5977169261259191,
+            0.4726248781653445
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.07858678698539734,
+          "box_xyxy": [
+            189.62064361572266,
+            26.512802124023438,
+            223.57603454589844,
+            243.7732391357422
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.5577077753403608,
+            0.05118301568344293,
+            0.6575765721938189,
+            0.47060470875625904
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.0675538033246994,
+          "box_xyxy": [
+            158.07277297973633,
+            15.34927749633789,
+            178.08366775512695,
+            238.96803283691406
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.46491992052863623,
+            0.029631809838490137,
+            0.5237754933974322,
+            0.4613282487199113
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A276_reference_02",
+      "source_sha256": "c5c98cb7ac0e4c2ab3c6bf7f9d3403ffbf64c74ba2633aa542dfe27c23fa1090",
+      "split": "val",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            189,
+            70,
+            366,
+            163
+          ],
+          "observation": "상단 가장자리 일부가 거칠고 불규칙하게 파인 형상이며 원본에 Thiếu라고 표시되어 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.23596981167793274,
+          "box_xyxy": [
+            161.0,
+            257.86639404296875,
+            319.4524230957031,
+            376.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.3492407809110629,
+            0.4453651019740393,
+            0.6929553646327616,
+            0.6493955094991365
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.1589764803647995,
+          "box_xyxy": [
+            97.40694427490234,
+            179.350830078125,
+            246.7850341796875,
+            375.896484375
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.2112948899672502,
+            0.3097596374406304,
+            0.5353254537520337,
+            0.6492167260362695
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.15425311028957367,
+          "box_xyxy": [
+            161.0,
+            339.1402893066406,
+            194.65897750854492,
+            453.38536071777344
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.3492407809110629,
+            0.585734523845666,
+            0.42225374730703885,
+            0.783048982241405
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.061134129762649536,
+          "box_xyxy": [
+            18.741004943847656,
+            343.9532775878906,
+            89.28785705566406,
+            455.16944885253906
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.040652939140667366,
+            0.5940471115507611,
+            0.19368298710556195,
+            0.7861303088990312
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A276_reference_02",
+      "source_sha256": "c5c98cb7ac0e4c2ab3c6bf7f9d3403ffbf64c74ba2633aa542dfe27c23fa1090",
+      "split": "val",
+      "variant": "jpeg85",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            189,
+            70,
+            366,
+            163
+          ],
+          "observation": "상단 가장자리 일부가 거칠고 불규칙하게 파인 형상이며 원본에 Thiếu라고 표시되어 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.21948426961898804,
+          "box_xyxy": [
+            96.96778106689453,
+            178.5037841796875,
+            246.21661376953125,
+            375.5438537597656
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.21034225827959768,
+            0.30829669115662783,
+            0.534092437677942,
+            0.6486076921584899
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.20913374423980713,
+          "box_xyxy": [
+            161.0,
+            339.7262268066406,
+            194.63597106933594,
+            453.60365295410156
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.3492407809110629,
+            0.586746505710951,
+            0.42220384179899334,
+            0.7834259981936124
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.18611936271190643,
+          "box_xyxy": [
+            161.0,
+            257.1136779785156,
+            320.0706787109375,
+            376.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.3492407809110629,
+            0.4440650742288698,
+            0.694296483103986,
+            0.6493955094991365
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.1376919150352478,
+          "box_xyxy": [
+            10.874090194702148,
+            344.3461151123047,
+            89.07167053222656,
+            456.9212646484375
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.02358804814469013,
+            0.5947255874133068,
+            0.19321403586166283,
+            0.7891558974929835
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.08650049567222595,
+          "box_xyxy": [
+            213.08255004882812,
+            309.70619201660156,
+            292.6575927734375,
+            431.3667449951172
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.46221811290418247,
+            0.534898431807602,
+            0.6348320884456344,
+            0.7450202849656601
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A276_reference_02",
+      "source_sha256": "c5c98cb7ac0e4c2ab3c6bf7f9d3403ffbf64c74ba2633aa542dfe27c23fa1090",
+      "split": "val",
+      "variant": "brightness",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            189,
+            70,
+            366,
+            163
+          ],
+          "observation": "상단 가장자리 일부가 거칠고 불규칙하게 파인 형상이며 원본에 Thiếu라고 표시되어 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.12364981323480606,
+          "box_xyxy": [
+            161.0,
+            337.4503936767578,
+            194.2839584350586,
+            456.29823303222656
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.3492407809110629,
+            0.5828158785436232,
+            0.4214402569090208,
+            0.7880798497965916
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.08856647461652756,
+          "box_xyxy": [
+            161.0,
+            260.1891174316406,
+            317.87608337402344,
+            376.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.3492407809110629,
+            0.4493767140442843,
+            0.6895359726117645,
+            0.6493955094991365
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.07632225751876831,
+          "box_xyxy": [
+            97.58387756347656,
+            177.7870635986328,
+            243.9774627685547,
+            376.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.21167869319626154,
+            0.3070588317765679,
+            0.5292352771552162,
+            0.6493955094991365
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.0651123970746994,
+          "box_xyxy": [
+            0.7846839427947998,
+            1.5798743963241577,
+            237.08950805664062,
+            166.0411834716797
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.0017021343661492404,
+            0.0027286259003871465,
+            0.5142939437237324,
+            0.28677233760221016
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.050896260887384415,
+          "box_xyxy": [
+            218.1721649169922,
+            307.13219451904297,
+            292.89630126953125,
+            430.1034851074219
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.4732584922277488,
+            0.5304528402746856,
+            0.635349894293994,
+            0.7428384889592778
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A276_reference_04",
+      "source_sha256": "9f1666b33cc0e2f1cab56d94a1b0f0198fb0bddbb5c7b87e507d96e5e6e5a66b",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 3,
+          "class_name": "missing_feature",
+          "label_ko": "재료·형상 결손 의심",
+          "box_xyxy": [
+            63,
+            106,
+            429,
+            371
+          ],
+          "observation": "곡선 가장자리 인접 표면에 불완전하고 불규칙한 재료 형상이 보이며 Thiếu 표시가 있습니다. 정확한 결손량은 사진에서 측정하지 않았습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "정상 제품이나 도면과 비교해 원래 형상과 결손 범위를 확인하세요.",
+            "결손이 체결·지지·조립 기능에 영향을 주는지 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.182712584733963,
+          "box_xyxy": [
+            408.1072082519531,
+            674.4263305664062,
+            437.9403991699219,
+            778
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 오른쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.7000123640685302,
+            0.8668718901881829,
+            0.7511842181302262,
+            1.0
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A276_reference_05",
+      "source_sha256": "fa40104fc2f458e423adbfee414b95f091f72b1ab4d70a8e54f934117003813a",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            170,
+            162,
+            209,
+            202
+          ],
+          "observation": "구멍 테두리 아래 오른쪽에 국부적인 패임이 보입니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.5282803177833557,
+          "box_xyxy": [
+            171.44729614257812,
+            155.6004638671875,
+            212.50436401367188,
+            199.47618865966797
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.5973773384758819,
+            0.4817351822513545,
+            0.7404333240894491,
+            0.617573339503616
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [],
+      "localization": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A276_reference_06",
+      "source_sha256": "7ed4b8ca6acb8c02022b38a3f6594a33d50d3681c7a1bc60737840f89fceac18",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 1,
+          "class_name": "dent",
+          "label_ko": "찍힘·눌림 의심",
+          "box_xyxy": [
+            215,
+            151,
+            251,
+            199
+          ],
+          "observation": "돌출 체결부 테두리에 국부적인 눌림·비정형 윤곽이 보이며 Dập 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "옆면 사진으로 눌린 깊이와 돌출 변형을 확인하세요.",
+            "정상 형상·도면과 비교하고 체결·조립 간섭 여부를 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.2911202907562256,
+          "box_xyxy": [
+            200.88582611083984,
+            142.6990203857422,
+            253.53763580322266,
+            208.80320739746094
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5177469745124739,
+            0.28313297695583767,
+            0.6534475149567595,
+            0.41429207816956537
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.2208806276321411,
+          "box_xyxy": [
+            218.61285400390625,
+            337.0273742675781,
+            252.0,
+            414.6836395263672
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.5634351907317171,
+            0.6687051076737661,
+            0.6494845360824743,
+            0.8227849990602524
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.21462583541870117,
+          "box_xyxy": [
+            207.5228271484375,
+            149.30300903320312,
+            269.2216796875,
+            270.9117126464844
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5348526472897873,
+            0.2962361290341332,
+            0.6938703084729382,
+            0.5375232393779452
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.08600879460573196,
+          "box_xyxy": [
+            122.00233459472656,
+            407.7562255859375,
+            175.0894317626953,
+            503.2062072753906
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.31443900668743957,
+            0.8090401301308284,
+            0.4512614220688024,
+            0.9984250144352989
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.05662982538342476,
+          "box_xyxy": [
+            17.825326919555664,
+            176.0,
+            128.6171875,
+            196.6188259124756
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.045941564225658926,
+            0.3492063492063492,
+            0.3314875966494845,
+            0.3901167180803087
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.05225763097405434,
+          "box_xyxy": [
+            137.2205047607422,
+            277.87896728515625,
+            187.36766052246094,
+            328.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.3536610947441809,
+            0.5513471573118179,
+            0.4829063415527344,
+            0.6507936507936508
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A376_reference_02",
+      "source_sha256": "cf3b95a89f190726a2866844c1d952adbd7b8e116c19736d2dd869db041b13c5",
+      "split": "val",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            193,
+            222,
+            215,
+            269
+          ],
+          "observation": "가로 지지대와 접합부 사이에 열린 파단선이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.2175489217042923,
+          "box_xyxy": [
+            109.86766052246094,
+            373.6748809814453,
+            191.9358673095703,
+            509
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.2929804280598958,
+            0.7341353260932127,
+            0.5118289794921875,
+            1.0
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.21722674369812012,
+          "box_xyxy": [
+            225.60846710205078,
+            179.59613037109375,
+            280.617919921875,
+            331.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6016225789388021,
+            0.35284112057189343,
+            0.748314453125,
+            0.650294695481336
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.16390979290008545,
+          "box_xyxy": [
+            340.3211212158203,
+            175.06529235839844,
+            375,
+            263.6243591308594
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.9075229899088542,
+            0.34393967064518355,
+            1.0,
+            0.5179260493730047
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.1252245306968689,
+          "box_xyxy": [
+            298.63502502441406,
+            269.84515380859375,
+            360.62413024902344,
+            331.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.7963600667317708,
+            0.5301476499186518,
+            0.9616643473307291,
+            0.650294695481336
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.08576338738203049,
+          "box_xyxy": [
+            64.64379119873047,
+            126.1820068359375,
+            244.0,
+            271.99151611328125
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.17238344319661458,
+            0.24790178160302062,
+            0.6506666666666666,
+            0.5343644717353266
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A376_reference_02",
+      "source_sha256": "cf3b95a89f190726a2866844c1d952adbd7b8e116c19736d2dd869db041b13c5",
+      "split": "val",
+      "variant": "jpeg85",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            193,
+            222,
+            215,
+            269
+          ],
+          "observation": "가로 지지대와 접합부 사이에 열린 파단선이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.3165076673030853,
+          "box_xyxy": [
+            115.02120208740234,
+            368.7467041015625,
+            200.13526916503906,
+            509
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.30672320556640625,
+            0.7244532497083742,
+            0.5336940511067708,
+            1.0
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.21299037337303162,
+          "box_xyxy": [
+            225.8618621826172,
+            178.96290588378906,
+            281.260986328125,
+            331.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6022982991536459,
+            0.35159706460469364,
+            0.750029296875,
+            0.650294695481336
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.1158178374171257,
+          "box_xyxy": [
+            298.0971984863281,
+            269.3918151855469,
+            360.702880859375,
+            331.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.7949258626302084,
+            0.5292570042938053,
+            0.9618743489583333,
+            0.650294695481336
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.09487368166446686,
+          "box_xyxy": [
+            340.75445556640625,
+            173.5419464111328,
+            375,
+            266.7782897949219
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.9086785481770834,
+            0.3409468495307128,
+            1.0,
+            0.5241223768073121
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.05010256916284561,
+          "box_xyxy": [
+            61.7840690612793,
+            128.9126434326172,
+            244.0,
+            273.3279724121094
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.1647575174967448,
+            0.2532664900444346,
+            0.6506666666666666,
+            0.5369901226171108
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A376_reference_02",
+      "source_sha256": "cf3b95a89f190726a2866844c1d952adbd7b8e116c19736d2dd869db041b13c5",
+      "split": "val",
+      "variant": "brightness",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            193,
+            222,
+            215,
+            269
+          ],
+          "observation": "가로 지지대와 접합부 사이에 열린 파단선이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.2770412266254425,
+          "box_xyxy": [
+            109.12899017333984,
+            373.640380859375,
+            194.5393829345703,
+            509
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.29101064046223957,
+            0.7340675458926817,
+            0.5187716878255209,
+            1.0
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.21180059015750885,
+          "box_xyxy": [
+            219.98585510253906,
+            174.92449951171875,
+            290.9002380371094,
+            350.0945739746094
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.5866289469401041,
+            0.3436630638737107,
+            0.7757339680989583,
+            0.6878085932703524
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.16910390555858612,
+          "box_xyxy": [
+            297.74949645996094,
+            270.134765625,
+            360.0707092285156,
+            331.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.7939986572265625,
+            0.5307166318762279,
+            0.9601885579427083,
+            0.650294695481336
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.07707827538251877,
+          "box_xyxy": [
+            340.25389099121094,
+            174.71022033691406,
+            375,
+            264.18060302734375
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.9073437093098958,
+            0.34324208317664845,
+            1.0,
+            0.5190188664584356
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.056917909532785416,
+          "box_xyxy": [
+            83.51004028320312,
+            298.21783447265625,
+            136.2940673828125,
+            331.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 중앙",
+          "box_xyxy_normalized": [
+            0.22269344075520833,
+            0.5858896551525663,
+            0.3634508463541667,
+            0.650294695481336
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A376_reference_03",
+      "source_sha256": "6667f16d5a3c96679f0b391189de3b89cedf36dd6ae8456747fb12be211c9895",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            37,
+            179,
+            67,
+            232
+          ],
+          "observation": "왼쪽 지지대에 연결을 가로지르는 끊김이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.18355534970760345,
+          "box_xyxy": [
+            3.2230231761932373,
+            390.71717834472656,
+            249.2034149169922,
+            612.8414001464844
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 왼쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.007114841448550193,
+            0.6363471960011833,
+            0.5501179137240446,
+            0.9981130295545348
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 왼쪽 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A376_reference_04",
+      "source_sha256": "9f5c5ba99bff0fcd79ae08abcd74271cbff134236b66f0dbea0b6408d78dce5f",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            255,
+            190,
+            283,
+            258
+          ],
+          "observation": "가로 지지대 접합부에 벌어진 균열이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.38693150877952576,
+          "box_xyxy": [
+            230.14031982421875,
+            210.0,
+            287.89733123779297,
+            337.81070709228516
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5013950322967728,
+            0.35,
+            0.6272273011716623,
+            0.5630178451538086
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.20347000658512115,
+          "box_xyxy": [
+            350.0268249511719,
+            127.83415985107422,
+            447.60845947265625,
+            267.181640625
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 오른쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.7625856752748843,
+            0.2130569330851237,
+            0.9751818289164624,
+            0.445302734375
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.1911943554878235,
+          "box_xyxy": [
+            207.74446868896484,
+            473.20501708984375,
+            456.8551025390625,
+            596.5749816894531
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 아래쪽",
+          "box_xyxy_normalized": [
+            0.45260232829839836,
+            0.7886750284830729,
+            0.9953270207822712,
+            0.9942916361490886
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source_id": "A376_reference_05",
+      "source_sha256": "44a646c22aee790ed8acf5333bfb68f1766fe36857a83007a3ba8b567f50ed52",
+      "split": "train",
+      "variant": "full",
+      "ground_truth": [
+        {
+          "class_id": 0,
+          "class_name": "fracture",
+          "label_ko": "균열·파손 의심",
+          "box_xyxy": [
+            201,
+            191,
+            226,
+            244
+          ],
+          "observation": "지지대 접합부에 열린 균열이 보이며 Gãy 표시가 있습니다.",
+          "cause": null,
+          "recommended_checks": [
+            "표시 부위를 다른 각도에서도 촬영해 파단선의 연속성을 확인하세요.",
+            "연결부와 인접 체결부의 손상 범위를 실물로 확인하세요."
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.5277829766273499,
+          "box_xyxy": [
+            114.86795043945312,
+            354.2029571533203,
+            209.3713836669922,
+            502
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 아래쪽",
+          "box_xyxy_normalized": [
+            0.294533206255008,
+            0.7055835799866939,
+            0.5368497017102364,
+            1.0
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 아래쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.21367068588733673,
+          "box_xyxy": [
+            198.00640487670898,
+            149.13690185546875,
+            278.5977478027344,
+            324.0755920410156
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5077087304530999,
+            0.29708546186348356,
+            0.7143531994941907,
+            0.6455689084482383
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.1766497641801834,
+          "box_xyxy": [
+            300.95611572265625,
+            212.78819274902344,
+            366.7201843261719,
+            321.4056701660156
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.7716823480068109,
+            0.4238808620498475,
+            0.9403081649389022,
+            0.6402503389761267
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.1589122712612152,
+          "box_xyxy": [
+            185.2849578857422,
+            184.517822265625,
+            231.68582153320312,
+            260.5369567871094
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.47508963560446715,
+            0.367565382999253,
+            0.5940662090594951,
+            0.518997921886672
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.1102990061044693,
+          "box_xyxy": [
+            331.6053771972656,
+            88.96195220947266,
+            386.24627685546875,
+            198.1863250732422
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 위쪽",
+          "box_xyxy_normalized": [
+            0.8502701979417068,
+            0.1772150442419774,
+            0.9903750688601762,
+            0.3947934762415183
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.08692725747823715,
+          "box_xyxy": [
+            254.25788116455078,
+            114.09244537353516,
+            387.9808044433594,
+            314.5671691894531
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 오른쪽 중앙",
+          "box_xyxy_normalized": [
+            0.6519432850373097,
+            0.22727578759668357,
+            0.9948225754957932,
+            0.6266278270706237
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 오른쪽 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    }
+  ],
+  "challenges": [
+    {
+      "name": "external_housing_screenshot_crop",
+      "training_used": false,
+      "annotation": "manual_visual_evaluation_only",
+      "ground_truth": [
+        {
+          "class_name": "fracture",
+          "box_xyxy": [
+            300,
+            195,
+            365,
+            230
+          ]
+        }
+      ],
+      "predictions": [],
+      "candidates": [
+        {
+          "label": "visible_defect",
+          "confidence": 0.1227390319108963,
+          "box_xyxy": [
+            309.19970703125,
+            199.9248809814453,
+            365.22283935546875,
+            276.0
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.5472561186393805,
+            0.47152094571095593,
+            0.646412105053927,
+            0.6509433962264151
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.10233797878026962,
+          "box_xyxy": [
+            265.9844970703125,
+            132.0799560546875,
+            468.716552734375,
+            408.2103271484375
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.47076902136338494,
+            0.3115093303176592,
+            0.8295868189988939,
+            0.9627602055387677
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.06565360724925995,
+          "box_xyxy": [
+            45.15022277832031,
+            103.1276626586914,
+            403.48114013671875,
+            394.46246337890625
+          ],
+          "search_mode": "full_640",
+          "location_ko": "사진 기준 가운데 중앙",
+          "box_xyxy_normalized": [
+            0.07991189872269082,
+            0.24322561947804577,
+            0.7141259117464048,
+            0.9303359985351562
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 중앙에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        },
+        {
+          "label": "visible_defect",
+          "confidence": 0.06358296424150467,
+          "box_xyxy": [
+            67.51217651367188,
+            14.153035163879395,
+            312.1209411621094,
+            228.8184814453125
+          ],
+          "search_mode": "tile_640",
+          "location_ko": "사진 기준 가운데 위쪽",
+          "box_xyxy_normalized": [
+            0.1194905779003042,
+            0.033379799914809896,
+            0.5524264445347069,
+            0.5396662298238503
+          ],
+          "cause": null,
+          "interpretation_source": "class_catalog_and_box_coordinates",
+          "type_status": "unconfirmed",
+          "label_ko": "결함 의심 · 유형 미확정",
+          "label_en": "Suspected defect; type unconfirmed",
+          "label_vi": "Nghi khuyết tật; chưa xác định loại",
+          "explanation": "사진 기준 가운데 위쪽에서 결함 의심 영역을 찾았습니다. 검출된 위치의 세부 유형은 미확정입니다. 아래 라벨 사례와 실제 형상을 비교해 확인하세요.",
+          "recommended_checks": [
+            "표시 부위를 확대한 사진과 다른 각도 사진으로 실제 형상을 확인하세요."
+          ]
+        }
+      ],
+      "localization": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      },
+      "typed": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1
+      }
+    },
+    {
+      "name": "blank_white",
+      "training_used": false,
+      "predictions": [],
+      "expected_count": 0
+    },
+    {
+      "name": "blank_black",
+      "training_used": false,
+      "predictions": [],
+      "expected_count": 0
+    },
+    {
+      "name": "blank_(30, 110, 75)",
+      "training_used": false,
+      "predictions": [],
+      "expected_count": 0
+    }
+  ],
+  "assessment": "limited_photo_holdout_only",
+  "specimen_independence": "unknown",
+  "normal_part_images": 0,
+  "unsupported_types": [
+    "scratch",
+    "assembly_gap"
+  ],
+  "universal_generalization_verified": false
+}

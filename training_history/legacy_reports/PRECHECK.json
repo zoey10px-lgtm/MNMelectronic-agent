@@ -1,0 +1,26 @@
+{
+  "verified": "static checks",
+  "dataset": {
+    "train": {
+      "images": 98,
+      "objects_per_class": [
+        49,
+        21,
+        7,
+        35
+      ]
+    },
+    "val": {
+      "images": 4,
+      "objects_per_class": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "four_class_weights_present": false,
+  "one_click_entry": "START.bat",
+  "old_weights_preserved": true
+}

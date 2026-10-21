@@ -1,0 +1,98 @@
+{
+  "rule": "maximize held-out full-photo TP, then minimize FP, then maximize train TP; no external challenge used",
+  "selected_report": "evaluation/repaired/report.json",
+  "candidates": [
+    {
+      "report": "evaluation/repaired/report.json",
+      "key": [
+        1,
+        -3,
+        16
+      ],
+      "summary": {
+        "train": {
+          "tp": 16,
+          "fp": 3,
+          "fn": 0,
+          "images": 14,
+          "matched_images": 14,
+          "precision": 0.8421052631578947,
+          "recall": 1.0
+        },
+        "val": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 3,
+          "images": 4,
+          "matched_images": 1,
+          "precision": 0.25,
+          "recall": 0.25
+        },
+        "val_per_class": {
+          "fracture": {
+            "gt": 1,
+            "tp": 1
+          },
+          "dent": {
+            "gt": 1,
+            "tp": 0
+          },
+          "porosity": {
+            "gt": 1,
+            "tp": 0
+          },
+          "missing_feature": {
+            "gt": 1,
+            "tp": 0
+          }
+        }
+      }
+    },
+    {
+      "report": "evaluation/candidates/generic_pretrained/report.json",
+      "key": [
+        1,
+        -3,
+        15
+      ],
+      "summary": {
+        "train": {
+          "tp": 15,
+          "fp": 3,
+          "fn": 1,
+          "images": 14,
+          "matched_images": 14,
+          "precision": 0.8333333333333334,
+          "recall": 0.9375
+        },
+        "val": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 3,
+          "images": 4,
+          "matched_images": 1,
+          "precision": 0.25,
+          "recall": 0.25
+        },
+        "val_per_class": {
+          "fracture": {
+            "gt": 1,
+            "tp": 1
+          },
+          "dent": {
+            "gt": 1,
+            "tp": 0
+          },
+          "porosity": {
+            "gt": 1,
+            "tp": 0
+          },
+          "missing_feature": {
+            "gt": 1,
+            "tp": 0
+          }
+        }
+      }
+    }
+  ]
+}
