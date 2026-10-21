@@ -78,7 +78,7 @@ def generate(product, message, category, images, vision, references, language='k
     if not SLOTS.acquire(blocking=False):
         return unavailable('rate_limited', language)
     try:
-        evidence = [{'id': r['id'], 'text': r['text'][:5000],
+        evidence = [{'id': r['id'], 'text': r['text'][:1500],
                      'authority': r.get('authority'), 'synthetic': r.get('synthetic', False)}
                     for r in references[:5]]
         inspection = [{'image_number': i+1, 'yolo_detections': f['detections'],
@@ -110,12 +110,12 @@ For a photo-only inquiry focus on what is visible. For a text-only inquiry leave
                             {'type': 'input_image', 'image_url': _photo_data(image), 'detail': 'high'}])
         payload = {'model': config['model'], 'instructions': instructions,
                    'input': [{'role': 'user', 'content': content}], 'store': False,
-                   'max_output_tokens': 3500,
+                   'max_output_tokens': 2200,
                    'text': {'format': {'type': 'json_schema', 'name': 'quality_inquiry',
                                        'strict': True, 'schema': SCHEMA}}}
         response = requests.post('https://api.openai.com/v1/responses', json=payload,
                                  headers={'Authorization': 'Bearer '+os.environ['OPENAI_API_KEY'].strip(),
-                                          'Content-Type': 'application/json'}, timeout=(8, 60))
+                                          'Content-Type': 'application/json'}, timeout=(8, 45))
         if response.status_code in (401, 403):
             return unavailable('authentication_failed', language)
         if response.status_code == 429:
@@ -136,7 +136,7 @@ For a photo-only inquiry focus on what is visible. For a text-only inquiry leave
         result['next_actions'] = result['next_actions'][:8]
         result['image_observations'] = result['image_observations'][:12]
         result.update(status='complete', provider='OpenAI', model=config['model'], language=language,
-                      observation_source='openai_visual_review',
+                      observation_source='openai_visual_review' if images else 'text_and_retrieved_records',
                       message='AI reply generated', response_id=raw.get('id'))
         return result
     except (requests.RequestException, ValueError, KeyError, TypeError):
