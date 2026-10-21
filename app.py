@@ -315,9 +315,14 @@ def analyze():
               'message': (f'YOLO가 결함 {total}곳을 검출하고 유형 {len(predicted_types)}종을 예측했습니다.' if predicted_types else f'YOLO가 결함 의심 영역 {total}곳을 검출했습니다. 유형 모델이 없어 세부 유형은 미확정입니다.') if total else
                          ('검출된 영역이 없습니다. 정상 판정은 아니며 담당자 확인이 필요합니다.' if photos
                           else '사진이 없어 이미지 검사를 진행하지 않았습니다.')}
-    from language_service import generate
-    language_result = generate(product, message, text(d, 'category', 80),
-                               images, vision, references, language)
+    # Strict YOLO-only path: do not call OpenAI or transmit images, detections,
+    # validation samples, or customer data to any external AI service.
+    language_result = {
+        'status': 'disabled_for_independent_yolo',
+        'provider': 'local',
+        'language': language,
+        'message': 'Image inspection is YOLO-only. AI reply generation is separate and not invoked.'
+    }
     category_names = {'scratch': '표면 스크래치', 'dent': '찍힘·변형', 'fracture': '균열 의심',
                       'porosity': '기공·표면 공동', 'missing_feature': '재료·형상 결손',
                       'assembly_gap': '조립 벌어짐', 'dimension': '치수·조립 문제',
