@@ -107,6 +107,22 @@ $('#complaintText').addEventListener('input',e=>$('#messageLength').textContent=
 $('#pickPhoto').addEventListener('click',()=>$('#photoInput').click());const dropZone=$('#dropZone');dropZone.addEventListener('click',e=>{if(!e.target.closest('button'))$('#photoInput').click()});['dragover','dragenter'].forEach(type=>dropZone.addEventListener(type,e=>{e.preventDefault();dropZone.classList.add('dragging')}));['dragleave','drop'].forEach(type=>dropZone.addEventListener(type,e=>{e.preventDefault();dropZone.classList.remove('dragging')}));dropZone.addEventListener('drop',e=>receiveFiles(e.dataTransfer.files));$('#photoInput').addEventListener('change',e=>{receiveFiles(e.target.files);e.target.value=''});
 function compressPhoto(file){return new Promise((resolve,reject)=>{if(!['image/jpeg','image/png','image/webp'].includes(file.type))return reject(new Error('JPG, PNG, WEBP 이미지만 사용할 수 있습니다.'));if(file.size>5*1024*1024)return reject(new Error('사진은 장당 최대 5MB까지 가능합니다.'));const reader=new FileReader();reader.onerror=()=>reject(new Error('사진을 읽을 수 없습니다.'));reader.onload=()=>resolve({name:file.name,url:reader.result});reader.readAsDataURL(file)})}
 async function receiveFiles(files){const list=Array.from(files||[]);if(photos.length+list.length>3)return toast('사진은 최대 3장까지 첨부할 수 있습니다.');for(const f of list){try{photos.push(await compressPhoto(f))}catch(e){toast(e.message)}}drawPreviews()}
+window.addEventListener('mm-document-images',async event=>{
+const urls=Array.isArray(event.detail)?event.detail:[];
+let added=0;
+for(const url of urls.slice(0,Math.max(0,3-photos.length))){
+try{
+const response=await fetch(url);
+const blob=await response.blob();
+const file=new File([blob],'document-image-'+(photos.length+1)+'.jpg',{type:'image/jpeg'});
+photos.push(await compressPhoto(file));
+added++;
+}catch(error){toast('문서 이미지 첨부 실패: '+error.message)}
+}
+drawPreviews();
+if(urls.length>added)toast('사진은 최대 3장까지 분석할 수 있습니다.');
+if(added)toast('문서 이미지 '+added+'장을 YOLO 분석용 사진에 추가했습니다.');
+});
 function drawPreviews(){$('#photoPreviews').innerHTML=photos.map((p,i)=>`<div class="photo-thumb"><img src="${p.url}" alt="첨부사진 ${i+1}"><button type="button" data-remove="${i}" aria-label="사진 삭제">${icon('close')}</button></div>`).join('');$$('[data-remove]').forEach(btn=>btn.addEventListener('click',()=>{photos.splice(Number(btn.dataset.remove),1);drawPreviews()}))}
 function makeBubble(role,html,plain=false){const el=document.createElement('div');el.className='chat-message '+role;el.innerHTML=`<div class="avatar">${role==='bot'?'M':'U'}</div><div class="chat-column"><span class="speaker">${role==='bot'?'M&amp;M Assistant':'고객'}</span><div class="chat-bubble">${plain?escapeHTML(html):html}</div><time>${new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})}</time></div>`;$('#chatWindow').append(el);scrollChat();return el}
 function scrollChat(){const el=$('#chatWindow');el.scrollTo({top:el.scrollHeight,behavior:'smooth'})}
@@ -188,6 +204,7 @@ out.replaceChildren();
 const heading=document.createElement('p');heading.textContent=result.filename+' | 텍스트 '+result.text_length+'자 | 이미지 '+result.image_count+'개';out.append(heading);
 const preview=document.createElement('pre');preview.textContent=result.text||'추출된 텍스트가 없습니다.';preview.style.cssText='white-space:pre-wrap;max-height:240px;overflow:auto;padding:12px;background:#eef2ed;border-radius:8px';out.append(preview);
 const insert=document.createElement('button');insert.type='button';insert.className='btn neutral';insert.textContent='추출 텍스트를 문의에 입력';insert.onclick=function(){const input=document.getElementById('complaintText');const available=1800-input.value.length;input.value+=(input.value?'\n':'')+result.text.slice(0,Math.max(0,available-1));input.dispatchEvent(new Event('input',{bubbles:true}));};out.append(insert);
+window.dispatchEvent(new CustomEvent('mm-document-images',{detail:result.image_previews}));
 for(const url of result.image_previews){const image=document.createElement('img');image.src=url;image.alt='문서에서 추출된 이미지';image.style.cssText='max-width:180px;max-height:180px;object-fit:contain;margin:8px';out.append(image);}
 }catch(err){out.textContent='오류: '+err.message;}finally{button.disabled=false;}
 });
