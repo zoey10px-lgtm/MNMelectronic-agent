@@ -1,6 +1,7 @@
 """Offline lexical retrieval. Pure Python; no model/API/embedding dependency."""
 from pathlib import Path
 import argparse, json, math, re, unicodedata, collections
+from functools import lru_cache
 
 ROOT=Path(__file__).resolve().parent
 def normalize(s):
@@ -38,9 +39,14 @@ ALIASES={
  'contamination':['contamination','oil','기름','이물','dị vật'],
  'repeat_issue':['recurr','repeated','반복','lặp lại'],
 }
+@lru_cache(maxsize=1)
+def knowledge_documents():
+    """Load reference data once per worker."""
+    return tuple(json.loads(l) for l in (ROOT/'rag/documents.jsonl').read_text(encoding='utf-8').splitlines() if l)
+
 def retrieve(query, model=None, category=None, k=5, include_examples=False, include_unconfirmed=False):
     if k<1:raise ValueError('k must be positive')
-    docs=[json.loads(l) for l in (ROOT/'rag/documents.jsonl').read_text(encoding='utf-8').splitlines() if l]
+    docs=list(knowledge_documents())
     m=(model.upper().replace('-','').replace(' ','')) if model else None
     if m and m not in {'A156','A176','A276','A376'}:raise ValueError('Unknown product model')
     if category and category not in ALIASES:raise ValueError('Unknown category')
@@ -64,7 +70,16 @@ def retrieve(query, model=None, category=None, k=5, include_examples=False, incl
         # Prefer an actionable guide over a loosely related marked photo.
         if d['kind']=='review_guide' and d.get('category') in inferred:score+=5
         if score>0:ranked.append({'score':round(score,5),**d})
-    return sorted(ranked,key=lambda d:(-d['score'],d['id']))[:k]
+    ordered=sorted(ranked,key=lambda d:(-d['score'],d['id']))
+    if not include_examples:
+        return ordered[:k]
+    # Genuine guides and product references take precedence over synthetic demos.
+    authoritative=[d for d in ordered if not d.get('synthetic')]
+    examples=[d for d in ordered if d.get('synthetic')]
+    selected=authoritative[:max(0,k-1)]
+    if examples and len(selected)<k:
+        selected.append(examples[0])
+    return (selected + [d for d in authoritative if d not in selected])[:k]
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--query',required=True);p.add_argument('--model');p.add_argument('--category');p.add_argument('--k',type=int,default=5);p.add_argument('--include-examples',action='store_true')
     a=p.parse_args();print(json.dumps(retrieve(a.query,a.model,a.category,a.k,a.include_examples),ensure_ascii=False,indent=2))
