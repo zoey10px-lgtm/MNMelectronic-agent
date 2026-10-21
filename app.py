@@ -339,14 +339,14 @@ def analyze():
               'revision': '6.1', 'photo_product_estimate': product_guesses, 'class_names': list(MODEL.names.values()) if MODEL else [],
               'predicted_types': predicted_types, 'type_classifier_active': bool(predicted_types) or (MODEL is not None and set(MODEL.names.values()) == set(CLASSES)),
               'source_label_types': source_types, 'evaluation': evaluation_info(),
-              'interpretation_method': 'YOLO predictions from detector.py; source annotations are separate reference data; no GPT call',
+              'interpretation_method': 'YOLO predictions from detector.py; source annotations are separate reference data; GPT receives YOLO metadata only, never original images',
               'confidence_threshold': 0.25, 'detection_count': total, 'images': findings,
               'message': (f'YOLO가 결함 {total}곳을 검출하고 유형 {len(predicted_types)}종을 예측했습니다.' if predicted_types else f'YOLO가 결함 의심 영역 {total}곳을 검출했습니다. 유형 모델이 없어 세부 유형은 미확정입니다.') if total else
                          ('검출된 영역이 없습니다. 정상 판정은 아니며 담당자 확인이 필요합니다.' if photos
                           else '사진이 없어 이미지 검사를 진행하지 않았습니다.')}
     from language_service import generate
     language_result = generate(product, message + ('\n\n[Attached document: ' + document_name + ']\n' + document_text[:10000] if document_text else ''), text(d, 'category', 80),
-                               images, vision, references, language)
+                               [], vision, references, language)  # Text-only GPT; YOLO owns image detection.
     category_names = {'scratch': '표면 스크래치', 'dent': '찍힘·변형', 'fracture': '균열 의심',
                       'porosity': '기공·표면 공동', 'missing_feature': '재료·형상 결손',
                       'assembly_gap': '조립 벌어짐', 'dimension': '치수·조립 문제',
