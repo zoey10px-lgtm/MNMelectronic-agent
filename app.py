@@ -231,6 +231,33 @@ def annotation_assets(name):
     return send_from_directory(ROOT / 'annotations', name)
 
 
+@app.post('/api/documents/preprocess')
+def preprocess_document_upload():
+    upload = request.files.get('file')
+    if upload is None or not upload.filename:
+        return jsonify(error='Select a document.'), 400
+    filename = Path(upload.filename).name
+    extension = Path(filename).suffix.lower()
+    if extension not in ('.pdf', '.docx', '.txt'):
+        return jsonify(error='Only PDF, DOCX and TXT are supported.'), 400
+    data = upload.read(12 * 1024 * 1024 + 1)
+    if len(data) > 12 * 1024 * 1024:
+        return jsonify(error='Maximum document size is 12 MB.'), 413
+    try:
+        if extension == '.txt':
+            result = {'filename': filename, 'type': 'txt',
+                      'text': data.decode('utf-8-sig')[:30000], 'images': [], 'image_count': 0}
+        else:
+            from document_preprocessor import preprocess_document
+            result = preprocess_document(filename, data)
+    except (ValueError, UnicodeDecodeError) as exc:
+        return jsonify(error=str(exc)), 400
+    images = result.pop('images')
+    result['image_previews'] = ['data:image/jpeg;base64,' + base64.b64encode(item).decode('ascii') for item in images]
+    result['text_length'] = len(result['text'])
+    return jsonify(result)
+
+
 @app.post('/api/analyze')
 def analyze():
     d = request.get_json(silent=True)
