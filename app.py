@@ -264,13 +264,15 @@ def analyze():
     if not isinstance(d, dict):
         return jsonify(error='문의 내용을 확인해주세요.'), 400
     product, message = text(d, 'product', 20), text(d, 'message', 1800)
+    document_text = text(d, 'document_text', 30000)
+    document_name = text(d, 'document_name', 200)
     language = d.get('language', 'ko')
     if language not in ('ko', 'en', 'vi'):
         language = 'ko'
     photos = d.get('photos', [])
     if not isinstance(photos, list) or len(photos) > 3:
         return jsonify(error='사진은 최대 3장까지 첨부할 수 있습니다.'), 400
-    if product not in ('A156', 'A176', 'A276', 'A376', 'AUTO') or (not photos and len(message) < 10):
+    if product not in ('A156', 'A176', 'A276', 'A376', 'AUTO') or (not photos and len(message) < 10 and len(document_text) < 10):
         return jsonify(error='제품을 선택하고 사진 또는 10자 이상의 문의 내용을 입력해주세요.'), 400
     if not message:
         message = '첨부 사진의 결함 의심 영역 검사를 요청합니다.'
@@ -330,7 +332,7 @@ def analyze():
     total = sum(f['detection_count'] for f in findings)
     predicted_types = sorted({b['label'] for f in findings for b in f['detections']
                               if b['label'] in CLASSES})
-    query = message + ' ' + ' '.join(CLASSES[t]['ko'] for t in predicted_types)
+    query = message + '\n' + document_text[:6000] + ' ' + ' '.join(CLASSES[t]['ko'] for t in predicted_types)
     references = retrieve(query, model=product if product in ('A156','A176','A276','A376') else None, k=5, include_examples=True,
                           category=predicted_types[0] if len(predicted_types) == 1 else None)
     vision = {'status': 'complete' if photos else 'no_photo', 'model': str(MODEL_PATH.relative_to(ROOT)) if MODEL_PATH else None,
@@ -343,7 +345,7 @@ def analyze():
                          ('검출된 영역이 없습니다. 정상 판정은 아니며 담당자 확인이 필요합니다.' if photos
                           else '사진이 없어 이미지 검사를 진행하지 않았습니다.')}
     from language_service import generate
-    language_result = generate(product, message, text(d, 'category', 80),
+    language_result = generate(product, message + ('\n\n[Attached document: ' + document_name + ']\n' + document_text[:10000] if document_text else ''), text(d, 'category', 80),
                                images, vision, references, language)
     category_names = {'scratch': '표면 스크래치', 'dent': '찍힘·변형', 'fracture': '균열 의심',
                       'porosity': '기공·표면 공동', 'missing_feature': '재료·형상 결손',
@@ -358,7 +360,7 @@ def analyze():
                                 'authority': r['authority'],
                                 'synthetic': r['synthetic']} for r in references]}
     payload = {'id': cid, 'createdAt': now(), 'product': product,
-               'message': message, 'category': chosen_category or '사진 검사',
+               'message': message, 'document_name': document_name, 'document_text': document_text, 'category': chosen_category or '사진 검사',
                'lot': text(d, 'lot', 80), 'name': text(d, 'name', 80), 'language': language,
                'email': text(d, 'email', 150), 'photos': original,
                'analysis': analysis, 'status': '접수 대기',
