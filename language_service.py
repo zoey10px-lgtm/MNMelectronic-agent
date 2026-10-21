@@ -9,7 +9,7 @@ import threading
 import requests
 
 LANGUAGES = {'ko': 'Korean', 'en': 'English', 'vi': 'Vietnamese'}
-DEFAULT_MODEL = 'gpt-5.4-mini'
+DEFAULT_MODEL = 'gpt-6-luna'
 SLOTS = threading.BoundedSemaphore(2)
 
 
