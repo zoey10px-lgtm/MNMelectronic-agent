@@ -331,7 +331,7 @@ def analyze():
     predicted_types = sorted({b['label'] for f in findings for b in f['detections']
                               if b['label'] in CLASSES})
     query = message + ' ' + ' '.join(CLASSES[t]['ko'] for t in predicted_types)
-    references = retrieve(query, model=product if product in ('A156','A176','A276','A376') else None, k=3, include_examples=False,
+    references = retrieve(query, model=product if product in ('A156','A176','A276','A376') else None, k=5, include_examples=True,
                           category=predicted_types[0] if len(predicted_types) == 1 else None)
     vision = {'status': 'complete' if photos else 'no_photo', 'model': str(MODEL_PATH.relative_to(ROOT)) if MODEL_PATH else None,
               'revision': '6.1', 'photo_product_estimate': product_guesses, 'class_names': list(MODEL.names.values()) if MODEL else [],
@@ -363,7 +363,11 @@ def analyze():
                'email': text(d, 'email', 150), 'photos': original,
                'analysis': analysis, 'status': '접수 대기',
                'priority': {'low': '낮음', 'normal': '보통', 'high': '높음', 'urgent': '긴급'}.get(language_result.get('priority'), '보통'),
-               'history': []}
+               'history': [],
+               'admin_summary': language_result.get('summary', '') if language_result.get('status') == 'complete' else '',
+               'recommended_actions': language_result.get('next_actions', []) if language_result.get('status') == 'complete' else [],
+               'ai_category': language_result.get('category') if language_result.get('status') == 'complete' else None,
+               'ai_review_required': language_result.get('needs_human_review', True)}
     with connect() as c:
         c.execute('INSERT INTO records VALUES (?,?,0,?)',
                   (cid, owner(), json.dumps(payload, ensure_ascii=False)))
