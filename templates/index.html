@@ -113,6 +113,37 @@ const UI_TRANSLATIONS={
 '고객에게 답변 등록':['Send Administrator Reply','Gửi phản hồi quản trị'],
 'PDF 분석 보고서 다운로드':['Download PDF Report','Tải báo cáo PDF']
 };
+Object.assign(UI_TRANSLATIONS,{
+'분석 결과가 없습니다.':['No analysis results.','Không có kết quả phân tích.'],
+'사진 검사 결과가 없습니다.':['No photo inspection results.','Không có kết quả kiểm tra ảnh.'],
+'AI 세부 분류(추정)':['AI Classification (Tentative)','Phân loại AI (dự đoán)'],
+'사진 검사 결과':['Photo Inspection Results','Kết quả kiểm tra ảnh'],
+'모델 예측':['YOLO Predictions','Dự đoán YOLO'],
+'검출된 영역이 없습니다. 정상 판정은 아니며 담당자 확인이 필요합니다.':['No suspected regions detected. Human inspection may still be needed.','Không phát hiện vùng nghi ngờ. Vẫn cần kiểm tra thủ công.'],
+'제품이 미식별 상태입니다.':['Product is unidentified.','Chưa xác định được sản phẩm.'],
+'최종 품질 판정 및 승인 결과가 아닙니다.':['This is not a final quality decision or approval.','Đây không phải quyết định hoặc phê duyệt chất lượng cuối cùng.'],
+'사진을 올리면 결함 위치·유형을 예측합니다.':['Upload a photo to detect suspected defect locations.','Tải ảnh lên để phát hiện vị trí nghi ngờ lỗi.'],
+'사진 선택하기':['Select Photo','Chọn ảnh'],
+'선택한 사진 넣기':['Add Selected Photo','Thêm ảnh đã chọn'],
+'문서 전처리 (PDF / Word / TXT)':['Document Processing (PDF / Word / TXT)','Xử lý tài liệu (PDF / Word / TXT)'],
+'파일 선택':['Choose File','Chọn tệp'],
+'선택된 파일 없음':['No file selected','Chưa chọn tệp'],
+'민원 상세 보기':['Complaint Details','Chi tiết khiếu nại'],
+'관리자 로그인':['Administrator Login','Đăng nhập quản trị'],
+'로그아웃':['Log Out','Đăng xuất'],
+'최종 접수 확인':['Final Submission Confirmation','Xác nhận gửi yêu cầu'],
+'정식으로 문의를 접수할까요?':['Submit this inquiry?','Gửi yêu cầu này?'],
+'AI 안내로 해결되지 않은 이유 (관리자 전달용)':['Why the issue remains unresolved (for administrator)','Lý do vấn đề chưa được giải quyết (gửi quản trị viên)'],
+'고객이 제출한 추가 사유가 없습니다.':['No additional customer explanation.','Khách hàng chưa gửi giải thích bổ sung.'],
+'현재 처리 상태':['Current Status','Trạng thái hiện tại'],
+'우선순위':['Priority','Mức độ ưu tiên'],
+'접수 시간':['Submission Time','Thời gian tiếp nhận'],
+'접수번호':['Case ID','Mã yêu cầu'],
+'문의 유형':['Inquiry Category','Loại yêu cầu'],
+'고객 첨부 사진':['Customer Photo','Ảnh khách hàng'],
+'추가 문의 또는 미해결 사유':['Additional Question or Unresolved Reason','Câu hỏi bổ sung hoặc lý do chưa giải quyết'],
+'관리자 답변':['Administrator Reply','Phản hồi quản trị viên']
+});
 const localeText=(value,lang=document.documentElement.lang)=>{if(lang==='ko')return value;let translated=UI_TRANSLATIONS[value];return translated?translated[lang==='vi'?1:0]:value};
 const nodeLocale=new WeakMap();
 function localizeUI(){
@@ -171,12 +202,12 @@ function analysisHTML(a){
  <small>제안된 점검 절차이며 최종 품질 판정 및 승인 결과가 아닙니다.</small></section>`:`<p style="padding:12px;background:#f7f9f5">${escapeHTML(ai.message||'')}</p>`;
  const picture=(url,alt)=>`<a href="${escapeHTML(url)}" target="_blank" rel="noopener"><img src="${escapeHTML(url)}" alt="${escapeHTML(alt)}" style="width:100%;max-height:420px;object-fit:contain;margin:10px 0;border:1px solid #dae3dc"></a>`;
  const checks=items=>items?.length?`<p style="font-size:12px"><b>확인할 내용</b><br>${items.map(escapeHTML).join('<br>')}</p>`:'';
- return `${aiResult}<b>사진 분석 결과</b><p>${escapeHTML(v.message)}</p>${(v.images||[]).map((im,i)=>{
+ return `${aiResult}<b>사진 분석 결과</b><p>${escapeHTML((document.documentElement.lang==='en'&&v.detection_count!==undefined)?('YOLO detected '+v.detection_count+' suspected region(s). Detailed defect category is assessed separately by AI.'):((document.documentElement.lang==='vi'&&v.detection_count!==undefined)?('YOLO phát hiện '+v.detection_count+' vùng nghi ngờ. Loại lỗi được AI phân tích riêng.'):v.message))}</p>${(v.images||[]).map((im,i)=>{
   const known=im.registered_label,recognition=im.product_recognition||{},weak=im.low_confidence_candidates||[];
   const categoryNames={ko:{scratch:'긁힘',dent:'찍힘',fracture:'균열',porosity:'기공',missing_feature:'재료 결손·파손',assembly_gap:'조립 틈',deformation:'변형',burr:'버',corrosion:'부식',coating_peel:'코팅 박리',contamination:'오염',other:'기타',unclear:'유형 미확정'},en:{scratch:'Scratch',dent:'Dent',fracture:'Crack',porosity:'Porosity',missing_feature:'Missing material / chipped edge',assembly_gap:'Assembly gap',deformation:'Deformation',burr:'Burr',corrosion:'Corrosion',coating_peel:'Coating peel',contamination:'Contamination',other:'Other',unclear:'Uncertain'},vi:{scratch:'Vết xước',dent:'Vết lõm',fracture:'Vết nứt',porosity:'Lỗ rỗ',missing_feature:'Thiếu vật liệu',assembly_gap:'Khe lắp ráp',deformation:'Biến dạng',burr:'Ba via',corrosion:'Ăn mòn',coating_peel:'Bong lớp phủ',contamination:'Bám bẩn',other:'Khác',unclear:'Chưa rõ'}};
  const langCode=document.documentElement.lang||'ko';
  const labelCategory=(key)=>categoryNames[langCode]?.[key]||categoryNames.ko[key]||key;
- const boxes=(im.detections||[]).map((b,j)=>`<div style="padding:12px;background:#f1f6f1;margin-top:10px"><b>${j+1}. ${escapeHTML(b.label_ko)}</b><p>${escapeHTML(b.explanation)}</p>${b.llm_classification?`<p style="font-size:13px"><b>${escapeHTML(langCode==='en'?'AI classification (tentative)':langCode==='vi'?'Phân loại AI (dự đoán)':'AI 세부 분류(추정)')}: ${escapeHTML(labelCategory(b.llm_classification.category))}</b><br>${escapeHTML(b.llm_classification.description)}<br><small>${escapeHTML(b.llm_classification.uncertainty)}</small></p>`:''}<p style="font-size:12px">검출 점수 ${Number(b.confidence).toFixed(2)}</p>${checks(b.recommended_checks)}</div>`).join('');
+ const boxes=(im.detections||[]).map((b,j)=>`<div style="padding:12px;background:#f1f6f1;margin-top:10px"><b>${j+1}. ${escapeHTML(b.label_ko)}</b><p>${escapeHTML(document.documentElement.lang==='en'?'YOLO localized a suspected region. Review the AI classification and inspection image below.':document.documentElement.lang==='vi'?'YOLO đã xác định vùng nghi ngờ. Xem phân loại AI và hình kiểm tra bên dưới.':b.explanation)}</p>${b.llm_classification?`<p style="font-size:13px"><b>${escapeHTML(langCode==='en'?'AI classification (tentative)':langCode==='vi'?'Phân loại AI (dự đoán)':'AI 세부 분류(추정)')}: ${escapeHTML(labelCategory(b.llm_classification.category))}</b><br>${escapeHTML(b.llm_classification.description)}<br><small>${escapeHTML(b.llm_classification.uncertainty)}</small></p>`:''}<p style="font-size:12px">검출 점수 ${Number(b.confidence).toFixed(2)}</p>${checks(b.recommended_checks)}</div>`).join('');
   const prediction=im.inference_status==='skipped_location_map'?'<p>검사 위치 안내도입니다. 제품 사진을 올려주세요.</p>':`${picture(im.annotated_image,'모델이 예측한 결함 위치')}<b>모델 예측 ${im.detection_count}곳</b>${boxes}${im.detection_count?'':'<p>결함 위치와 유형을 판별하지 못했습니다. 이 결과로 정상 여부를 결정할 수 없습니다.</p>'}`;
   const source=known?`<details style="margin:18px 0"><summary>등록된 원본 자료와 비교</summary><p>${escapeHTML(known.image_id)} · ${escapeHTML(known.product_model)} · ${known.split==='train'?'학습에 사용한 사진':known.split==='val'?'학습에서 제외한 검증 사진':'검토 자료'}</p>${picture(known.annotated_image,'등록 자료의 정답 라벨')}<p>${escapeHTML(known.interpretation)}</p><p style="font-size:12px">등록 자료의 라벨입니다. 위 모델 예측과 비교할 수 있습니다.</p></details>`:'';
   return `<section style="margin:22px 0"><h3>사진 ${i+1}</h3><p><b>제품 모델: ${escapeHTML(recognition.model||'미식별')}</b></p>${prediction}${source}<details style="margin:12px 0;background:#fff7eb;padding:12px"><summary>검사 상세 · 낮은 점수 후보 ${weak.length}건</summary><p>점수 0.05~${Number(v.confidence_threshold||.25).toFixed(2)} 후보</p>${weak.map(b=>`<p>${escapeHTML(b.label)} · ${Number(b.confidence).toFixed(3)}</p>`).join('')}</details></section>`;
