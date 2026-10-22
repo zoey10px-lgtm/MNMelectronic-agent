@@ -83,7 +83,16 @@ function analysisHTML(a){
  if(!a)return '분석 결과가 없습니다.';
  const v=a.vision||{images:[],message:'사진 검사 결과가 없습니다.'};
  const ai=a.language||{};
- const aiResult=ai.status==='complete'?`<section class="ai-result" style="padding:18px;border:1px solid #9fbda8;background:#f4faf5;margin-bottom:22px"><b>AI 문의 분석 및 답변 초안</b><p>${escapeHTML(ai.summary)}</p>${(ai.image_observations||[]).map(o=>`<p><b>사진 ${o.image_number} · ${escapeHTML(o.location)}</b><br>${escapeHTML(o.observation)}<br>${escapeHTML(o.suspected_issue)}</p>`).join('')}<p style="white-space:pre-wrap">${escapeHTML(ai.reply_draft)}</p>${ai.next_actions?.length?`<b>다음 확인 사항</b><ul>${ai.next_actions.map(t=>`<li>${escapeHTML(t)}</li>`).join('')}</ul>`:''}<small>AI가 작성한 검토용 초안입니다.</small></section>`:`<p style="padding:12px;background:#f7f9f5">${escapeHTML(ai.message||'')}</p>`;
+ const actionList=(title,items)=>Array.isArray(items)&&items.length?`<div style="margin-top:12px"><b>${escapeHTML(title)}</b><ol>${items.map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ol></div>`:'';
+ const aiResult=ai.status==='complete'?`<section class="ai-result" style="padding:18px;border:1px solid #9fbda8;background:#f4faf5;margin-bottom:22px">
+ <b>AI 민원 분석 및 해결 안내</b><p>${escapeHTML(ai.summary)}</p>
+ ${actionList('지금 해야 할 조치',ai.immediate_actions)}
+ ${actionList('확인 및 검사 절차',ai.verification_steps)}
+ ${actionList('후속 해결 절차',ai.resolution_plan)}
+ ${actionList('추가로 필요한 정보',ai.required_information)}
+ ${ai.needs_human_review?`<p style="margin-top:12px"><b>관리자 검토 필요</b> ${escapeHTML(ai.escalation_reason||'최종 확인이 필요합니다.')}</p>`:''}
+ <details style="margin-top:12px"><summary>AI 고객 답변 초안</summary><p style="white-space:pre-wrap">${escapeHTML(ai.reply_draft)}</p></details>
+ <small>제안된 점검 절차이며 최종 품질 판정 및 승인 결과가 아닙니다.</small></section>`:`<p style="padding:12px;background:#f7f9f5">${escapeHTML(ai.message||'')}</p>`;
  const picture=(url,alt)=>`<a href="${escapeHTML(url)}" target="_blank" rel="noopener"><img src="${escapeHTML(url)}" alt="${escapeHTML(alt)}" style="width:100%;max-height:420px;object-fit:contain;margin:10px 0;border:1px solid #dae3dc"></a>`;
  const checks=items=>items?.length?`<p style="font-size:12px"><b>확인할 내용</b><br>${items.map(escapeHTML).join('<br>')}</p>`:'';
  return `${aiResult}<b>사진 분석 결과</b><p>${escapeHTML(v.message)}</p>${(v.images||[]).map((im,i)=>{
