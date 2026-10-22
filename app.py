@@ -472,6 +472,8 @@ def status(cid):
     if not row or not row['confirmed']:
         return jsonify(error='등록된 접수번호가 없습니다.'), 404
     p = json.loads(row['payload'])
+    if row['owner'] != session.get('owner') and not session.get('admin'):
+        return jsonify(error='이 브라우저에서 접수한 문의만 상세 조회할 수 있습니다.'),403
     return jsonify({**{k: p[k] for k in ('id', 'createdAt', 'product', 'category', 'status')}, 'admin_replies':p.get('admin_replies',[]), 'customer_resolved':p.get('customer_resolved'), 'customer_followups':p.get('customer_followups',[])})
 
 
@@ -563,6 +565,12 @@ def export_complaint_pdf(cid):
                  ' | LLM candidate: '+str(guess.get('category','unclassified')))
             if guess.get('description'):
                 line('AI observation',guess['description'])
+    parts.append(Paragraph('Customer follow-ups and administrator replies',heading))
+    for item in record.get('customer_followups',[]):
+        line('Customer follow-up '+str(item.get('at','')),item.get('reason',''))
+    for item in record.get('admin_replies',[]):
+        line('Administrator reply '+str(item.get('at','')),item.get('message',''))
+    line('Customer resolved',record.get('customer_resolved'))
     parts.append(Paragraph('Complaint resolution draft',heading))
     for label,key in [('Summary','summary'),('Customer reply','reply_draft'),
                       ('Escalation reason','escalation_reason')]:
