@@ -128,13 +128,13 @@ def server_error(_):
 
 def model_info():
     """Expose the actual available weights instead of implying 4-class accuracy."""
-    candidates = [ROOT / 'weights' / 'defect_types.pt', ROOT / 'weights' / 'best.pt']
+    candidates = [ROOT / 'weights' / 'exp-4.pt', ROOT / 'weights' / 'defect_types.pt', ROOT / 'weights' / 'best.pt']
     return {'available_weights': [str(p.relative_to(ROOT)) for p in candidates if p.is_file()],
             'active_weights': str(MODEL_PATH.relative_to(ROOT)) if MODEL_PATH else None,
             'active_classes': list(MODEL.names.values()) if MODEL is not None else [],
             'evaluation': evaluation_info(),
             'type_classifier_active': MODEL is not None and set(MODEL.names.values()) ==
-            {'fracture', 'dent', 'porosity', 'missing_feature'}}
+            {'fracture', 'dent', 'porosity', 'missing_feature'}
 
 
 def evaluation_info():
@@ -142,6 +142,8 @@ def evaluation_info():
     path = ROOT / 'MODEL_EVALUATION.json'
     if not path.is_file() or MODEL_PATH is None:
         return {'status': 'not_evaluated'}
+    if MODEL_PATH.name == 'exp-4.pt' or os.environ.get('MM_MODEL_PATH'):
+        return {'status': 'vice_model_external_validation_pending', 'universal_generalization_verified': False}
     report = json.loads(path.read_text(encoding='utf-8'))
     digest = hashlib.sha256(MODEL_PATH.read_bytes()).hexdigest()
     if report.get('model_sha256') != digest:
@@ -159,10 +161,10 @@ def load_model():
         import ultralytics.utils.torch_utils as tu
         tu.NUM_THREADS = min(4, os.cpu_count() or 1)
         torch.set_num_threads(min(4, os.cpu_count() or 1))
-        from model_bundle import verify_bundle, CLASSES
+        from model_bundle import verify_bundle
         path, report = verify_bundle()
         loaded = YOLO(str(path))
-        if list(loaded.names.values()) != CLASSES:
+        if list(loaded.names.values()) != report['class_names']:
             raise RuntimeError('Loaded model class mapping differs from its evaluation.')
         MODEL, MODEL_PATH = loaded, path
     return MODEL
