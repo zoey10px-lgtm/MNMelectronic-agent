@@ -478,6 +478,69 @@ def records():
                           key=lambda p: p['createdAt'], reverse=True))
 
 
+@app.get('/api/admin/complaints/<cid>/report.pdf')
+@admin_only
+def export_complaint_pdf(cid):
+    """Download an administrator-only report from the persisted complaint record."""
+    from reportlab.lib import colors
+    from reportlab.lib.pagesizes import A4
+    from reportlab.lib.styles import ParagraphStyle
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.cidfonts import UnicodeCIDFont
+    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, KeepTogether
+    from xml.sax.saxutils import escape
+    row = read_record(cid)
+    if not row or not row['confirmed']:
+        abort(404)
+    record = json.loads(row['payload'])
+    ai = record.get('analysis', {}).get('language', {})
+    vision = record.get('analysis', {}).get('vision', {})
+    pdfmetrics.registerFont(UnicodeCIDFont('HYSMyeongJo-Medium'))
+    font = 'HYSMyeongJo-Medium'
+    normal = ParagraphStyle('normal', fontName=font, fontSize=10, leading=16, spaceAfter=9)
+    heading = ParagraphStyle('heading', parent=normal, fontSize=14, leading=20, spaceBefore=14)
+    title = ParagraphStyle('title', parent=normal, fontSize=19, leading=26)
+    buf = io.BytesIO()
+    doc = SimpleDocTemplate(buf, pagesize=A4, leftMargin=38,rightMargin=38,topMargin=38,bottomMargin=38)
+    parts = [Paragraph('M&amp;M Electronics - Quality Complaint Report',title),
+             Paragraph('AI assisted draft | Human inspection and approval required', normal), Spacer(1,12)]
+    def line(label, value):
+        parts.append(Paragraph(escape(str(label))+': '+escape(str(value or '-')),normal))
+    line('Case ID', record.get('id'))
+    line('Product',record.get('product'))
+    line('Status',record.get('status'))
+    line('Priority',record.get('priority'))
+    line('Created',record.get('createdAt'))
+    parts.append(Paragraph('Customer complaint',heading))
+    line('Description',record.get('message'))
+    parts.append(Paragraph('YOLO observations and tentative crop classifications',heading))
+    for i, item in enumerate(vision.get('images',[]),1):
+        line('Image '+str(i),'Detected regions: '+str(item.get('detection_count',0)))
+        for j, det in enumerate(item.get('detections',[]),1):
+            guess=det.get('llm_classification') or {}
+            line('Region '+str(j), 'Bounding box '+str(det.get('box_xyxy'))+
+                 ' | YOLO confidence '+str(round(det.get('confidence',0),3))+
+                 ' | LLM candidate: '+str(guess.get('category','unclassified')))
+            if guess.get('description'):
+                line('AI observation',guess['description'])
+    parts.append(Paragraph('Complaint resolution draft',heading))
+    for label,key in [('Summary','summary'),('Customer reply','reply_draft'),
+                      ('Escalation reason','escalation_reason')]:
+        line(label,ai.get(key))
+    for label,key in [('Immediate action','immediate_actions'),('Verification','verification_steps'),
+                      ('Resolution plan','resolution_plan'),('Required information','required_information')]:
+        items=ai.get(key) or []
+        if items:
+            parts.append(Paragraph(escape(label),heading))
+            for idx,v in enumerate(items,1):
+                line(str(idx),v)
+    parts.append(Spacer(1,15))
+    parts.append(Paragraph('This report summarizes unverified AI suggestions and YOLO detections. It is not a final quality decision.',normal))
+    doc.build(parts)
+    buf.seek(0)
+    return send_file(buf,mimetype='application/pdf',as_attachment=True,download_name='quality-report-'+cid+'.pdf')
+
+
 @app.patch('/api/admin/complaints/<cid>')
 @admin_only
 def update(cid):
