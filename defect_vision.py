@@ -40,10 +40,10 @@ def _request(model, content, language, token_count=1200):
     payload={'model':model,'store':False,'max_output_tokens':token_count,
      'instructions':('You are inspecting a suspected electronics component defect. '
        'For each numbered region compare the close view with its wider context. '
-       'Identify a tentative defect category, not a confirmed quality decision. '
+       'Identify a tentative defect category, not a confirmed quality decision. Use precise taxonomy: missing_feature = metal chipped away, broken off, absent material or jagged notch; fracture = visible crack or split with material largely present; deformation = bent or warped metal without evident missing material; dent = localized depression; scratch = linear surface abrasion; burr = protruding extra metal. When both distortion and material loss occur, choose missing_feature as primary. Distinguish actual geometry from reflections. '
        'Ordinary surfaces and shadows may be false positive YOLO boxes; choose unclear if evidence is insufficient. '
        'Use the exact image_number and detection_number supplied. '
-       'Descriptions must be in '+{'ko':'Korean','en':'English','vi':'Vietnamese'}.get(language,'Korean')+'.'),
+       'For each classification, state the visible distinguishing evidence, avoid unsupported certainty. Descriptions must be in '+{'ko':'Korean','en':'English','vi':'Vietnamese'}.get(language,'Korean')+'.'),
      'input':[{'role':'user','content':content}],
      'text':{'format':{'type':'json_schema','name':'defect_crop_classification','strict':True,'schema':SCHEMA}}}
     response=requests.post('https://api.openai.com/v1/responses',json=payload,
