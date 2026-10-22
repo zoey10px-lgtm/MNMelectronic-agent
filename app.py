@@ -426,13 +426,53 @@ def confirm(cid):
     return jsonify(ok=True, id=cid)
 
 
+@app.post('/api/complaints/<cid>/followup')
+def customer_followup(cid):
+    row = read_record(cid)
+    if not row or row['owner'] != session.get('owner') or not row['confirmed']:
+        abort(404)
+    d = request.get_json(silent=True) or {}
+    reason = str(d.get('reason','')).strip()[:2000]
+    if len(reason) < 5:
+        return jsonify(error='해결되지 않은 이유를 5자 이상 작성해주세요.'), 400
+    p = json.loads(row['payload'])
+    p.setdefault('customer_followups',[]).append({'at':now(),'reason':reason})
+    p['status'] = '검토 중'
+    p['history'].append({'at':now(),'text':'고객이 미해결 사유를 추가 제출했습니다.'})
+    with connect() as c:
+        c.execute('UPDATE records SET payload=? WHERE id=?',(json.dumps(p,ensure_ascii=False),cid))
+    return jsonify(ok=True,id=cid,status=p['status'])
+
+
+@app.post('/api/complaints/<cid>/feedback')
+def customer_resolution_feedback(cid):
+    row=read_record(cid)
+    if not row or row['owner'] != session.get('owner') or not row['confirmed']:
+        abort(404)
+    p=json.loads(row['payload'])
+    if not p.get('admin_replies'):
+        return jsonify(error='관리자 답변이 아직 없습니다.'),400
+    d=request.get_json(silent=True) or {}
+    resolved=d.get('resolved')
+    if type(resolved) is not bool:
+        return jsonify(error='해결 여부를 선택해주세요.'),400
+    p['status']='처리 완료' if resolved else '검토 중'
+    p['customer_resolved']=resolved
+    p['history'].append({'at':now(),'text':'고객이 해결 완료를 확인했습니다.' if resolved else '고객이 추가 조치를 요청했습니다.'})
+    if not resolved and str(d.get('reason','')).strip():
+        p.setdefault('customer_followups',[]).append({'at':now(),'reason':str(d['reason']).strip()[:2000]})
+    with connect() as c:
+        c.execute('UPDATE records SET payload=? WHERE id=?',(json.dumps(p,ensure_ascii=False),cid))
+    return jsonify(ok=True,status=p['status'])
+
+
 @app.get('/api/complaints/<cid>/status')
 def status(cid):
     row = read_record(cid)
     if not row or not row['confirmed']:
         return jsonify(error='등록된 접수번호가 없습니다.'), 404
     p = json.loads(row['payload'])
-    return jsonify({k: p[k] for k in ('id', 'createdAt', 'product', 'category', 'status')})
+    return jsonify({**{k: p[k] for k in ('id', 'createdAt', 'product', 'category', 'status')}, 'admin_replies':p.get('admin_replies',[]), 'customer_resolved':p.get('customer_resolved'), 'customer_followups':p.get('customer_followups',[])})
 
 
 @app.get('/api/media/<cid>/<name>')
@@ -539,6 +579,26 @@ def export_complaint_pdf(cid):
     doc.build(parts)
     buf.seek(0)
     return send_file(buf,mimetype='application/pdf',as_attachment=True,download_name='quality-report-'+cid+'.pdf')
+
+
+@app.post('/api/admin/complaints/<cid>/reply')
+@admin_only
+def administrator_reply(cid):
+    row=read_record(cid)
+    if not row or not row['confirmed']:
+        abort(404)
+    d=request.get_json(silent=True) or {}
+    reply=str(d.get('reply','')).strip()[:4000]
+    if len(reply)<5:
+        return jsonify(error='답변을 5자 이상 작성해주세요.'),400
+    p=json.loads(row['payload'])
+    p.setdefault('admin_replies',[]).append({'at':now(),'message':reply})
+    p['status']='조치 중'
+    p['customer_resolved']=None
+    p['history'].append({'at':now(),'text':'관리자가 고객에게 후속 조치를 안내했습니다.'})
+    with connect() as c:
+        c.execute('UPDATE records SET payload=? WHERE id=?',(json.dumps(p,ensure_ascii=False),cid))
+    return jsonify(ok=True,status=p['status'])
 
 
 @app.patch('/api/admin/complaints/<cid>')
