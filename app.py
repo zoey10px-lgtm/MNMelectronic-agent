@@ -22,8 +22,6 @@ from flask import Flask, abort, jsonify, request, send_file, send_from_directory
 from PIL import Image, ImageOps, UnidentifiedImageError
 
 ROOT = Path(__file__).resolve().parent
-from restore_assets import ensure_assets
-ensure_assets()
 load_dotenv(ROOT / '.env')
 DATA = Path(os.environ.get('MM_DATA_DIR', str(ROOT / 'data')))
 MEDIA = DATA / 'media'
