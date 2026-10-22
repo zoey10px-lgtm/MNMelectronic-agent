@@ -68,7 +68,11 @@
 </main>
 <footer id="siteFooter" class="site-footer"><div class="container"><div class="footer-main"><div><a href="#home" data-link="home" class="footer-brand">M&amp;M<small>ELECTRONICS</small></a><p>Precision Components.<br>Trust in Every Detail.</p></div><div class="footer-links"><div><b>COMPANY</b><a data-link="company" href="#company">회사소개</a><a data-link="products" href="#products">제품소개</a><a data-link="quality" href="#quality">기술·품질</a></div><div><b>SUPPORT</b><a data-link="support" href="#support">품질 문의</a><a data-link="admin" href="#admin">관리자</a></div></div></div><div class="footer-bottom"><span>© 2026 M&amp;M ELECTRONICS. ALL RIGHTS RESERVED.</span><span>Hackathon UI prototype · 기업 정보와 제품 설명은 시연용 콘셉트입니다.</span><a href="#home" data-link="home">TOP ↑</a></div></div></footer>
 <div class="modal-backdrop" id="confirmModal" hidden role="dialog" aria-modal="true" aria-labelledby="confirmTitle"><div class="modal-card"><div class="modal-icon"><svg><use href="#i-file"/></svg></div><div class="eyebrow">FINAL CONFIRMATION</div><h2 id="confirmTitle">정식으로 문의를 접수할까요?</h2><p>접수하면 관리자 대시보드에 문의 내용과 첨부된 사진이 등록됩니다. 접수 후에도 처리 상태를 조회할 수 있어요.</p><div class="confirm-summary" id="confirmSummary"></div><label style="display:block;margin:16px 0;font-weight:600">AI 안내로 해결되지 않은 이유 (관리자 전달용)<textarea id="unresolvedReason" rows="4" maxlength="2000" style="display:block;width:100%;padding:12px;margin-top:8px;border:1px solid #bacbbf" placeholder="예: 안내된 점검을 해봤지만 파손 부위가 그대로이고 교체가 필요한지 알고 싶습니다."></textarea></label><div class="modal-buttons"><button class="btn neutral" id="cancelConfirm">돌아가기</button><button class="btn primary" id="submitConfirm">문의 최종 접수 <svg><use href="#i-arrow"/></svg></button></div></div></div>
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="followupAssistant" hidden style="margin:12px 0;padding:12px;border:1px solid #d4e3d7;background:#fbfdfb">
+ <label for="followupQuestion"><b id="followupHeading">Ask a follow-up question about this inspection</b></label>
+ <textarea id="followupQuestion" rows="2" maxlength="1000" style="display:block;width:100%;padding:12px;margin:8px 0;border:1px solid #c9d8cc" placeholder="예: 이 부분은 교체해야 하나요?"></textarea>
+ <button type="button" class="btn primary" id="followupAsk">질문 보내기 ↗</button>
+ </div><div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script>(()=>{'use strict';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 
@@ -172,6 +176,7 @@ if(selectedLanguage){
   document.documentElement.lang=selectedLanguage.value;
   localStorage.setItem('mm-language',selectedLanguage.value);
   localizeUI();
+  refreshTranslatedAnalysis();
  });
 }
 const languageObserver=new MutationObserver(()=>{if(!window.__mmLocalizing){window.__mmLocalizing=true;requestAnimationFrame(()=>{localizeUI();window.__mmLocalizing=false;});}});
@@ -186,6 +191,28 @@ const icon=name=>`<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
 let caseCache=[];
 const getCases=()=>caseCache;
 async function api(url,method='GET',data){const res=await fetch(url,{method,headers:data?{'Content-Type':'application/json'}:{},body:data?JSON.stringify(data):undefined});let result;try{result=await res.json()}catch{throw Error('서버 응답을 확인할 수 없습니다. START 창을 확인해주세요.')}if(!res.ok)throw Error(result.error||'요청에 실패했습니다.');return result}
+let activeAnalysis=null;let activeAnalysisId=null;const translationCache=new Map();
+async function refreshTranslatedAnalysis(){
+ if(!activeAnalysis||!activeAnalysisId)return;
+ const language=document.documentElement.lang;
+ const key=activeAnalysisId+':'+language;
+ if(language!=='ko' || activeAnalysis.language?.language!=='ko'){
+  try{
+   let data=translationCache.get(key);
+   if(!data){const response=await api('/api/complaints/'+encodeURIComponent(activeAnalysisId)+'/translate','POST',{language});data=response.translation;translationCache.set(key,data);}
+   if(activeAnalysisId!==key.split(':')[0]||document.documentElement.lang!==language)return;
+   const view=structuredClone(activeAnalysis);
+   const fields=data.fields||{};
+   Object.assign(view.language||{},fields);
+   for(const det of data.detections||[]){
+    const box=view.vision?.images?.[det.image_index]?.detections?.[det.box_index];
+    if(box?.llm_classification){box.llm_classification.description=det.description;box.llm_classification.uncertainty=det.uncertainty;}
+   }
+   const target=document.getElementById('liveAnalysisResult');
+   if(target)target.innerHTML=analysisHTML(view);
+  }catch(err){console.warn('Translation error:',err.message);}
+ }else{const target=document.getElementById('liveAnalysisResult');if(target)target.innerHTML=analysisHTML(activeAnalysis);}
+}
 function analysisHTML(a){
  if(!a)return '분석 결과가 없습니다.';
  const v=a.vision||{images:[],message:'사진 검사 결과가 없습니다.'};
@@ -199,7 +226,7 @@ function analysisHTML(a){
  ${actionList('추가로 필요한 정보',ai.required_information)}
  ${ai.needs_human_review?`<p style="margin-top:12px"><b>관리자 검토 필요</b> ${escapeHTML(ai.escalation_reason||'최종 확인이 필요합니다.')}</p>`:''}
  <details style="margin-top:12px"><summary>AI 고객 답변 초안</summary><p style="white-space:pre-wrap">${escapeHTML(ai.reply_draft)}</p></details>
- <small>제안된 점검 절차이며 최종 품질 판정 및 승인 결과가 아닙니다.</small></section>`:`<p style="padding:12px;background:#f7f9f5">${escapeHTML(ai.message||'')}</p>`;
+ <small>YOLO가 검출한 영역과 AI가 분석한 손상 특성을 근거로 안내합니다. 교체·환불 등 최종 조치는 담당자가 확인합니다.</small></section>`:`<p style="padding:12px;background:#f7f9f5">${escapeHTML(ai.message||'')}</p>`;
  const picture=(url,alt)=>`<a href="${escapeHTML(url)}" target="_blank" rel="noopener"><img src="${escapeHTML(url)}" alt="${escapeHTML(alt)}" style="width:100%;max-height:420px;object-fit:contain;margin:10px 0;border:1px solid #dae3dc"></a>`;
  const checks=items=>items?.length?`<p style="font-size:12px"><b>확인할 내용</b><br>${items.map(escapeHTML).join('<br>')}</p>`:'';
  return `${aiResult}<b>사진 분석 결과</b><p>${escapeHTML((document.documentElement.lang==='en'&&v.detection_count!==undefined)?('YOLO detected '+v.detection_count+' suspected region(s). Detailed defect category is assessed separately by AI.'):((document.documentElement.lang==='vi'&&v.detection_count!==undefined)?('YOLO phát hiện '+v.detection_count+' vùng nghi ngờ. Loại lỗi được AI phân tích riêng.'):v.message))}</p>${(v.images||[]).map((im,i)=>{
@@ -253,9 +280,9 @@ loading=true;$('#analyzeBtn').disabled=true;draft.serverId=null;
 $$('.chat-actions').forEach(x=>x.remove());
 makeBubble('user',d.message,true);makeBubble('bot','첨부한 사진에서 결함 의심 부위를 검사하고 있습니다. 잠시 기다려주세요.');const t=typingBubble();
 try{const response=await api('/api/analyze','POST',{...d,language:document.documentElement.lang||'ko'});d.serverId=response.id;d.analysis=response.analysis;
-t.remove();chatNote(analysisHTML(response.analysis));
+t.remove();activeAnalysis=response.analysis;activeAnalysisId=response.id;chatNote('<div id="liveAnalysisResult">'+analysisHTML(response.analysis)+'</div>');refreshTranslatedAnalysis();
 makeBubble('bot','검사 결과를 확인해주세요. <b>정식 문의 접수</b>를 누르면 관리자에게 전달됩니다.');
-const actions=document.createElement('div');actions.className='chat-actions';actions.innerHTML=`<button class="btn primary" type="button" id="chatSubmitFinal">정식 문의 접수 ${icon('arrow')}</button><button class="btn neutral" type="button" id="chatEdit">내용 수정하기</button>`;$('#chatWindow').append(actions);$('#chatSubmitFinal').onclick=openConfirmation;$('#chatEdit').onclick=()=>toast('입력창에서 수정한 뒤 다시 분석해주세요.');scrollChat();
+const followup=$('#followupAssistant');followup.hidden=false;$('#chatWindow').append(followup);$('#followupAsk').onclick=async()=>{const question=$('#followupQuestion').value.trim();if(!question||!draft?.serverId)return;makeBubble('user',question,true);$('#followupQuestion').value='';$('#followupAsk').disabled=true;try{const answer=await api('/api/complaints/'+encodeURIComponent(draft.serverId)+'/assistant','POST',{question,language:document.documentElement.lang||'ko'});makeBubble('bot',answer.answer,true)}catch(err){makeBubble('bot',err.message,true)}finally{$('#followupAsk').disabled=false}};const actions=document.createElement('div');actions.className='chat-actions';actions.innerHTML=`<button class="btn primary" type="button" id="chatSubmitFinal">정식 문의 접수 ${icon('arrow')}</button><button class="btn neutral" type="button" id="chatEdit">내용 수정하기</button>`;$('#chatWindow').append(actions);$('#chatSubmitFinal').onclick=openConfirmation;$('#chatEdit').onclick=()=>toast('입력창에서 수정한 뒤 다시 분석해주세요.');scrollChat();
 }catch(e){t.remove();makeBubble('bot','분석을 완료하지 못했습니다: '+e.message,true);toast(e.message)}
 finally{loading=false;$('#analyzeBtn').disabled=false}}
 
