@@ -71,6 +71,82 @@
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script>(()=>{'use strict';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+
+// Three-language UI localization. Original Korean copy is retained as the source.
+const UI_TRANSLATIONS={
+'회사소개':['Company','Giới thiệu'],'제품소개':['Products','Sản phẩm'],'기술·품질':['Technology & Quality','Công nghệ & Chất lượng'],
+'고객지원':['Customer Support','Hỗ trợ khách hàng'],'관리자':['Admin','Quản trị'],'품질 문의':['Quality Inquiry','Yêu cầu chất lượng'],
+'사진 분석 결과':['Photo Inspection Results','Kết quả kiểm tra ảnh'],
+'AI 민원 분석 및 해결 안내':['AI Complaint Analysis & Resolution','Phân tích & giải quyết khiếu nại AI'],
+'지금 해야 할 조치':['Immediate Actions','Hành động ngay'],
+'확인 및 검사 절차':['Verification Steps','Các bước kiểm tra'],
+'후속 해결 절차':['Resolution Plan','Kế hoạch xử lý'],
+'추가로 필요한 정보':['Additional Information Needed','Thông tin cần bổ sung'],
+'관리자 검토 필요':['Human Review Required','Cần người quản lý xem xét'],
+'AI 고객 답변 초안':['Draft Customer Reply','Bản nháp phản hồi khách hàng'],
+'제품 모델':['Product Model','Mã sản phẩm'],'처리 상태':['Status','Trạng thái'],
+'검출 점수':['Detection Score','Điểm phát hiện'],'확인할 내용':['Recommended Checks','Các bước kiểm tra'],
+'결함 의심 · 유형 미확정':['Suspected Defect · Unclassified','Nghi ngờ lỗi · Chưa phân loại'],
+'미식별':['Unknown','Chưa xác định'],'사진 검사':['Photo Inspection','Kiểm tra ảnh'],
+'문의가 접수되었습니다.':['Inquiry submitted.','Đã gửi yêu cầu.'],
+'정식 문의 접수':['Submit Inquiry','Gửi yêu cầu'],
+'고객':['Customer','Khách hàng'],'접수 완료':['Submitted','Đã tiếp nhận'],
+'검토 중':['Under Review','Đang xem xét'],'조치 중':['In Progress','Đang xử lý'],'처리 완료':['Resolved','Đã hoàn tất'],
+'보류':['On Hold','Tạm dừng'],'전체 접수':['All Cases','Tất cả yêu cầu'],
+'접수 대기':['Pending','Chờ xử lý'],'처리 진행':['In Progress','Đang xử lý'],
+'관리자 대시보드':['Admin Dashboard','Bảng điều khiển quản trị'],
+'민원 접수 관리':['Complaint Management','Quản lý khiếu nại'],
+'유형별 통계':['Category Insights','Thống kê theo loại'],
+'고객 불만 내용':['Customer Complaint','Nội dung khiếu nại'],
+'고객 추가 문의 · 미해결 사유':['Customer Follow-up · Unresolved Reason','Khách hàng phản hồi · Lý do chưa giải quyết'],
+'관리자 후속 답변':['Administrator Response','Phản hồi của quản trị viên'],
+'처리 이력':['History','Lịch sử xử lý'],
+'기본 접수 정보':['Case Information','Thông tin yêu cầu'],
+'첨부 제품 사진':['Attached Product Photos','Ảnh sản phẩm đính kèm'],
+'AI 분석 및 권장 조치':['AI Analysis & Recommended Actions','Phân tích AI & Hành động đề xuất'],
+'처리 상태 관리':['Manage Case Status','Quản lý trạng thái'],
+'확인 결과 및 조치':['Inspection Result & Action','Kết quả kiểm tra & Hành động'],
+'관리자에게 전달':['Escalate to Admin','Chuyển đến quản trị viên'],
+'돌아가기':['Back','Quay lại'],'변경 사항 저장':['Save Changes','Lưu thay đổi'],
+'해결 완료 확인':['Confirm Resolution','Xác nhận đã giải quyết'],
+'추가 문의 전송':['Send Follow-up','Gửi phản hồi'],
+'고객에게 답변 등록':['Send Administrator Reply','Gửi phản hồi quản trị'],
+'PDF 분석 보고서 다운로드':['Download PDF Report','Tải báo cáo PDF']
+};
+const localeText=(value,lang=document.documentElement.lang)=>{if(lang==='ko')return value;let translated=UI_TRANSLATIONS[value];return translated?translated[lang==='vi'?1:0]:value};
+const nodeLocale=new WeakMap();
+function localizeUI(){
+ const lang=document.documentElement.lang;
+ document.querySelectorAll('body *').forEach(el=>{
+  if(['SCRIPT','STYLE','SVG','PATH','OPTION','TEXTAREA'].includes(el.tagName)||el.closest('[contenteditable="true"]'))return;
+  if(el.matches('input[placeholder],textarea[placeholder]')){
+   const original=el.dataset.originalPlaceholder||el.getAttribute('placeholder');
+   if(original){el.dataset.originalPlaceholder=original;el.setAttribute('placeholder',localeText(original,lang));}
+  }
+  for(const child of el.childNodes){
+   if(child.nodeType!==3||!child.textContent.trim())continue;
+   const current=child.textContent;
+   const base=nodeLocale.get(child)||current;
+   nodeLocale.set(child,base);
+   const match=base.match(/^(\s*)(.*?)(\s*)$/s);
+   if(match)child.textContent=match[1]+localeText(match[2],lang)+match[3];
+  }
+ });
+}
+const selectedLanguage=document.getElementById('languageSelect');
+if(selectedLanguage){
+ selectedLanguage.value=localStorage.getItem('mm-language')||'ko';
+ document.documentElement.lang=selectedLanguage.value;
+ selectedLanguage.addEventListener('change',()=>{
+  document.documentElement.lang=selectedLanguage.value;
+  localStorage.setItem('mm-language',selectedLanguage.value);
+  localizeUI();
+ });
+}
+const languageObserver=new MutationObserver(()=>{if(!window.__mmLocalizing){window.__mmLocalizing=true;requestAnimationFrame(()=>{localizeUI();window.__mmLocalizing=false;});}});
+languageObserver.observe(document.body,{childList:true,subtree:true});
+localizeUI();
+
 const models=['AUTO','A176','A376','A156','A276'];
 const defs=[{id:'A176',name:'Precision Bracket',desc:'정밀 금속 브래킷 · A176 시리즈',sub:'표면 및 체결 위치 품질 관리'},{id:'A376',name:'Mounting Component',desc:'장착용 금속 부품 · A376 시리즈',sub:'조립 안정성과 가공 품질 확인'},{id:'A156',name:'Structure Frame',desc:'정밀 가공 프레임 · A156 시리즈',sub:'형상·가장자리 품질 관리'},{id:'A276',name:'Metal Support',desc:'금속 지지 부품 · A276 시리즈',sub:'연결부 및 외관 품질 확인'}];
 let photos=[],draft=null,stagedTimers=[],adminView='overview',detailId=null,loading=false;
@@ -107,7 +183,7 @@ function analysisHTML(a){
  }).join('')}<a href="/annotations/" target="_blank" rel="noopener">등록 원본 자료 보기 ↗</a><details style="margin-top:14px"><summary>문의 관련 참고자료 ${(a.references||[]).length}건</summary>${(a.references||[]).map(r=>`<p>${escapeHTML(r.text)}</p>`).join('')}</details>`;
 }
 
-const formatDate=iso=>{try{return new Date(iso).toLocaleString('ko-KR',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})}catch{return iso||''}};
+const formatDate=iso=>{try{return new Date(iso).toLocaleString(({ko:'ko-KR',en:'en-US',vi:'vi-VN'})[document.documentElement.lang]||'ko-KR',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})}catch{return iso||''}};
 let toastTimer;
 function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),3600)}
 function route(){const path=(location.hash||'#home').slice(1).split('?')[0];const page=['home','company','products','quality','support','admin'].includes(path)?path:'home';$$('.page').forEach(el=>el.classList.toggle('active',el.id==='page-'+page));$$('[data-link]').forEach(el=>el.classList.toggle('active',el.dataset.link===page&&el.closest('.main-nav')));$('#mainNav').classList.remove('open');window.scrollTo({top:0,behavior:'instant'});if(page==='admin')syncAdmin();document.title=(page==='home'?'M&M Electronics':({company:'회사소개',products:'제품소개',quality:'기술·품질',support:'고객지원',admin:'관리자'}[page]+' | M&M Electronics'))}
