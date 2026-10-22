@@ -143,7 +143,7 @@ def model_info():
             'active_classes': list(MODEL.names.values()) if MODEL is not None else [],
             'evaluation': evaluation_info(),
             'type_classifier_active': MODEL is not None and set(MODEL.names.values()) ==
-            {'fracture', 'dent', 'porosity', 'missing_feature'}
+            {'fracture', 'dent', 'porosity', 'missing_feature'}}
 
 
 def evaluation_info():
