@@ -50,6 +50,11 @@ SCHEMA = {
             'shipping', 'other', 'unclear']},
         'priority': {'type': 'string', 'enum': ['low', 'normal', 'high', 'urgent']},
         'reply_draft': {'type': 'string'},
+        'immediate_actions': {'type':'array','items':{'type':'string'}},
+        'verification_steps': {'type':'array','items':{'type':'string'}},
+        'resolution_plan': {'type':'array','items':{'type':'string'}},
+        'required_information': {'type':'array','items':{'type':'string'}},
+        'escalation_reason': {'type':'string'},
         'next_actions': {'type': 'array', 'items': {'type': 'string'}},
         'reference_ids': {'type': 'array', 'items': {'type': 'string'}},
         'needs_human_review': {'type': 'boolean'},
@@ -59,7 +64,9 @@ SCHEMA = {
                            'observation': {'type': 'string'}, 'suspected_issue': {'type': 'string'}},
             'required': ['image_number', 'location', 'observation', 'suspected_issue']}}},
     'required': ['summary', 'category', 'priority', 'reply_draft', 'next_actions',
-                 'reference_ids', 'needs_human_review', 'image_observations']}
+                 'reference_ids', 'needs_human_review', 'image_observations',
+                 'immediate_actions', 'verification_steps', 'resolution_plan',
+                 'required_information', 'escalation_reason']}
 
 
 def generate(product, message, category, images, vision, references, language='ko'):
@@ -71,7 +78,8 @@ def generate(product, message, category, images, vision, references, language='k
         return unavailable('rate_limited', language)
     try:
         evidence = [{'id': r['id'], 'text': r['text'][:1500],
-                     'authority': r.get('authority'), 'synthetic': r.get('synthetic', False)}
+                     'authority': r.get('authority'), 'synthetic': r.get('synthetic', False),
+                     'resolution_procedure': r.get('resolution_procedure')}
                     for r in references[:5]]
         inspection = [{'image_number': i+1, 'yolo_detections': f['detections'],
                        'product_reference_match': f['product_recognition'],
@@ -94,6 +102,15 @@ Provide a useful complaint summary, textual triage category, priority, actionabl
 and a customer reply draft grounded in the referenced documents.
 Synthetic examples are examples only, never verified facts or binding company policy.
 Set needs_human_review when physical inspection or company approval is required.
+Use resolution_procedure from retrieved references to create concrete customer actions.
+Separate immediate_actions, verification_steps, resolution_plan and required_information.
+When a guide is not company-approved, describe it as proposed guidance, not a binding policy.
+Never claim a repair, refund, replacement, or warranty decision has been approved.
+Make resolution_plan actionable and conditional: explain the next step and who decides it.
+If the YOLO output has no detections, never fabricate detected damage; customer-reported
+issues can still receive text-only triage and suggested inspection steps.
+Keep reply_draft concise and consistent with these fields; escalation_reason is empty
+when human review is unnecessary.
 Always return image_observations as an EMPTY ARRAY. YOLO image observations are rendered
 separately by the application from YOLO inference metadata, not from this AI response.'''
         context = {'product_model': product, 'customer_message': message,
@@ -153,6 +170,11 @@ def _valid_result(result, image_count):
         return False
     for key in ['next_actions', 'reference_ids']:
         if not isinstance(result[key], list) or not all(isinstance(x, str) for x in result[key]):
+            return False
+    if not isinstance(result.get('escalation_reason'), str):
+        return False
+    for key in ('immediate_actions','verification_steps','resolution_plan','required_information'):
+        if not isinstance(result.get(key), list) or not all(isinstance(x,str) for x in result[key]):
             return False
     observations = result['image_observations']
     if not isinstance(observations, list):
