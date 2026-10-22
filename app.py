@@ -351,6 +351,13 @@ def analyze():
         shutil.rmtree(media_dir, ignore_errors=True)
         logging.exception('YOLO inference failed')
         return jsonify(error='사진 분석에 실패했습니다. 서버 창의 오류를 확인해주세요.'), 503
+    from defect_vision import classify
+    visual_classification = classify(images, findings, language)
+    for finding in visual_classification.get('findings', []):
+        image_idx = finding['image_number'] - 1
+        box_idx = finding['detection_number'] - 1
+        if 0 <= image_idx < len(findings) and 0 <= box_idx < len(findings[image_idx]['detections']):
+            findings[image_idx]['detections'][box_idx]['llm_classification'] = finding
     from retrieve import retrieve
     source_types = sorted({b['class_name'] for im in findings
                            for b in (im.get('registered_label') or {}).get('labels', [])
@@ -359,14 +366,15 @@ def analyze():
     total = sum(f['detection_count'] for f in findings)
     predicted_types = sorted({b['label'] for f in findings for b in f['detections']
                               if b['label'] in CLASSES})
-    query = message + '\n' + document_text[:6000] + ' ' + ' '.join(CLASSES[t]['ko'] for t in predicted_types)
+    llm_types = [x['category'] for x in visual_classification.get('findings', []) if x['category'] not in ('unclear','other')]
+    query = message + '\n' + document_text[:6000] + ' ' + ' '.join(CLASSES[t]['ko'] for t in predicted_types) + ' ' + ' '.join(llm_types)
     references = retrieve(query, model=product if product in ('A156','A176','A276','A376') else None, k=5, include_examples=True,
                           category=predicted_types[0] if len(predicted_types) == 1 else None)
-    vision = {'status': 'complete' if photos else 'no_photo', 'model': str(MODEL_PATH.relative_to(ROOT)) if MODEL_PATH else None,
+    vision = {'llm_classification': visual_classification, 'status': 'complete' if photos else 'no_photo', 'model': str(MODEL_PATH.relative_to(ROOT)) if MODEL_PATH else None,
               'revision': '6.1', 'photo_product_estimate': product_guesses, 'class_names': list(MODEL.names.values()) if MODEL else [],
               'predicted_types': predicted_types, 'type_classifier_active': bool(predicted_types) or (MODEL is not None and set(MODEL.names.values()) == set(CLASSES)),
               'source_label_types': source_types, 'evaluation': evaluation_info(),
-              'interpretation_method': 'YOLO predictions from detector.py; source annotations are separate reference data; GPT receives YOLO metadata only, never original images',
+              'interpretation_method': 'YOLO detects regions; a vision LLM tentatively classifies YOLO crops; original full photos are not sent to OpenAI',
               'confidence_threshold': 0.25, 'detection_count': total, 'images': findings,
               'message': (f'YOLO가 결함 {total}곳을 검출하고 유형 {len(predicted_types)}종을 예측했습니다.' if predicted_types else f'YOLO가 결함 의심 영역 {total}곳을 검출했습니다. 유형 모델이 없어 세부 유형은 미확정입니다.') if total else
                          ('검출된 영역이 없습니다. 정상 판정은 아니며 담당자 확인이 필요합니다.' if photos
