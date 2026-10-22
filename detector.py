@@ -12,11 +12,16 @@ def iou(a,b):
 def detect(model,image):
  raw=[];modes=[];w,h=image.size
  views=[('full_640',image,(0,0),640)]
- for angle,transpose in ((90,Image.Transpose.ROTATE_90),(180,Image.Transpose.ROTATE_180),(270,Image.Transpose.ROTATE_270)):
+ # The large one-class Vice model uses a single CPU inference pass to avoid
+ # excessive latency and memory usage on small Render instances.
+ is_vice = set(model.names.values()) == {'Defect1'}
+ if is_vice:
+  views=[('full_640',image,(0,0),640)]
+ for angle,transpose in (() if is_vice else ((90,Image.Transpose.ROTATE_90),(180,Image.Transpose.ROTATE_180),(270,Image.Transpose.ROTATE_270))):
   views.append((f'rotation_{angle}',image.transpose(transpose),(0,0),640))
  # Always use the same search plan in evaluation and serving.
- if max(w,h)>800:views.append(('full_960',image,(0,0),960))
- if min(w,h)>=256:
+ if not is_vice and max(w,h)>800:views.append(('full_960',image,(0,0),960))
+ if not is_vice and min(w,h)>=256:
   tw,th=round(w*.65),round(h*.65)
   for x,y in ((0,0),(w-tw,0),(0,h-th),(w-tw,h-th)):
    views.append(('tile_640',image.crop((x,y,x+tw,y+th)),(x,y),640))
