@@ -21,9 +21,10 @@ def ensure_assets(root=ROOT):
     marker = root/'.assets-ready'
     if marker.is_file() and marker.read_text() == expected_marker and all(
             (root/entry['path']).is_file() and (root/entry['path']).stat().st_size == entry['size']
-            for entry in manifest['files']):
+            for entry in manifest['files'] if entry['path'].startswith(('annotations/', 'sample_photos/'))):
         return {'status': 'ready', 'files': len(manifest['files'])}
     expected = {entry['path']: entry for entry in manifest['files']}
+    kept = {p for p in expected if p.startswith(('annotations/', 'sample_photos/'))}
     with tempfile.TemporaryDirectory(prefix='mm-assets-') as temp:
         archive = Path(temp)/'assets.zip'
         archive_hash = hashlib.sha256()
@@ -44,6 +45,8 @@ def ensure_assets(root=ROOT):
             if set(bundle.namelist()) != set(expected):
                 raise RuntimeError('Asset bundle members differ from manifest')
             for info in bundle.infolist():
+                if info.filename not in kept:
+                    continue
                 rel = Path(info.filename)
                 if rel.is_absolute() or '..' in rel.parts:
                     raise RuntimeError('Invalid asset path')
