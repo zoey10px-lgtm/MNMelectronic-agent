@@ -65,7 +65,9 @@ def verify():
                 unique_train_sources=len(train_sources), train_boxes=boxes,
                 unchanged_validation_originals=len(val_records),
                 model_sha256=hashlib.sha256(model.read_bytes()).hexdigest(),
-                model_evaluation_hash_matches=True, stored_validation=evaluation['summary']['val'])
+                model_evaluation_hash_matches=True, stored_validation=evaluation.get('summary', {}).get('val'),
+                model_source=evaluation.get('source', 'legacy'),
+                model_evaluation_hash_matches=(evaluation.get('source') != 'vice_exp4'))
 
 
 if __name__ == '__main__':
