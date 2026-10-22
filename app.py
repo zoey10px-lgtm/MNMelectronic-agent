@@ -126,11 +126,20 @@ def server_error(_):
     return jsonify(error='서버 처리 중 오류가 발생했습니다. START 창의 오류를 확인해주세요.'), 500
 
 
+def display_model_path(path):
+    if path is None:
+        return None
+    try:
+        return str(path.resolve().relative_to(ROOT.resolve()))
+    except ValueError:
+        return path.name
+
+
 def model_info():
     """Expose the actual available weights instead of implying 4-class accuracy."""
     candidates = [ROOT / 'weights' / 'exp-4.pt', ROOT / 'weights' / 'defect_types.pt', ROOT / 'weights' / 'best.pt']
     return {'available_weights': [str(p.relative_to(ROOT)) for p in candidates if p.is_file()],
-            'active_weights': str(MODEL_PATH.relative_to(ROOT)) if MODEL_PATH else None,
+            'active_weights': display_model_path(MODEL_PATH),
             'active_classes': list(MODEL.names.values()) if MODEL is not None else [],
             'evaluation': evaluation_info(),
             'type_classifier_active': MODEL is not None and set(MODEL.names.values()) ==
