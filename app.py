@@ -137,7 +137,7 @@ def display_model_path(path):
 
 def model_info():
     """Expose the actual available weights instead of implying 4-class accuracy."""
-    candidates = [ROOT / 'weights' / 'exp-4.pt', ROOT / 'weights' / 'defect_types.pt', ROOT / 'weights' / 'best.pt']
+    candidates = [ROOT / 'weights' / 'exp-4.pt']
     return {'available_weights': [str(p.relative_to(ROOT)) for p in candidates if p.is_file()],
             'active_weights': display_model_path(MODEL_PATH),
             'active_classes': list(MODEL.names.values()) if MODEL is not None else [],
