@@ -12,7 +12,7 @@ def verify_bundle():
     configured = os.environ.get('MM_MODEL_PATH', '').strip()
     path = Path(configured).expanduser() if configured else ROOT / 'weights' / 'exp-4.pt'
     if path.is_file():
-        expected = os.environ.get('MM_MODEL_SHA256', '').strip().lower()
+        expected = os.environ.get('MM_MODEL_SHA256', 'd522fc938cd3478d1deafe536fc9d438f91a9b7024ddede307d7c78d7a4846c9').strip().lower()
         checksum = hashlib.sha256(path.read_bytes()).hexdigest()
         if expected and checksum != expected:
             raise RuntimeError('Vice model SHA-256 does not match MM_MODEL_SHA256')
