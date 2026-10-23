@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f6f7f3">
@@ -170,7 +170,7 @@ function localizeUI(){
 }
 const selectedLanguage=document.getElementById('languageSelect');
 if(selectedLanguage){
- selectedLanguage.value=localStorage.getItem('mm-language')||'ko';
+ selectedLanguage.value=localStorage.getItem('mm-language')||'en';
  document.documentElement.lang=selectedLanguage.value;
  selectedLanguage.addEventListener('change',()=>{
   document.documentElement.lang=selectedLanguage.value;
